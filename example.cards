@@ -1,0 +1,31 @@
+# Format: Rarity Level Name
+#   Rarity: C|R|E|L|M
+#   Level: as shown in game
+#   Name: as shown in game, case-insensitive
+# Repetitions are allowed - each treated as another instance of the card
+
+# Epic heroes
+E 6** Bob
+E 6** Bob
+
+# Epic objects
+
+
+# Legendary heroes
+L 6** Bender
+L 6 Bobby
+L 6* Bobby
+L 6 Brian
+L 6 Dr. Amy Wong
+
+
+# Legendary objects
+L 6 Big Boy Karate
+L 6 Capoeira Reginald
+L 6 Fashion Wrestling
+L 6 Finger Gun Gayle
+L 6 Hypnotoad
+L 6* Iraq Lobster
+L 6 Jacked on Bots
+L 6* Jacked on Bots
+L 6** K Pop Video
