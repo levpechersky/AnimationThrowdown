@@ -32,11 +32,14 @@ def read_deck(deck_path):
             # Legendary 4** -> n_fuses=2, level=(2*6 + 4)=16
             # Epic 5        -> n_fuses=0, level=(0*5 + 5)=5
             n_fuses = len(level_text) - 1
-            level = n_fuses * RARITY_UPGRADES[rarity] + int(level_text[0])
+            i_level = int(level_text[0])
+            if i_level > RARITY_UPGRADES[rarity]:
+                raise Exception("Level {} is too high for an {} card".format(level, RARITY[rarity]))
+            level = n_fuses * RARITY_UPGRADES[rarity] + i_level
 
             OWNED_CARDS[rarity][name].append(level)
 
-            debug("rarity={} level={:2} name='{}'".format(rarity, level, name))
+            debug("{:10} {:30} level {:2}".format(RARITY[rarity], name, level))
 
     return OWNED_CARDS
 
