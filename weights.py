@@ -35,3 +35,8 @@ SKILL_WEIGHTS = {
 	"Jab": 45,  # piercing damage
 }
 
+####################################################
+
+SINGLE_CARD_SCORE_WEIGHT = 10
+
+COMBOS_SCORE_WEIGHT = 15

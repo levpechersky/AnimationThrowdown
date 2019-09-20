@@ -2,6 +2,13 @@ import copy
 from enum import Enum
 from weights import *
 
+# id -> CardProto
+CARDS_BY_ID = {}
+# CARDS_BY_RARITY[rarity][name] -> CardProto
+CARDS_BY_RARITY = {}
+# COMBOS[id1][id2] -> CardProto
+COMBOS = {}
+
 RARITY = ["N/A", "Common", "Rare", "Epic", "Legendary", "Mythic"]
 RARITY_UPGRADES = [0, 3, 4, 5, 6, 7]
 RARITY_FORMAT = {"C": 1, "R": 2, "E": 3, "L": 4, "M": 5}
@@ -22,6 +29,9 @@ class Type(Enum):
 	POWER = 3
 	COMBO = 4
 
+	def __str__(self):
+		return self.name
+
 
 class Series(Enum):
 	# DO NOT REORDER!
@@ -34,10 +44,6 @@ class Series(Enum):
 
 	def __str__(self):
 		return self.name.replace("_", " ").title()
-
-	@classmethod
-	def of(cls, i):
-		return Series(i)
 
 
 class Skill:
@@ -55,7 +61,7 @@ class Skill:
 	def __str__(self):
 		if self.y:
 			try:
-				y_str = Series.of(int(self.y))
+				y_str = Series(int(self.y))
 			except ValueError:
 				y_str = self.y
 			return "{}({}-{})".format(SKILL_NAME[self.id], self.x, y_str)
@@ -109,6 +115,29 @@ class CardBase:
 		o.hp = other.hp
 
 		return o
+
+	def _apply_mastery(self, mastery):
+		assert mastery is int and mastery > 0
+
+		m = 1 + 0.1 * mastery
+		self.attack = int(self.attack * m)
+		self.hp = int(self.hp * m)
+		for skill in self.skills:
+			skill.x = int(skill.x * m)
+
+	def _get_score(self):
+		a = self.attack * ATTACK_WEIGHT
+		h = self.hp * HP_WEIGHT
+		s = 0
+		for skill in self.skills.values():
+			s_name = SKILL_NAME[skill.id]
+			w = SKILL_WEIGHTS[s_name]
+			if not skill.y:
+				s += skill.x * w
+			else:
+				s += skill.x * 0.5 * w
+
+		return int(a + h + s)
 
 	def __str__(self):
 		# skills = [s.id for s in self.skills]
@@ -171,20 +200,8 @@ class CardInstance(CardBase):
 	def get_score(self):
 		if self.level == 0:
 			raise Exception("Instance of {} #{} has undefined level".format(self.name, self.id))
-
-		a = self.attack * ATTACK_WEIGHT
-		h = self.hp * HP_WEIGHT
-
-		s = 0
-		for skill in self.skills.values():
-			s_name = SKILL_NAME[skill.id]
-			w = SKILL_WEIGHTS[s_name]
-			if not skill.y:
-				s += skill.x * w
-			else:
-				s += skill.x * 0.5 * w
-
-		return int(a + h + s)
+		return self.score
+		#return (self.score * SINGLE_CARD_SCORE_WEIGHT + self.combo_score * COMBOS_SCORE_WEIGHT) / (SINGLE_CARD_SCORE_WEIGHT + COMBOS_SCORE_WEIGHT)
 
 	def pretty(self):
 		skill_s = [str(s) for s in self.skills.values()]
@@ -193,41 +210,54 @@ class CardInstance(CardBase):
 		else:
 			return "{:10} {:28} ({:8} of {:16}) [{:5}]".format(RARITY[self.rarity], self.name, self.type.name, self.series, self.score)
 
-	def set_stats(self, upgrades, level, mastery):
-		if self.type != Type.COMBO:
-			assert upgrades and level
+	def set_stats(self, upgrades, level, mastery=None):
+		assert self.type != Type.COMBO
+		assert upgrades and level
 
-			self.level = level
+		self.level = level
 
-			for up in sorted(upgrades, key=lambda u: u.level):
-				if up.hp > 0:
-					self.hp = up.hp
-				if up.attack > 0:
-					self.attack = up.attack
-				for skill in up.skills.values():
-					self.skills[skill.id] = skill
-				if up.level >= level:
-					break
+		for up in sorted(upgrades, key=lambda u: u.level):
+			if up.hp > 0:
+				self.hp = up.hp
+			if up.attack > 0:
+				self.attack = up.attack
+			for skill in up.skills.values():
+				self.skills[skill.id] = skill
+			if up.level >= level:
+				break
 
 		if mastery:
-			assert mastery is int and mastery > 0
-			m = 1 + 0.1 * mastery
-			self.attack = int(self.attack * m)
-			self.hp = int(self.hp * m)
-			for skill in self.skills:
-				skill.x = int(skill.x * m)
+			self._apply_mastery(mastery)
+
+		self.score = self._get_score()
+
+
+class CardCombo(CardBase):
+	def __init__(self):
+		super(CardCombo, self).__init__()
+
+		self.score = 0
+
+	def set_stats(self, mastery):
+		if mastery:
+			self._apply_mastery(mastery)
 
 		self.score = self.get_score()
 
+	def get_score(self):
+		return self.score
 
-def get_combo(card1, card2, combos, cards_by_id, mastery):
-	combo_card_id = combos[card1.id][card2.id]
-	combo_card = cards_by_id[combo_card_id]
 
-	instance = CardInstance.of(combo_card)
+def get_combo(card1, card2, mastery):
+	assert card1 is CardInstance
+	assert card2 is CardInstance
+
+	combo_card_id = COMBOS[card1.id][card2.id]
+	combo_card = CARDS_BY_ID[combo_card_id]
+
+	instance = CardCombo.of(combo_card)
 
 	mastery_level = mastery.get(combo_card.name)
-	instance.set_stats(upgrades=None, level=None, mastery=mastery_level)
 
 	instance.attack = int(1.1 * (card1.attack + card2.attack) * combo_card.m_attack)
 	instance.hp = int(1.1 * (card1.hp + card2.hp) * combo_card.m_hp)
@@ -235,5 +265,7 @@ def get_combo(card1, card2, combos, cards_by_id, mastery):
 	combo_power = 1.1 * (3 * (card1.attack + card2.attack) + card1.hp + card2.hp)
 	for skill in instance.skills:
 		skill.x = int((combo_power - skill.p) * (skill.v - 1) / (100 - skill.p) + 1)
+
+	instance.set_stats(mastery_level)
 
 	return instance

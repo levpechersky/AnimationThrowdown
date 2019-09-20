@@ -1,18 +1,12 @@
 from collections import defaultdict
 from utils import *
+from stats import *
 from xml_parser import *
 from input_parser import *
 
 # Google doc with stats
 # https://docs.google.com/spreadsheets/d/14wUFB7iVjP8ETCvgcBsGm_i5HgU7ecYFo1ivRoVPGlw/edit#gid=924965638
 
-
-# id -> Card
-CARDS_BY_ID = {}
-# CARDS_BY_RARITY[rarity][name] -> Card
-CARDS_BY_RARITY = {}
-# COMBOS[id1][id2] -> Card
-COMBOS = {}
 
 # OWNED_CARDS[rarity][name] -> [levels...]
 OWNED_CARDS = {}
@@ -53,38 +47,8 @@ def get_instances(owned_cards):
 def statistics(owned_instances):
 	new_part("COMPUTING STATISTICS")
 	stat_count_by_series(owned_instances)
-	stat_cards_by_score(owned_instances, limit=30)
-
-
-def stat_count_by_series(owned_instances):
-	count_by_series = {}
-	for series in Series:
-		count_by_series[series] = 0
-	for r_cards in owned_instances.values():
-		for instances in r_cards.values():
-			for inst in instances:
-				count_by_series[inst.series] += 1
-	print()
-	print("Cards count:")
-	for series in Series:
-		print(" {:16}: {}".format(series, count_by_series[series]))
-
-
-def stat_cards_by_score(owned_instances, limit=None):
-	all_cards = []
-	for r_cards in owned_instances.values():
-		for instances in r_cards.values():
-			for inst in instances:
-				all_cards.append(inst)
-	print()
-	if limit:
-		print("Top {} the most powerful cards:".format(limit))
-	else:
-		print("All cards, sorted by power")
-	for i, c in enumerate(sorted(all_cards, key=lambda card: card.score, reverse=True)):
-		print(c.pretty())
-		if limit and i >= limit:
-			break
+	stat_count_by_skill(owned_instances)
+	stat_cards_by_score(owned_instances)
 
 
 def select_decks():
