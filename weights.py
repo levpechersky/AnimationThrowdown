@@ -1,4 +1,11 @@
-SKILL_NAME = {
+# All weights are per 1 unit of skill/hp/attack
+# E.g. if Bobby has Punch=6, and Punch weight is 10, then total Punch weight is 60
+
+HP_WEIGHT = 25
+
+ATTACK_WEIGHT = 75
+
+SKILL_WEIGHTS = {
 	# Damage
 	"Punch": 100,
 	"Bomb": 95,
@@ -7,8 +14,8 @@ SKILL_NAME = {
 	# Buff other
 	"Give": 45,
 	"Cheer": 45,
-	"Cheer All": 75,  # does it work on all ?
-	"Motivate": 70,  # +attack for neigbors
+	"Cheer All": 75,
+	"Motivate": 75,  # +attack for neigbors
 	"Heal": 75,
 	"Heal All": 95,
 	# Debuff
@@ -27,3 +34,4 @@ SKILL_NAME = {
 	"Leech": 55,  # heal when dealing damage
 	"Jab": 45,  # piercing damage
 }
+

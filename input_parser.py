@@ -3,64 +3,71 @@ from game import *
 from utils import *
 from collections import defaultdict
 
-
 CARD_RE = re.compile(r'([CRELM])\s+(\d\**)\s+(\S+.*\S+)')
 MASTERY_RE = re.compile(r'(\d\**)\s+(\S+.*\S+)')
 
 
 def read_deck(deck_path):
-    OWNED_CARDS = {}
-    for rarity in range(len(RARITY)):
-        OWNED_CARDS[rarity] = defaultdict(list)
+	new_part("READING DECK")
 
-    with open(deck_path) as f:
-        for line in f:
-            # discard whitespace, empty or comment lines
-            if line.isspace() or line.startswith("#"):
-                continue
+	OWNED_CARDS = {}
+	for rarity in range(len(RARITY)):
+		OWNED_CARDS[rarity] = defaultdict(list)
 
-            m = CARD_RE.match(line)
-            if m is None:
-                raise Exception("Failed to parse card '{}'".format(line))
+	with open(deck_path) as f:
+		for line in f:
+			# discard whitespace, empty or comment lines
+			if line.isspace() or line.startswith("#"):
+				continue
 
-            rarity_text = m.group(1)
-            level_text = m.group(2)
-            name = m.group(3)
+			m = CARD_RE.match(line)
+			if m is None:
+				raise Exception("Failed to parse card '{}'".format(line))
 
-            rarity = RARITY_FORMAT[rarity_text]
+			rarity_text = m.group(1)
+			level_text = m.group(2)
+			name = m.group(3)
 
-            # Legendary 4** -> n_fuses=2, level=(2*6 + 4)=16
-            # Epic 5        -> n_fuses=0, level=(0*5 + 5)=5
-            n_fuses = len(level_text) - 1
-            i_level = int(level_text[0])
-            if i_level > RARITY_UPGRADES[rarity]:
-                raise Exception("Level {} is too high for an {} card".format(level, RARITY[rarity]))
-            level = n_fuses * RARITY_UPGRADES[rarity] + i_level
+			rarity = RARITY_FORMAT[rarity_text]
 
-            OWNED_CARDS[rarity][name].append(level)
+			# Legendary 4** -> n_fuses=2, level=(2*6 + 4)=16
+			# Epic 5        -> n_fuses=0, level=(0*5 + 5)=5
+			n_fuses = len(level_text) - 1
+			i_level = int(level_text[0])
+			if i_level > RARITY_UPGRADES[rarity]:
+				raise Exception("Level {} is too high for an {} card".format(i_level, RARITY[rarity]))
+			level = n_fuses * RARITY_UPGRADES[rarity] + i_level
 
-            debug("{:10} {:30} level {:2}".format(RARITY[rarity], name, level))
+			OWNED_CARDS[rarity][name].append(level)
 
-    return OWNED_CARDS
+			debug("{:10} {:30} level {:2}".format(RARITY[rarity], name, level))
+
+	print("Successfully loaded {} cards (not including duplicates)".format(sum([len(r_cards) for r_cards in OWNED_CARDS.values()])))
+
+	return OWNED_CARDS
 
 
 def read_mastery(mastery_path):
-    MASTERY = {}
+	new_part("READING COMBO MASTERY STATS")
 
-    with open(mastery_path) as f:
-        for line in f:
-            # discard whitespace, empty or comment lines
-            if line.isspace() or line.startswith("#"):
-                continue
+	MASTERY = {}
 
-            m = MASTERY_RE.match(line)
-            if m is None:
-                raise Exception("Failed to parse mastery '{}'".format(line))
+	with open(mastery_path) as f:
+		for line in f:
+			# discard whitespace, empty or comment lines
+			if line.isspace() or line.startswith("#"):
+				continue
 
-            mastery_level = int(m.group(1))
-            name = m.group(2)
-            debug("mastery_level='{}' name='{}'".format(mastery_level, name))
+			m = MASTERY_RE.match(line)
+			if m is None:
+				raise Exception("Failed to parse mastery '{}'".format(line))
 
-            MASTERY[name] = mastery_level
+			mastery_level = int(m.group(1))
+			name = m.group(2)
+			debug("mastery_level='{}' name='{}'".format(mastery_level, name))
 
-    return MASTERY
+			MASTERY[name] = mastery_level
+
+	print("Successfully loaded {} mastered combos".format(len(MASTERY)))
+
+	return MASTERY
