@@ -5,59 +5,6 @@
 # Repetitions are allowed - each treated as another instance of the card
 
 # Epic heroes
-E 5** Bob
-E 5** Bob
-
-# Epic objects
-
-
-# Epic Power
-E 5** Fowl Fighter Teddy
-
-
-# Legendary heroes
-L 6** Bender
-L 6 Bobby
-L 6* Bobby
-L 6 Brian
-L 6* Dr. Amy Wong
-L 6 Peggy
-L 6* Peter
-L 6* Peter
-L 6 Roger
-L 6 Stewie
-L 6 Tina
-L 6* Tina
-
-# Legendary objects
-L 6 Big Boy Karate
-L 6 Capoeira Reginald
-L 6 Fashion Wrestling
-L 6 Finger Gun Gayle
-L 6 Hypnotoad
-L 6* Iraq Lobster
-L 6 Jacked on Bots
-L 6* Jacked on Bots
-L 6** K Pop Video
-L 6 Leon Petard
-L 6** Napkin Art
-L 6** Pantry Guns
-L 6* Power Gym
-L 6* Quahog Martial Arts Academy
-L 6 Sacred Daggers
-L 6 Shrimp Dress
-L 6 Shrimpy Shrimps
-L 6 Toad Licking
-
-
-# Legendary Power
-L 6 Pool Shark
-L 6 Swole Francine
-
-
-############################################################
-
-# Epic heroes
 E 5** Leela
 E 5** Leela
 E 5** Peggy
@@ -78,9 +25,8 @@ L 6 Arcturan Kung Fu
 L 6 Bedtime Stories
 L 6 Bending School
 L 6 Blernsball
-L 6 Buck's Stud
-L 6* Buck's Stud
-L 6 Bunny Costume
+L 6** Buck's Stud
+L 6* Bunny Costume
 L 6 Cuddles
 L 6 Doubles Ping Pong
 L 6 Fart School for the Gifted

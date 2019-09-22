@@ -2,20 +2,32 @@ import copy
 from enum import Enum
 from weights import *
 
-# id -> CardProto
-CARDS_BY_ID = {}
-# CARDS_BY_RARITY[rarity][name] -> CardProto
-CARDS_BY_RARITY = {}
-# COMBOS[id1][id2] -> CardProto
-COMBOS = {}
 
-RARITY = ["N/A", "Common", "Rare", "Epic", "Legendary", "Mythic"]
-RARITY_UPGRADES = [0, 3, 4, 5, 6, 7]
-RARITY_FORMAT = {"C": 1, "R": 2, "E": 3, "L": 4, "M": 5}
+class Rarity(Enum):
+	NONE = 0
+	COMMON = 1
+	RARE = 2
+	EPIC = 3
+	LEGENDARY = 4
+	MYTHIC = 5
+
+	def __str__(self):
+		return self.name.title()
+
+	def upgrades(self):
+		upgrades = [0, 3, 4, 5, 6, 7]
+		return upgrades[self.value]
+
+	@staticmethod
+	def parse(char):
+		format = {"C": 1, "R": 2, "E": 3, "L": 4, "M": 5}
+		return Rarity(format[char])
+
 
 SKILL_NAME = {"give": "Give", "rally": "Cheer", "rallyall": "Cheer All", "inspire": "Motivate", "berserk": "Crazed", "invigorate": "Boost", "outlast": "Recover", "hijack": "Hijack",
 	"weaken": "Cripple", "weakenall": "Cripple All", "poison": "Gas", "counter": "Payback", "pierce": "Jab", "strike": "Punch", "shrapnel": "Bomb", "leech": "Leech", "heal": "Heal",
-	"healall": "Heal All", "bodyguard": "Bodyguard", "armored": "Sturdy", "barrier": "Shield", "barrierall": "Shield All", }
+	"healall": "Heal All", "bodyguard": "Bodyguard", "armored": "Sturdy", "barrier": "Shield", "barrierall": "Shield All",
+			  "burn": "Burn", "enlarge": "Enlarge"}
 # reverse index
 SKILL_BY_NAME = {}
 for s, n in SKILL_NAME.items():
@@ -117,12 +129,12 @@ class CardBase:
 		return o
 
 	def _apply_mastery(self, mastery):
-		assert mastery is int and mastery > 0
+		assert isinstance(mastery, int) and mastery > 0
 
 		m = 1 + 0.1 * mastery
 		self.attack = int(self.attack * m)
 		self.hp = int(self.hp * m)
-		for skill in self.skills:
+		for skill in self.skills.values():
 			skill.x = int(skill.x * m)
 
 	def _get_score(self):
@@ -142,7 +154,7 @@ class CardBase:
 	def __str__(self):
 		# skills = [s.id for s in self.skills]
 		# return "[{} {} {} {} ({})]".format(self.id, self.name, str(self.type)[5:], RARITY[self.rarity], str(skills)[1:-1])
-		return "[{} {} {} {}]".format(self.id, self.name, self.type.name, RARITY[self.rarity])
+		return "[{} {} {} {}]".format(self.id, self.name, self.type.name, self.rarity)
 
 	def __repr__(self):
 		return str(self)
@@ -206,9 +218,9 @@ class CardInstance(CardBase):
 	def pretty(self):
 		skill_s = [str(s) for s in self.skills.values()]
 		if skill_s:
-			return "{:10} {:28} ({:8} of {:16}) [{:5}] {}".format(RARITY[self.rarity], self.name, self.type.name, self.series, self.score, ' '.join(skill_s))
+			return "{:10} {:28} ({:8} of {:16}) [{:5}] {}".format(self.rarity, self.name, self.type.name, self.series, self.score, ' '.join(skill_s))
 		else:
-			return "{:10} {:28} ({:8} of {:16}) [{:5}]".format(RARITY[self.rarity], self.name, self.type.name, self.series, self.score)
+			return "{:10} {:28} ({:8} of {:16}) [{:5}]".format(self.rarity, self.name, self.type.name, self.series, self.score)
 
 	def set_stats(self, upgrades, level, mastery=None):
 		assert self.type != Type.COMBO
@@ -242,30 +254,15 @@ class CardCombo(CardBase):
 		if mastery:
 			self._apply_mastery(mastery)
 
-		self.score = self.get_score()
+		self.score = self._get_score()
 
 	def get_score(self):
 		return self.score
 
+	def pretty(self):
+		skill_s = [str(s) for s in self.skills.values()]
+		return "{:28} A:{:2} HP:{:2} [{:5}] {}".format(self.name, self.attack, self.hp, self.score, ' '.join(skill_s))
 
-def get_combo(card1, card2, mastery):
-	assert card1 is CardInstance
-	assert card2 is CardInstance
 
-	combo_card_id = COMBOS[card1.id][card2.id]
-	combo_card = CARDS_BY_ID[combo_card_id]
-
-	instance = CardCombo.of(combo_card)
-
-	mastery_level = mastery.get(combo_card.name)
-
-	instance.attack = int(1.1 * (card1.attack + card2.attack) * combo_card.m_attack)
-	instance.hp = int(1.1 * (card1.hp + card2.hp) * combo_card.m_hp)
-
-	combo_power = 1.1 * (3 * (card1.attack + card2.attack) + card1.hp + card2.hp)
-	for skill in instance.skills:
-		skill.x = int((combo_power - skill.p) * (skill.v - 1) / (100 - skill.p) + 1)
-
-	instance.set_stats(mastery_level)
-
-	return instance
+def is_power_card(id):
+	return 110001 <= id <= 160000

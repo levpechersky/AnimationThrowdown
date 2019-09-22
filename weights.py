@@ -33,10 +33,13 @@ SKILL_WEIGHTS = {
 	"Hijack": 60,
 	"Leech": 55,  # heal when dealing damage
 	"Jab": 45,  # piercing damage
+	# WTF?
+	"Burn": 90,
+	"Enlarge": 75,
 }
 
 ####################################################
 
-SINGLE_CARD_SCORE_WEIGHT = 10
+SINGLE_CARD_SCORE_WEIGHT = 30
 
-COMBOS_SCORE_WEIGHT = 15
+COMBOS_SCORE_WEIGHT = 20
