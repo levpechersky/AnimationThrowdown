@@ -39,6 +39,8 @@ def instantiate_all_combos(player_cards, game_db, heros, objects):
 
 	# combo_instances[inst 1][inst 2] -> Combo
 	combo_instances = defaultdict(dict)
+	# Combo -> (inst1, inst2)
+	combo_recipes = {}
 
 	for hero in heros:
 		for obj in objects:
@@ -60,11 +62,12 @@ def instantiate_all_combos(player_cards, game_db, heros, objects):
 			instance.set_stats(mastery)
 
 			combo_instances[hero][obj] = instance
+			combo_recipes[instance] = (hero, obj)
 
 	n_combos = sum([len(x) for x in combo_instances.values()])
 	print("Successfully instantiated {} combos from {} hero and {} object cards"
 		  .format(n_combos, len(heros), len(objects)))
-	return combo_instances
+	return combo_instances, combo_recipes
 
 
 def split_instances(instances):
@@ -153,25 +156,37 @@ if __name__ == '__main__':
 
 	instances = instantiate_all_cards(player_cards, game_db)
 	heros, objects = split_instances(instances)
-	combo_instances = instantiate_all_combos(player_cards, game_db, heros, objects)
+	combo_instances, combo_recipes = instantiate_all_combos(player_cards, game_db, heros, objects)
 
 	inst_scores, inst_combo_scores, combo_scores = compute_scores(instances, combo_instances)
-	print("Individual card score:")
+
+	print(">> Individual card score:")
 	for inst, score in sorted(inst_scores.items(), key=lambda t: t[1], reverse=True):
 		print("{:7} {}".format(inst_combo_scores[inst], inst.pretty()))
 
-	print("Combo potential score:")
+	print(">> Combo potential score:")
 	for inst, combo_score in sorted(inst_combo_scores.items(), key=lambda t: t[1], reverse=True):
 		print("{:7} {}".format(combo_score, inst.pretty()))
 
-	print("Combined score:")
+	print(">> Combined score:")
 	combined = map(lambda t: (t[0], combined_score(t[1], inst_scores[t[0]])), inst_combo_scores.items())
 	for inst, combo_score in sorted(combined, key=lambda t: t[1], reverse=True):
 		print("{:7} {}".format(combo_score, inst.pretty()))
 
-	print("Strongest combos:")
+	print(">> Strongest combos:")
 	for inst, score in sorted(combo_scores.items(), key=lambda t: t[1], reverse=True):
-		print("{:7} {}".format(score, inst.pretty()))
+		print("{:7} {:120} {} + {}".format(score, inst.pretty(), combo_recipes[inst][0].dump(), combo_recipes[inst][1].dump()))
+
+	print(">> Strongest combos per card:")
+	card_combos = defaultdict(list)
+	for combo, score in sorted(combo_scores.items(), key=lambda t: t[1], reverse=True):
+		src1, src2 = combo_recipes[combo]
+		card_combos[src1].append((src2, combo))
+		card_combos[src2].append((src1, combo))
+	for inst, combos in card_combos.items():
+		print("{}:".format(inst.dump()))
+		for other, combo in combos:
+			print("	{:7} with {:40}: {}".format(combo.get_score(), other.dump(), combo.pretty()))
 
 	# statistics(instances)
 

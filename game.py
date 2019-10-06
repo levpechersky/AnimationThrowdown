@@ -213,14 +213,15 @@ class CardInstance(CardBase):
 		if self.level == 0:
 			raise Exception("Instance of {} #{} has undefined level".format(self.name, self.id))
 		return self.score
-		#return (self.score * SINGLE_CARD_SCORE_WEIGHT + self.combo_score * COMBOS_SCORE_WEIGHT) / (SINGLE_CARD_SCORE_WEIGHT + COMBOS_SCORE_WEIGHT)
 
 	def pretty(self):
 		skill_s = [str(s) for s in self.skills.values()]
-		if skill_s:
-			return "{:10} {:28} ({:8} of {:16}) [{:5}] {}".format(self.rarity, self.name, self.type.name, self.series, self.score, ' '.join(skill_s))
-		else:
-			return "{:10} {:28} ({:8} of {:16}) [{:5}]".format(self.rarity, self.name, self.type.name, self.series, self.score)
+		return "{:10} {:2}/{:2}[{:5}] {:28} {:6} {:16} {}".format(self.rarity, self.attack, self.hp, self.score, self.name, self.type.name, self.series, ' '.join(skill_s))
+
+	def dump(self):
+		fuses, level = divmod(self.level, self.rarity.upgrades())
+		level_str = "{}{}".format(level + self.rarity.upgrades(), "*"*(fuses-1))
+		return "{} {} {}".format(self.rarity, level_str, self.name)
 
 	def set_stats(self, upgrades, level, mastery=None):
 		assert self.type != Type.COMBO
@@ -261,7 +262,7 @@ class CardCombo(CardBase):
 
 	def pretty(self):
 		skill_s = [str(s) for s in self.skills.values()]
-		return "{:28} A:{:2} HP:{:2} [{:5}] {}".format(self.name, self.attack, self.hp, self.score, ' '.join(skill_s))
+		return "{:28} {:2}/{:2}[{:5}] {}".format(self.name, self.attack, self.hp, self.score, ' '.join(skill_s))
 
 
 def is_power_card(id):
