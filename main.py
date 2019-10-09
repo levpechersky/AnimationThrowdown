@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 import argparse
+import datetime
 import sys
-from utils import *
 from stats import *
 from game_db import *
 from player_cards import *
@@ -159,7 +159,7 @@ if __name__ == '__main__':
 	side = "sidedeck.cards"
 	if args.deck_only:
 		side = None
-	mastery = "example.mastery"
+	mastery = "combo.mastery"
 	player_cards = PlayerCards(deck, side, mastery)
 	player_cards.load()
 
@@ -171,3 +171,5 @@ if __name__ == '__main__':
 
 	# Report
 	statistics(instances, inst_scores, inst_combo_scores, combo_scores, combo_recipes)
+
+	print("Report generated on {}".format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")))

@@ -1,6 +1,8 @@
 __DEBUG = False
+__NEW_PART = "=" * 80
 
-NEW_PART = "=" * 80
+
+USER_WEIGHTS_FILE = 'weights_user.py'
 
 
 def debug(*args):
@@ -15,5 +17,5 @@ def set_debug(bool):
 
 def new_part(*args):
 	print()
-	print(NEW_PART)
+	print(__NEW_PART)
 	print(*args)

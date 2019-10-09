@@ -1,9 +1,9 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import random
 import sys
 from collections import namedtuple
-from utils import *
+from utils import USER_WEIGHTS_FILE
 
 Card = namedtuple("Card", ['attack', 'hp', 'skill', 'skill_value'])
 
@@ -30,7 +30,7 @@ SKILL_HINTS = {
 def get_choice(i_str):
 	while True:
 		try:
-			return int(input(i_str))
+			return int(input(i_str + "> "))
 		except EOFError:
 			sys.exit(0)
 		except ValueError:
@@ -95,30 +95,33 @@ def trade(skill_1, v1, skill_2):
 	return False
 
 
-W_BASE = 100
-W_SKILLS = {}
-for s in SKILLS:
-	W_SKILLS[s] = W_BASE
+if __name__ == '__main__':
+	W_BASE = 100
+	W_SKILLS = {}
+	for s in SKILLS:
+		W_SKILLS[s] = W_BASE
 
-# All skills in Attack units
-random.shuffle(SKILLS)  # to make it less boring
-for i, skill in enumerate(SKILLS):
-	if skill == "Attack":
-		continue
+	# All skills in Attack units
+	random.shuffle(SKILLS)  # to make it less boring
+	for i, skill in enumerate(SKILLS):
+		if skill == "Attack":
+			continue
 
-	retry = True
-	while retry:
-		retry = trade("Attack", random.randint(1, 15), skill)
+		retry = True
+		while retry:
+			retry = trade("Attack", random.randint(1, 15), skill)
 
-	if (len(SKILLS) - i) % 5 == 0:
-		print("\n*** Good Job! Only {} skills left! ***\n".format(len(SKILLS) - i))
+		if (len(SKILLS) - i) % 5 == 0:
+			print("\n*** Good Job! Only {} skills left! ***\n".format(len(SKILLS) - i))
 
-# Show
-print("# COMPUTED WEIGHTS")
-print("# Paste this into weights.py at the end of file.")
-print("HP_WEIGHT = {}\nATTACK_WEIGHT = {}\nSKILL_WEIGHTS = {{".format(W_SKILLS["HP"], W_SKILLS["Attack"]))
-for skill, w in sorted(W_SKILLS.items(), key=lambda t: t[1], reverse=True):
-	if skill not in ["HP", "Attack"]:
-		hint = "  # {}".format(SKILL_HINTS[skill]) if SKILL_HINTS.get(skill) else ""
-		print("	'{}': {},{}".format(skill, w, hint))
-print("}")
+	# Show
+	with open(USER_WEIGHTS_FILE, 'w') as f:
+		print("Writing weight to file: {}".format(USER_WEIGHTS_FILE))
+		sys.stdout = f
+		print("# COMPUTED WEIGHTS")
+		print("HP_WEIGHT = {}\nATTACK_WEIGHT = {}\nSKILL_WEIGHTS = {{".format(W_SKILLS["HP"], W_SKILLS["Attack"]))
+		for skill, w in sorted(W_SKILLS.items(), key=lambda t: t[1], reverse=True):
+			if skill not in ["HP", "Attack"]:
+				hint = "  # {}".format(SKILL_HINTS[skill]) if SKILL_HINTS.get(skill) else ""
+				print("	'{}': {},{}".format(skill, w, hint))
+		print("}")

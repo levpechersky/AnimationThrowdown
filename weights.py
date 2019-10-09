@@ -1,7 +1,10 @@
+import os
+from utils import *
 # All weights are per 1 unit of skill/hp/attack
 # E.g. if Bobby has Punch=6, and Punch weight is 10, then total Punch weight is 60
 #
 # Values themselves don't matter much, the relation between weights is what matters.
+
 
 W_HP_DEFAULT = 40
 W_ATTACK_DEFAULT = 100
@@ -94,9 +97,15 @@ W_SKILL_GENERATED = {
 ####################################################
 
 SINGLE_CARD_SCORE_WEIGHT = 30
-
 COMBOS_SCORE_WEIGHT = 20
 
 HP_WEIGHT = W_HP_GENERATED
 ATTACK_WEIGHT = W_ATTACK_GENERATED
 SKILL_WEIGHTS = W_SKILL_GENERATED
+
+if os.path.isfile(USER_WEIGHTS_FILE):
+	print("User-defined skills weights file found: {}".format(USER_WEIGHTS_FILE))
+	from weights_user import *
+	print("Using user-defined skills weights file: {}".format(USER_WEIGHTS_FILE))
+else:
+	print("Using default skills weights")
