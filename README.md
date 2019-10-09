@@ -21,7 +21,7 @@ In future I plan to make it able to generate decks based on requested criteria
 ##### What is special about this tool? 
 
 - works with _your_ deck: takes into account cards levels, combo mastery, duplicate cards - 
-for both regular cards and combos. HP, Attack, Skills - everything will be exactly as you see in-game.
+for both regular cards and combos. Health, Attack, Skills - everything will be exactly as you see in-game.
 
 
 ##### Usage

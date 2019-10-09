@@ -1,16 +1,12 @@
 #!/usr/bin/env python3
 
 import argparse
+import sys
 from utils import *
 from stats import *
 from game_db import *
 from player_cards import *
 
-# Google doc with stats
-# https://docs.google.com/spreadsheets/d/14wUFB7iVjP8ETCvgcBsGm_i5HgU7ecYFo1ivRoVPGlw/edit#gid=924965638
-
-# http://cb-live.synapse-games.com/assets/combo_recipe.xml
-# http://cb-live.synapse-games.com/assets/combo.xml
 
 def validate_owned(owned_cards, cards_by_rarity):
 	missing = []
@@ -67,8 +63,7 @@ def instantiate_all_combos(player_cards, game_db, heros, objects):
 			combo_recipes[instance] = (hero, obj)
 
 	n_combos = sum([len(x) for x in combo_instances.values()])
-	print("Successfully instantiated {} combos from {} hero and {} object cards"
-		  .format(n_combos, len(heros), len(objects)))
+	print("Successfully instantiated {} combos from {} hero and {} object cards".format(n_combos, len(heros), len(objects)))
 	return combo_instances, combo_recipes
 
 
@@ -139,28 +134,27 @@ def statistics(owned_instances, inst_scores, inst_combo_scores, combo_scores, co
 	strongest_combos_per_skill(combo_scores, combo_recipes)
 
 
-def select_decks():
-	new_part("CHOOSING THE BEST DECKS")
-	pass  # TODO
-
-
-def show_decks():
-	pass  # TODO
-
-
 if __name__ == '__main__':
-	set_debug(False)
-
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-d", "--deck_only", action='store_true', help="Only process cards in the active deck")
+	parser.add_argument("-o", "--output", default='report.txt', type=argparse.FileType('w'), help="Write output to file")
+	parser.add_argument("-D", "--debug", action='store_true', help="Print additional debug info")
 	args = parser.parse_args()
 
+	if args.debug:
+		set_debug(True)
+
+	if args.output:
+		sys.stdout = args.output
+
+	# Read Game Cards Data
 	cards_xmls = ["cards.xml", "cards_finalform.xml", "cards_mythic.xml"]
 	combos_xml = "combos.xml"
 	char_combos_xml = "combo_recipe.xml"
 	game_db = GameDB(cards_xmls, combos_xml, char_combos_xml)
 	game_db.load()
 
+	# Read Player Cards Data
 	deck = "deck.cards"
 	side = "sidedeck.cards"
 	if args.deck_only:
@@ -169,13 +163,11 @@ if __name__ == '__main__':
 	player_cards = PlayerCards(deck, side, mastery)
 	player_cards.load()
 
+	# Instantiate Cards and Combos
 	instances = instantiate_all_cards(player_cards, game_db)
 	heros, objects = split_instances(instances)
 	combo_instances, combo_recipes = instantiate_all_combos(player_cards, game_db, heros, objects)
 	inst_scores, inst_combo_scores, combo_scores = compute_scores(instances, combo_instances)
 
+	# Report
 	statistics(instances, inst_scores, inst_combo_scores, combo_scores, combo_recipes)
-
-	# select_decks()
-
-	# show_decks()

@@ -24,10 +24,33 @@ class Rarity(Enum):
 		return Rarity(format[char])
 
 
-SKILL_NAME = {"give": "Give", "rally": "Cheer", "rallyall": "Cheer All", "inspire": "Motivate", "berserk": "Crazed", "invigorate": "Boost", "outlast": "Recover", "hijack": "Hijack",
-	"weaken": "Cripple", "weakenall": "Cripple All", "poison": "Gas", "counter": "Payback", "pierce": "Jab", "strike": "Punch", "shrapnel": "Bomb", "leech": "Leech", "heal": "Heal",
-	"healall": "Heal All", "bodyguard": "Bodyguard", "armored": "Sturdy", "barrier": "Shield", "barrierall": "Shield All",
-			  "burn": "Burn", "enlarge": "Enlarge"}
+SKILL_NAME = {
+	"give": "Give",
+	"rally": "Cheer",
+	"rallyall": "Cheer All",
+	"inspire": "Motivate",
+	"berserk": "Crazed",
+	"invigorate": "Boost",
+	"outlast": "Recover",
+	"hijack": "Hijack",
+	"weaken": "Cripple",
+	"weakenall": "Cripple All",
+	"poison": "Gas",
+	"counter": "Payback",
+	"pierce": "Jab",
+	"strike": "Punch",
+	"shrapnel": "Bomb",
+	"leech": "Leech",
+	"heal": "Heal",
+	"healall": "Heal All",
+	"bodyguard": "Bodyguard",
+	"armored": "Sturdy",
+	"barrier": "Shield",
+	"barrierall": "Shield All",
+	"bunker": "Bunker",
+	"burn": "Burn",
+	"enlarge": "Enlarge"
+}
 # reverse index
 SKILL_BY_NAME = {}
 for s, n in SKILL_NAME.items():
@@ -77,8 +100,8 @@ class Skill:
 			except ValueError:
 				y_str = self.y
 			return "{}({}-{})".format(SKILL_NAME[self.id], self.x, y_str)
-		else:
-			return "{}({})".format(SKILL_NAME[self.id], self.x)
+
+		return "{}({})".format(SKILL_NAME[self.id], self.x)
 
 
 class Upgrade:
@@ -93,11 +116,10 @@ class Upgrade:
 
 
 class CardBase:
-	# if has <commander> - discard
 	def __init__(self):
 		self.id = 0
 		self.name = ""
-		self.rarity = 0
+		self.rarity = Rarity(0)
 		self.trait = ""
 
 		# name -> Skill()
@@ -130,7 +152,6 @@ class CardBase:
 
 	def _apply_mastery(self, mastery):
 		assert isinstance(mastery, int) and mastery > 0
-
 		m = 1 + 0.1 * mastery
 		self.attack = int(self.attack * m)
 		self.hp = int(self.hp * m)
@@ -152,8 +173,6 @@ class CardBase:
 		return int(a + h + s)
 
 	def __str__(self):
-		# skills = [s.id for s in self.skills]
-		# return "[{} {} {} {} ({})]".format(self.id, self.name, str(self.type)[5:], RARITY[self.rarity], str(skills)[1:-1])
 		return "[{} {} {} {}]".format(self.id, self.name, self.type.name, self.rarity)
 
 	def __repr__(self):
@@ -181,11 +200,10 @@ class CardBase:
 
 
 class CardProto(CardBase):
-	# if has <commander> - discard
 	def __init__(self):
 		super(CardProto, self).__init__()
 
-		# Base card
+		# Owned card
 		self.upgrades = []
 		# attack, hp - inherited
 

@@ -1,7 +1,7 @@
 # Format: Rarity Level Name
 #   Rarity: C|R|E|L|M
 #   Level: as shown in game
-#   Name: as shown in game, case-insensitive
+#   Name: as shown in game, case-sensitive
 # Repetitions are allowed - each treated as another instance of the card
 
 # Epic heroes

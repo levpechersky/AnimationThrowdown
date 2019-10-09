@@ -1,11 +1,11 @@
-__DEBUG = True
+__DEBUG = False
 
 NEW_PART = "=" * 80
 
 
 def debug(*args):
 	if __DEBUG:
-		print(*args)
+		print("[DEBUG]", *args)
 
 
 def set_debug(bool):
