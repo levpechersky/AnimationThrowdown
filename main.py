@@ -1,4 +1,6 @@
-from collections import defaultdict
+#!/usr/bin/env python3
+
+import argparse
 from utils import *
 from stats import *
 from game_db import *
@@ -123,11 +125,18 @@ def combined_score(combos_score, instance_score):
 	return ((combos_score // 15) * COMBOS_SCORE_WEIGHT + instance_score * SINGLE_CARD_SCORE_WEIGHT) // (COMBOS_SCORE_WEIGHT + SINGLE_CARD_SCORE_WEIGHT)
 
 
-def statistics(owned_instances):
+def statistics(owned_instances, inst_scores, inst_combo_scores, combo_scores, combo_recipes):
 	new_part("COMPUTING STATISTICS")
 	stat_count_by_series(owned_instances)
 	stat_count_by_skill(owned_instances)
-	stat_cards_by_score(owned_instances)
+	stat_count_by_trait(owned_instances)
+	# stat_cards_by_score(owned_instances)
+	stat_individual_score(inst_scores, inst_combo_scores)
+	stat_combo_potential_score(inst_combo_scores)
+	stat_combined_score(inst_scores, inst_combo_scores, combined_score)
+	strongest_combos(combo_scores, combo_recipes)
+	strongest_combos_per_card(combo_scores, combo_recipes)
+	strongest_combos_per_skill(combo_scores, combo_recipes)
 
 
 def select_decks():
@@ -142,6 +151,10 @@ def show_decks():
 if __name__ == '__main__':
 	set_debug(False)
 
+	parser = argparse.ArgumentParser()
+	parser.add_argument("-d", "--deck_only", action='store_true', help="Only process cards in the active deck")
+	args = parser.parse_args()
+
 	cards_xmls = ["cards.xml", "cards_finalform.xml", "cards_mythic.xml"]
 	combos_xml = "combos.xml"
 	char_combos_xml = "combo_recipe.xml"
@@ -150,6 +163,8 @@ if __name__ == '__main__':
 
 	deck = "deck.cards"
 	side = "sidedeck.cards"
+	if args.deck_only:
+		side = None
 	mastery = "example.mastery"
 	player_cards = PlayerCards(deck, side, mastery)
 	player_cards.load()
@@ -157,39 +172,10 @@ if __name__ == '__main__':
 	instances = instantiate_all_cards(player_cards, game_db)
 	heros, objects = split_instances(instances)
 	combo_instances, combo_recipes = instantiate_all_combos(player_cards, game_db, heros, objects)
-
 	inst_scores, inst_combo_scores, combo_scores = compute_scores(instances, combo_instances)
 
-	print(">> Individual card score:")
-	for inst, score in sorted(inst_scores.items(), key=lambda t: t[1], reverse=True):
-		print("{:7} {}".format(inst_combo_scores[inst], inst.pretty()))
+	statistics(instances, inst_scores, inst_combo_scores, combo_scores, combo_recipes)
 
-	print(">> Combo potential score:")
-	for inst, combo_score in sorted(inst_combo_scores.items(), key=lambda t: t[1], reverse=True):
-		print("{:7} {}".format(combo_score, inst.pretty()))
+	# select_decks()
 
-	print(">> Combined score:")
-	combined = map(lambda t: (t[0], combined_score(t[1], inst_scores[t[0]])), inst_combo_scores.items())
-	for inst, combo_score in sorted(combined, key=lambda t: t[1], reverse=True):
-		print("{:7} {}".format(combo_score, inst.pretty()))
-
-	print(">> Strongest combos:")
-	for inst, score in sorted(combo_scores.items(), key=lambda t: t[1], reverse=True):
-		print("{:7} {:120} {} + {}".format(score, inst.pretty(), combo_recipes[inst][0].dump(), combo_recipes[inst][1].dump()))
-
-	print(">> Strongest combos per card:")
-	card_combos = defaultdict(list)
-	for combo, score in sorted(combo_scores.items(), key=lambda t: t[1], reverse=True):
-		src1, src2 = combo_recipes[combo]
-		card_combos[src1].append((src2, combo))
-		card_combos[src2].append((src1, combo))
-	for inst, combos in card_combos.items():
-		print("{}:".format(inst.dump()))
-		for other, combo in combos:
-			print("	{:7} with {:40}: {}".format(combo.get_score(), other.dump(), combo.pretty()))
-
-	# statistics(instances)
-
-	select_decks()
-
-	show_decks()
+	# show_decks()

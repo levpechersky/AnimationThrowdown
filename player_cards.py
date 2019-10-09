@@ -34,7 +34,8 @@ class PlayerCards:
 	def load(self):
 		new_part("READING DECK")
 		self._read_deck(self.deck_path, in_deck=True)
-		self._read_deck(self.side_deck_path, in_deck=False)
+		if self.side_deck_path:
+			self._read_deck(self.side_deck_path, in_deck=False)
 
 		n_cards = sum([len(r_cards) for r_cards in self.cards.values()])
 		print("Successfully loaded {} cards (not including duplicates)".format(n_cards))
