@@ -244,7 +244,7 @@ class CardInstance(CardBase):
 
 	def dump(self):
 		fuses, level = divmod(self.level, self.rarity.upgrades())
-		level_str = "{}{}".format(level + self.rarity.upgrades(), "*"*(fuses-1))
+		level_str = "{}{}".format(self.rarity.upgrades() if level == 0 else level, "*"*(fuses-1))
 		return "{} {} {}".format(self.rarity, level_str, self.name)
 
 	def set_stats(self, upgrades, level, mastery=None):
