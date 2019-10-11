@@ -234,7 +234,8 @@ class CardInstance(CardBase):
 
 	def pretty(self):
 		skill_s = [str(s) for s in self.skills.values()]
-		return "{:10} {:2}/{:2}[{:5}] {:28} {:6} {:16} {}".format(self.rarity, self.attack, self.hp, self.score, self.name, self.type.name, self.series, ' '.join(skill_s))
+		return "{:10} {:2}/{:2}[{:5}] {:28} {:6} {:16} {}"\
+			.format(self.rarity, self.attack, self.hp, self.score, self.name, self.type.name, str(self.series), ' '.join(skill_s))
 
 	def dump(self):
 		fuses, level = divmod(self.level, self.rarity.upgrades())

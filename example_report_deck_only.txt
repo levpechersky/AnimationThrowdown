@@ -1,0 +1,1186 @@
+
+================================================================================
+PARSING GAME CARDS XML
+Parsing cards data from cards.xml
+Parsing cards data from cards_finalform.xml
+Parsing cards data from cards_mythic.xml
+Parsing combos from combos.xml
+Parsing character combos from combos.xml
+Successfully loaded 1908 cards and 21057 combos from game XML files
+
+================================================================================
+READING DECK
+Successfully loaded 25 cards (not including duplicates)
+
+================================================================================
+READING COMBO MASTERY STATS
+Successfully loaded 10 mastered combos
+
+================================================================================
+GENERATE CARDS INSTANCES
+
+================================================================================
+GENERATE ALL POSSIBLE COMBOS
+Successfully instantiated 155 combos from 13 hero and 13 object cards
+
+================================================================================
+COMPUTING STATISTICS
+
+>> Cards count by series:
+ Bobs Burgers    : 6
+ Family Guy      : 6
+ American Dad    : 5
+ Futurama        : 5
+ King Of The Hill: 3
+ None            : 1
+Detailed:
+	None
+		Mythic     18/40[ 6605] Leela                        HERO   None             Motivate(8) Punch(11) Cripple All(6)
+	American Dad
+		Legendary  11/37[ 3211] Power Gym                    OBJECT American Dad     Shield(7) Cheer All(4-athletic) Boost(6)
+		Legendary  13/47[ 4303] Pantry Guns                  OBJECT American Dad     Bodyguard(8) Jab(11) Gas(10)
+		Legendary   6/30[ 2276] Roger                        HERO   American Dad     Jab(6) Payback(4) Cripple All(2)
+		Legendary  12/25[ 2974] Sacred Daggers               OBJECT American Dad     Jab(6) Motivate(4) Recover(4)
+		Legendary   2/36[ 1847] Klaus Heisler                HERO   American Dad     Shield All(2-American Dad) Recover(4) Gas(3)
+	Bobs Burgers
+		Legendary  12/32[ 2984] Mr. Business                 OBJECT Bobs Burgers     Bodyguard(4) Shield(8-Bobs Burgers) Boost(6)
+		Legendary  12/39[ 3464] Tina                         HERO   Bobs Burgers     Shield All(3-Bobs Burgers) Leech(11) Boost(7)
+		Legendary   9/41[ 3407] Shrimp Dress                 OBJECT Bobs Burgers     Shield(7) Cheer All(3-disguised) Motivate(5)
+		Legendary   9/48[ 3080] Napkin Art                   OBJECT Bobs Burgers     Bodyguard(6) Leech(11)
+		Epic        9/24[ 2688] Bob                          HERO   Bobs Burgers     Crazed(3) Heal(7)
+		Epic        9/24[ 2688] Bob                          HERO   Bobs Burgers     Crazed(3) Heal(7)
+	Futurama
+		Legendary  14/38[ 3680] Bender                       HERO   Futurama         Payback(8) Leech(6) Sturdy(8)
+		Legendary  13/38[ 3249] Dr. Amy Wong                 HERO   Futurama         Bodyguard(5) Cripple All(3)
+		Legendary  10/45[ 3797] Big Boy Karate               OBJECT Futurama         Shield All(4-fighter) Cripple(7) Motivate(5)
+		Legendary  10/47[ 3806] Jacked on Bots               OBJECT Futurama         Bodyguard(5) Sturdy(5) Crazed(7)
+		Legendary   9/42[ 3297] Hypnotoad                    OBJECT Futurama         Cripple(7) Hijack(4) Heal(11-addicted)
+	King Of The Hill
+		Legendary  15/46[ 4592] Buck's Stud                  OBJECT King Of The Hill Hijack(8) Heal(13)
+		Legendary   8/36[ 3266] Bobby                        HERO   King Of The Hill Payback(6) Punch(6) Crazed(3)
+		Legendary   9/34[ 2751] Peggy                        HERO   King Of The Hill Payback(5) Heal All(1) Gas(6)
+	Family Guy
+		Legendary  16/33[ 4466] Quahog Martial Arts Academy  OBJECT Family Guy       Bodyguard(7) Cheer All(4-Family Guy) Motivate(8)
+		Legendary   8/38[ 2784] Stewie                       HERO   Family Guy       Shield All(1) Leech(6) Punch(4)
+		Legendary  13/38[ 3584] K Pop Video                  OBJECT Family Guy       Cheer(10-musical) Leech(10) Motivate(8-musical)
+		Legendary  16/27[ 3652] Iraq Lobster                 OBJECT Family Guy       Jab(8) Motivate(4) Sturdy(6)
+		Legendary   7/33[ 2491] Brian                        HERO   Family Guy       Bodyguard(2) Boost(5) Bomb(3)
+		Legendary  11/45[ 4097] Peter                        HERO   Family Guy       Cheer All(4-Family Guy) Sturdy(8) Bomb(7)
+
+>> Cards count by skill:
+ Motivate        : 7
+ Bodyguard       : 7
+ Leech           : 5
+ Jab             : 4
+ Payback         : 4
+ Heal            : 4
+ Cheer All       : 4
+ Boost           : 4
+ Crazed          : 4
+ Shield All      : 4
+ Sturdy          : 4
+ Shield          : 3
+ Punch           : 3
+ Gas             : 3
+ Cripple All     : 3
+ Cripple         : 2
+ Bomb            : 2
+ Recover         : 2
+ Hijack          : 2
+ Heal All        : 1
+ Cheer           : 1
+
+>> Cards count by trait:
+ none            : 7
+ animal          : 5
+ armed           : 2
+ fighter         : 2
+ addicted        : 2
+ athletic        : 2
+ artistic        : 1
+ musical         : 1
+ disguised       : 1
+ educated        : 1
+ drunk           : 1
+ rich            : 1
+Detailed:
+	artistic
+		Legendary   9/48[ 3080] Napkin Art                   OBJECT Bobs Burgers     Bodyguard(6) Leech(11)
+	armed
+		Legendary  13/47[ 4303] Pantry Guns                  OBJECT American Dad     Bodyguard(8) Jab(11) Gas(10)
+		Legendary  12/25[ 2974] Sacred Daggers               OBJECT American Dad     Jab(6) Motivate(4) Recover(4)
+	educated
+		Legendary   9/34[ 2751] Peggy                        HERO   King Of The Hill Payback(5) Heal All(1) Gas(6)
+	addicted
+		Legendary  10/47[ 3806] Jacked on Bots               OBJECT Futurama         Bodyguard(5) Sturdy(5) Crazed(7)
+		Legendary   9/42[ 3297] Hypnotoad                    OBJECT Futurama         Cripple(7) Hijack(4) Heal(11-addicted)
+	musical
+		Legendary  13/38[ 3584] K Pop Video                  OBJECT Family Guy       Cheer(10-musical) Leech(10) Motivate(8-musical)
+	drunk
+		Legendary  11/45[ 4097] Peter                        HERO   Family Guy       Cheer All(4-Family Guy) Sturdy(8) Bomb(7)
+	animal
+		Legendary  12/32[ 2984] Mr. Business                 OBJECT Bobs Burgers     Bodyguard(4) Shield(8-Bobs Burgers) Boost(6)
+		Legendary  15/46[ 4592] Buck's Stud                  OBJECT King Of The Hill Hijack(8) Heal(13)
+		Legendary  16/27[ 3652] Iraq Lobster                 OBJECT Family Guy       Jab(8) Motivate(4) Sturdy(6)
+		Legendary   7/33[ 2491] Brian                        HERO   Family Guy       Bodyguard(2) Boost(5) Bomb(3)
+		Legendary   2/36[ 1847] Klaus Heisler                HERO   American Dad     Shield All(2-American Dad) Recover(4) Gas(3)
+	athletic
+		Legendary  11/37[ 3211] Power Gym                    OBJECT American Dad     Shield(7) Cheer All(4-athletic) Boost(6)
+		Mythic     18/40[ 6605] Leela                        HERO   None             Motivate(8) Punch(11) Cripple All(6)
+	fighter
+		Legendary  16/33[ 4466] Quahog Martial Arts Academy  OBJECT Family Guy       Bodyguard(7) Cheer All(4-Family Guy) Motivate(8)
+		Legendary  10/45[ 3797] Big Boy Karate               OBJECT Futurama         Shield All(4-fighter) Cripple(7) Motivate(5)
+	rich
+		Legendary  13/38[ 3249] Dr. Amy Wong                 HERO   Futurama         Bodyguard(5) Cripple All(3)
+	disguised
+		Legendary   9/41[ 3407] Shrimp Dress                 OBJECT Bobs Burgers     Shield(7) Cheer All(3-disguised) Motivate(5)
+
+>> Individual card score:
+  96652 Mythic     18/40[ 6605] Leela                        HERO   None             Motivate(8) Punch(11) Cripple All(6)
+  97605 Legendary  15/46[ 4592] Buck's Stud                  OBJECT King Of The Hill Hijack(8) Heal(13)
+  80510 Legendary  16/33[ 4466] Quahog Martial Arts Academy  OBJECT Family Guy       Bodyguard(7) Cheer All(4-Family Guy) Motivate(8)
+  61423 Legendary  13/47[ 4303] Pantry Guns                  OBJECT American Dad     Bodyguard(8) Jab(11) Gas(10)
+  92302 Legendary  11/45[ 4097] Peter                        HERO   Family Guy       Cheer All(4-Family Guy) Sturdy(8) Bomb(7)
+  82425 Legendary  10/47[ 3806] Jacked on Bots               OBJECT Futurama         Bodyguard(5) Sturdy(5) Crazed(7)
+  68385 Legendary  10/45[ 3797] Big Boy Karate               OBJECT Futurama         Shield All(4-fighter) Cripple(7) Motivate(5)
+  71266 Legendary  14/38[ 3680] Bender                       HERO   Futurama         Payback(8) Leech(6) Sturdy(8)
+  79029 Legendary  16/27[ 3652] Iraq Lobster                 OBJECT Family Guy       Jab(8) Motivate(4) Sturdy(6)
+  86288 Legendary  13/38[ 3584] K Pop Video                  OBJECT Family Guy       Cheer(10-musical) Leech(10) Motivate(8-musical)
+  92666 Legendary  12/39[ 3464] Tina                         HERO   Bobs Burgers     Shield All(3-Bobs Burgers) Leech(11) Boost(7)
+  81400 Legendary   9/41[ 3407] Shrimp Dress                 OBJECT Bobs Burgers     Shield(7) Cheer All(3-disguised) Motivate(5)
+  73962 Legendary   9/42[ 3297] Hypnotoad                    OBJECT Futurama         Cripple(7) Hijack(4) Heal(11-addicted)
+  83093 Legendary   8/36[ 3266] Bobby                        HERO   King Of The Hill Payback(6) Punch(6) Crazed(3)
+  67947 Legendary  13/38[ 3249] Dr. Amy Wong                 HERO   Futurama         Bodyguard(5) Cripple All(3)
+  78581 Legendary  11/37[ 3211] Power Gym                    OBJECT American Dad     Shield(7) Cheer All(4-athletic) Boost(6)
+  72486 Legendary   9/48[ 3080] Napkin Art                   OBJECT Bobs Burgers     Bodyguard(6) Leech(11)
+  76627 Legendary  12/32[ 2984] Mr. Business                 OBJECT Bobs Burgers     Bodyguard(4) Shield(8-Bobs Burgers) Boost(6)
+  79891 Legendary  12/25[ 2974] Sacred Daggers               OBJECT American Dad     Jab(6) Motivate(4) Recover(4)
+  89571 Legendary   8/38[ 2784] Stewie                       HERO   Family Guy       Shield All(1) Leech(6) Punch(4)
+  84605 Legendary   9/34[ 2751] Peggy                        HERO   King Of The Hill Payback(5) Heal All(1) Gas(6)
+  77437 Epic        9/24[ 2688] Bob                          HERO   Bobs Burgers     Crazed(3) Heal(7)
+  77437 Epic        9/24[ 2688] Bob                          HERO   Bobs Burgers     Crazed(3) Heal(7)
+  51753 Legendary   7/33[ 2491] Brian                        HERO   Family Guy       Bodyguard(2) Boost(5) Bomb(3)
+  74893 Legendary   6/30[ 2276] Roger                        HERO   American Dad     Jab(6) Payback(4) Cripple All(2)
+  58990 Legendary   2/36[ 1847] Klaus Heisler                HERO   American Dad     Shield All(2-American Dad) Recover(4) Gas(3)
+
+>> Combo potential score:
+  97605 Legendary  15/46[ 4592] Buck's Stud                  OBJECT King Of The Hill Hijack(8) Heal(13)
+  96652 Mythic     18/40[ 6605] Leela                        HERO   None             Motivate(8) Punch(11) Cripple All(6)
+  92666 Legendary  12/39[ 3464] Tina                         HERO   Bobs Burgers     Shield All(3-Bobs Burgers) Leech(11) Boost(7)
+  92302 Legendary  11/45[ 4097] Peter                        HERO   Family Guy       Cheer All(4-Family Guy) Sturdy(8) Bomb(7)
+  89571 Legendary   8/38[ 2784] Stewie                       HERO   Family Guy       Shield All(1) Leech(6) Punch(4)
+  86288 Legendary  13/38[ 3584] K Pop Video                  OBJECT Family Guy       Cheer(10-musical) Leech(10) Motivate(8-musical)
+  84605 Legendary   9/34[ 2751] Peggy                        HERO   King Of The Hill Payback(5) Heal All(1) Gas(6)
+  83093 Legendary   8/36[ 3266] Bobby                        HERO   King Of The Hill Payback(6) Punch(6) Crazed(3)
+  82425 Legendary  10/47[ 3806] Jacked on Bots               OBJECT Futurama         Bodyguard(5) Sturdy(5) Crazed(7)
+  81400 Legendary   9/41[ 3407] Shrimp Dress                 OBJECT Bobs Burgers     Shield(7) Cheer All(3-disguised) Motivate(5)
+  80510 Legendary  16/33[ 4466] Quahog Martial Arts Academy  OBJECT Family Guy       Bodyguard(7) Cheer All(4-Family Guy) Motivate(8)
+  79891 Legendary  12/25[ 2974] Sacred Daggers               OBJECT American Dad     Jab(6) Motivate(4) Recover(4)
+  79029 Legendary  16/27[ 3652] Iraq Lobster                 OBJECT Family Guy       Jab(8) Motivate(4) Sturdy(6)
+  78581 Legendary  11/37[ 3211] Power Gym                    OBJECT American Dad     Shield(7) Cheer All(4-athletic) Boost(6)
+  77437 Epic        9/24[ 2688] Bob                          HERO   Bobs Burgers     Crazed(3) Heal(7)
+  77437 Epic        9/24[ 2688] Bob                          HERO   Bobs Burgers     Crazed(3) Heal(7)
+  76627 Legendary  12/32[ 2984] Mr. Business                 OBJECT Bobs Burgers     Bodyguard(4) Shield(8-Bobs Burgers) Boost(6)
+  74893 Legendary   6/30[ 2276] Roger                        HERO   American Dad     Jab(6) Payback(4) Cripple All(2)
+  73962 Legendary   9/42[ 3297] Hypnotoad                    OBJECT Futurama         Cripple(7) Hijack(4) Heal(11-addicted)
+  72486 Legendary   9/48[ 3080] Napkin Art                   OBJECT Bobs Burgers     Bodyguard(6) Leech(11)
+  71266 Legendary  14/38[ 3680] Bender                       HERO   Futurama         Payback(8) Leech(6) Sturdy(8)
+  68385 Legendary  10/45[ 3797] Big Boy Karate               OBJECT Futurama         Shield All(4-fighter) Cripple(7) Motivate(5)
+  67947 Legendary  13/38[ 3249] Dr. Amy Wong                 HERO   Futurama         Bodyguard(5) Cripple All(3)
+  61423 Legendary  13/47[ 4303] Pantry Guns                  OBJECT American Dad     Bodyguard(8) Jab(11) Gas(10)
+  58990 Legendary   2/36[ 1847] Klaus Heisler                HERO   American Dad     Shield All(2-American Dad) Recover(4) Gas(3)
+  51753 Legendary   7/33[ 2491] Brian                        HERO   Family Guy       Bodyguard(2) Boost(5) Bomb(3)
+
+>> Combined score:
+   6540 Mythic     18/40[ 6605] Leela                        HERO   None             Motivate(8) Punch(11) Cripple All(6)
+   5358 Legendary  15/46[ 4592] Buck's Stud                  OBJECT King Of The Hill Hijack(8) Heal(13)
+   4919 Legendary  11/45[ 4097] Peter                        HERO   Family Guy       Cheer All(4-Family Guy) Sturdy(8) Bomb(7)
+   4826 Legendary  16/33[ 4466] Quahog Martial Arts Academy  OBJECT Family Guy       Bodyguard(7) Cheer All(4-Family Guy) Motivate(8)
+   4549 Legendary  12/39[ 3464] Tina                         HERO   Bobs Burgers     Shield All(3-Bobs Burgers) Leech(11) Boost(7)
+   4481 Legendary  10/47[ 3806] Jacked on Bots               OBJECT Futurama         Bodyguard(5) Sturdy(5) Crazed(7)
+   4451 Legendary  13/38[ 3584] K Pop Video                  OBJECT Family Guy       Cheer(10-musical) Leech(10) Motivate(8-musical)
+   4298 Legendary  16/27[ 3652] Iraq Lobster                 OBJECT Family Guy       Jab(8) Motivate(4) Sturdy(6)
+   4219 Legendary  13/47[ 4303] Pantry Guns                  OBJECT American Dad     Bodyguard(8) Jab(11) Gas(10)
+   4214 Legendary   9/41[ 3407] Shrimp Dress                 OBJECT Bobs Burgers     Shield(7) Cheer All(3-disguised) Motivate(5)
+   4175 Legendary   8/36[ 3266] Bobby                        HERO   King Of The Hill Payback(6) Punch(6) Crazed(3)
+   4108 Legendary  14/38[ 3680] Bender                       HERO   Futurama         Payback(8) Leech(6) Sturdy(8)
+   4101 Legendary  10/45[ 3797] Big Boy Karate               OBJECT Futurama         Shield All(4-fighter) Cripple(7) Motivate(5)
+   4058 Legendary   8/38[ 2784] Stewie                       HERO   Family Guy       Shield All(1) Leech(6) Punch(4)
+   4021 Legendary  11/37[ 3211] Power Gym                    OBJECT American Dad     Shield(7) Cheer All(4-athletic) Boost(6)
+   3950 Legendary   9/42[ 3297] Hypnotoad                    OBJECT Futurama         Cripple(7) Hijack(4) Heal(11-addicted)
+   3914 Legendary  12/25[ 2974] Sacred Daggers               OBJECT American Dad     Jab(6) Motivate(4) Recover(4)
+   3906 Legendary   9/34[ 2751] Peggy                        HERO   King Of The Hill Payback(5) Heal All(1) Gas(6)
+   3833 Legendary  12/32[ 2984] Mr. Business                 OBJECT Bobs Burgers     Bodyguard(4) Shield(8-Bobs Burgers) Boost(6)
+   3780 Legendary   9/48[ 3080] Napkin Art                   OBJECT Bobs Burgers     Bodyguard(6) Leech(11)
+   3761 Legendary  13/38[ 3249] Dr. Amy Wong                 HERO   Futurama         Bodyguard(5) Cripple All(3)
+   3677 Epic        9/24[ 2688] Bob                          HERO   Bobs Burgers     Crazed(3) Heal(7)
+   3677 Epic        9/24[ 2688] Bob                          HERO   Bobs Burgers     Crazed(3) Heal(7)
+   3362 Legendary   6/30[ 2276] Roger                        HERO   American Dad     Jab(6) Payback(4) Cripple All(2)
+   2874 Legendary   7/33[ 2491] Brian                        HERO   Family Guy       Bodyguard(2) Boost(5) Bomb(3)
+   2681 Legendary   2/36[ 1847] Klaus Heisler                HERO   American Dad     Shield All(2-American Dad) Recover(4) Gas(3)
+
+>> Strongest combos:
+Chicken Fight                22/54[10147] Motivate(11) Punch(21) Bomb(16)                                                Legendary 6** Peter + Legendary 6** Quahog Martial Arts Academy
+Chicken Fight                17/63[ 9774] Motivate(11) Punch(20) Bomb(16)                                                Legendary 6** Peter + Legendary 6* Big Boy Karate
+Pointillism                  13/65[ 9204] Punch(18) Heal(18) Bomb(14)                                                    Legendary 6 Stewie + Legendary 6** Napkin Art
+Katz                         25/66[ 8708] Cripple All(14) Leech(23) Hijack(17)                                           Mythic 8 Leela + Legendary 6** Buck's Stud
+Line Dancer Amy              20/58[ 8646] Jab(18) Motivate(18) Bomb(12)                                                  Legendary 6* Dr. Amy Wong + Legendary 6** K Pop Video
+Pointillism                  12/61[ 8624] Punch(17) Heal(17) Bomb(13)                                                    Legendary 6 Brian + Legendary 6** Napkin Art
+Boy Crazy                    17/67[ 8436] Shield All(10) Hijack(18) Heal(20)                                             Legendary 6** Tina + Legendary 6* Jacked on Bots
+Penguin Conservator          23/66[ 8373] Jab(25) Punch(26)                                                              Mythic 8 Leela + Legendary 6** Pantry Guns
+Bender's Ducklings           22/66[ 8317] Motivate(19-animal) Crazed(12) Heal(26-animal)                                 Legendary 6** Bender + Legendary 6** Buck's Stud
+Squirrel Death               20/50[ 8305] Jab(24) Heal(23) Bomb(11)                                                      Epic 5** Bob + Legendary 6** Buck's Stud
+Squirrel Death               20/50[ 8305] Jab(24) Heal(23) Bomb(11)                                                      Epic 5** Bob + Legendary 6** Buck's Stud
+Nurse Tina                   16/61[ 8156] Shield(18) Heal All(7) Punch(21)                                               Legendary 6** Tina + Legendary 6* Shrimp Dress
+Golfer Amy                   17/56[ 8098] Bomb(14) Crazed(14) Recover(21)                                                Legendary 6* Dr. Amy Wong + Legendary 6* Power Gym
+Boy Crazy                    16/63[ 8066] Shield All(10) Hijack(17) Heal(19)                                             Legendary 6** Tina + Legendary 6* Hypnotoad
+Balloon Fight                19/47[ 8007] Punch(18) Boost(16) Bomb(11)                                                   Legendary 6** Tina + Legendary 6 Sacred Daggers
+Wingnut Amy                  17/65[ 7986] Sturdy(14) Punch(18) Crazed(11)                                                Legendary 6* Dr. Amy Wong + Legendary 6* Jacked on Bots
+Karate Stewie                18/54[ 7879] Punch(17) Boost(17) Crazed(11)                                                 Legendary 6 Stewie + Legendary 6** Quahog Martial Arts Academy
+Katz                         26/51[ 7838] Cripple All(12) Leech(21) Hijack(15)                                           Mythic 8 Leela + Legendary 6* Iraq Lobster
+Nacho Addict Bender          19/63[ 7829] Bodyguard(15) Leech(22) Bomb(17)                                               Legendary 6** Bender + Legendary 6* Jacked on Bots
+Whale Hunter Amy             20/47[ 7812] Jab(19) Punch(16) Bomb(13)                                                     Legendary 6* Dr. Amy Wong + Legendary 6 Sacred Daggers
+K Pop Peter                  19/62[ 7791] Shield All(10-musical) Leech(22) Punch(19)                                     Legendary 6** Peter + Legendary 6** K Pop Video
+Tina Tackle                  20/59[ 7682] Shield All(13-fighter) Bodyguard(19) Gas(22)                                   Legendary 6** Tina + Legendary 6** Quahog Martial Arts Academy
+Wild Brian                   17/68[ 7648] Cheer(22-animal) Punch(16) Crazed(13)                                          Legendary 6 Brian + Legendary 6** Buck's Stud
+Xerxes the Falcon            17/64[ 7644] Jab(24) Cripple(24) Gas(24)                                                    Legendary 6 Stewie + Legendary 6** Buck's Stud
+Cute Witch of the North      18/55[ 7598] Cripple(18) Leech(25) Heal(20)                                                 Legendary 6* Dr. Amy Wong + Legendary 6* Shrimp Dress
+Leela Balloon Art            22/63[ 7566] Cripple All(10) Gas(24)                                                        Mythic 8 Leela + Legendary 6** Napkin Art
+Laser Gun Stewie             16/65[ 7553] Jab(21) Punch(16) Gas(18)                                                      Legendary 6 Stewie + Legendary 6** Pantry Guns
+Leela's Harpoon              24/48[ 7536] Jab(23) Cheer All(11-armed) Punch(17)                                          Mythic 8 Leela + Legendary 6 Sacred Daggers
+Wingnut Amy                  16/61[ 7529] Sturdy(14) Punch(17) Crazed(10)                                                Legendary 6* Dr. Amy Wong + Legendary 6* Hypnotoad
+Marmalade                    15/61[ 7521] Shield(14) Punch(19) Recover(19)                                               Legendary 6 Roger + Legendary 6** Buck's Stud
+Male Leela                   20/62[ 7500] Sturdy(22) Boost(19) Payback(19)                                               Mythic 8 Leela + Legendary 6* Shrimp Dress
+Class Spanker                19/51[ 7455] Payback(19) Hijack(13) Punch(19)                                               Legendary 6 Peggy + Legendary 6** Quahog Martial Arts Academy
+Jealous Bobby                19/53[ 7450] Jab(19) Punch(17) Crazed(10)                                                   Legendary 6* Bobby + Legendary 6** Quahog Martial Arts Academy
+Butt Toucher Tina            18/57[ 7450] Punch(16) Leech(20) Boost(19)                                                  Legendary 6** Tina + Legendary 6* Power Gym
+Karate Stewie                13/63[ 7440] Punch(16) Boost(16) Crazed(11)                                                 Legendary 6 Stewie + Legendary 6* Big Boy Karate
+Skiing Leela                 23/56[ 7427] Motivate(14-athletic) Sturdy(16) Bomb(11)                                      Mythic 8 Leela + Legendary 6* Power Gym
+Katz                         23/55[ 7425] Cripple All(11) Leech(20) Hijack(15)                                           Mythic 8 Leela + Legendary 6* Mr. Business
+Paddlin' Peggy               17/68[ 7414] Punch(18) Crazed(13)                                                           Legendary 6 Peggy + Legendary 6** Pantry Guns
+Betsy                        19/71[ 7380] Sturdy(23) Hijack(14) Boost(20)                                                Legendary 6* Dr. Amy Wong + Legendary 6** Buck's Stud
+Space Honey                  21/66[ 7336] Bodyguard(19) Payback(23) Hijack(16)                                           Mythic 8 Leela + Legendary 6* Jacked on Bots
+Squirrel Death               21/36[ 7290] Jab(20) Heal(19) Bomb(10)                                                      Epic 5** Bob + Legendary 6* Iraq Lobster
+Squirrel Death               21/36[ 7290] Jab(20) Heal(19) Bomb(10)                                                      Epic 5** Bob + Legendary 6* Iraq Lobster
+Sewer Surfer Bender          20/57[ 7274] Sturdy(16) Motivate(13-athletic) Gas(23)                                       Legendary 6** Bender + Legendary 6* Power Gym
+Doghouse Bobby               18/60[ 7256] Payback(16) Heal(23-animal) Gas(22)                                            Legendary 6* Bobby + Legendary 6** Buck's Stud
+Pirate Cannon Peter          17/53[ 7239] Cheer All(7) Crazed(11) Bomb(13)                                               Legendary 6** Peter + Legendary 6 Sacred Daggers
+Roger Goes Down              14/56[ 7219] Jab(19) Heal(20) Bomb(10)                                                      Legendary 6 Roger + Legendary 6** K Pop Video
+Action Delivery Force Leela  26/56[ 7196] Cheer(24-Futurama) Hijack(14) Crazed(15)                                       Mythic 8 Leela + Legendary 6** Quahog Martial Arts Academy
+Assassin Bender              21/47[ 7196] Leech(18) Crazed(12) Bomb(12)                                                  Legendary 6** Bender + Legendary 6 Sacred Daggers
+Nun Peggy                    13/60[ 7183] Leech(15) Sturdy(12) Bomb(21)                                                  Legendary 6 Peggy + Legendary 6* Shrimp Dress
+Karate Bender                21/61[ 7168] Sturdy(15) Motivate(16)                                                        Legendary 6** Bender + Legendary 6** Quahog Martial Arts Academy
+Bender's Ducklings           20/55[ 7128] Motivate(16-animal) Crazed(10) Heal(22-animal)                                 Legendary 6** Bender + Legendary 6* Mr. Business
+Hip Hop Bob                  16/47[ 7101] Cripple All(6) Punch(15) Crazed(10)                                            Epic 5** Bob + Legendary 6** K Pop Video
+Hip Hop Bob                  16/47[ 7101] Cripple All(6) Punch(15) Crazed(10)                                            Epic 5** Bob + Legendary 6** K Pop Video
+Dolphin Rider Peter          22/77[ 7096] Shield All(8-animal) Cheer All(9) Leech(19)                                    Legendary 6** Peter + Legendary 6** Buck's Stud
+Klepto Bender                17/65[ 7044] Shield All(10) Hijack(14) Sturdy(16)                                           Legendary 6** Bender + Legendary 6* Hypnotoad
+Smoke Bomb                   14/53[ 7040] Cripple All(7) Gas(17) Bomb(12)                                                Legendary 6 Klaus Heisler + Legendary 6** Quahog Martial Arts Academy
+Fashion Fight                17/62[ 7036] Leech(18) Crazed(14) Recover(20)                                               Legendary 6** Tina + Legendary 6* Big Boy Karate
+Space Honey                  20/63[ 6978] Bodyguard(18) Payback(22) Hijack(15)                                           Mythic 8 Leela + Legendary 6* Hypnotoad
+Contact High Stewie          13/67[ 6976] Leech(20) Punch(18) Hijack(15)                                                 Legendary 6 Stewie + Legendary 6* Jacked on Bots
+Class Spanker                14/60[ 6974] Payback(18) Hijack(12) Punch(18)                                               Legendary 6 Peggy + Legendary 6* Big Boy Karate
+Gun Safety Peter             18/70[ 6970] Jab(15) Punch(21)                                                              Legendary 6** Peter + Legendary 6** Pantry Guns
+Sharpshooter Bobby           16/63[ 6966] Jab(13) Punch(19) Recover(12)                                                  Legendary 6* Bobby + Legendary 6** Pantry Guns
+Duke                         18/63[ 6931] Jab(21) Sturdy(17) Gas(20)                                                     Legendary 6 Peggy + Legendary 6** Buck's Stud
+Music Video Stewie           15/60[ 6918] Punch(18) Leech(18) Sturdy(12)                                                 Legendary 6 Stewie + Legendary 6** K Pop Video
+Yeti Fighter Leela           21/65[ 6875] Jab(23) Payback(21) Cheer All(12-fighter)                                      Mythic 8 Leela + Legendary 6* Big Boy Karate
+Xerxes the Falcon            18/50[ 6833] Jab(21) Cripple(21) Gas(21)                                                    Legendary 6 Stewie + Legendary 6* Iraq Lobster
+Red Rodriguez 2 Real         22/58[ 6808] Cheer(22-musical) Punch(20)                                                    Legendary 6** Bender + Legendary 6** K Pop Video
+Draw Me Tina                 15/74[ 6805] Leech(23) Motivate(15-artistic) Heal(22-artistic)                              Legendary 6** Tina + Legendary 6** Napkin Art
+Cigarette Addicts            14/65[ 6800] Leech(20) Crazed(11) Gas(20)                                                   Legendary 6 Peggy + Legendary 6* Jacked on Bots
+Belly Drum                   16/63[ 6797] Sturdy(16) Boost(14) Bomb(11)                                                  Legendary 6* Bobby + Legendary 6** K Pop Video
+Smoke Bomb                    9/63[ 6747] Cripple All(7) Gas(16) Bomb(12)                                                Legendary 6 Klaus Heisler + Legendary 6* Big Boy Karate
+Wild Brian                   18/51[ 6694] Cheer(18-animal) Punch(14) Crazed(11)                                          Legendary 6 Brian + Legendary 6* Iraq Lobster
+Nasal Spray Peter            15/75[ 6648] Shield All(11-addicted) Cripple(18) Sturdy(15)                                 Legendary 6** Peter + Legendary 6* Jacked on Bots
+Cigarette Addicts            13/67[ 6643] Leech(19) Crazed(11) Gas(19)                                                   Legendary 6* Bobby + Legendary 6* Jacked on Bots
+Teagle                       19/70[ 6620] Shield All(12-animal) Cheer(20) Hijack(16)                                     Legendary 6** Tina + Legendary 6** Buck's Stud
+Cranberry Bog                14/57[ 6611] Punch(15) Sturdy(12) Heal(18-addicted)                                         Epic 5** Bob + Legendary 6* Jacked on Bots
+Cranberry Bog                14/57[ 6611] Punch(15) Sturdy(12) Heal(18-addicted)                                         Epic 5** Bob + Legendary 6* Jacked on Bots
+Betsy                        20/55[ 6608] Sturdy(20) Hijack(12) Boost(18)                                                Legendary 6* Dr. Amy Wong + Legendary 6* Iraq Lobster
+Marmalade                    16/46[ 6532] Shield(12) Punch(16) Recover(16)                                               Legendary 6 Roger + Legendary 6* Iraq Lobster
+Grill Cook                   19/66[ 6529] Heal(19-Bobs Burgers) Bomb(13)                                                 Legendary 6** Tina + Legendary 6** Pantry Guns
+Disco Bender                 20/52[ 6524] Shield All(7-disguised) Sturdy(17) Bomb(10)                                    Legendary 6** Bender + Legendary 6* Shrimp Dress
+Propane Sculpture            13/68[ 6469] Jab(17) Bomb(9) Gas(19)                                                        Legendary 6 Peggy + Legendary 6** Napkin Art
+Doghouse Bobby               19/46[ 6467] Payback(14) Heal(20-animal) Gas(19)                                            Legendary 6* Bobby + Legendary 6* Iraq Lobster
+Xerxes the Falcon            15/53[ 6444] Jab(20) Cripple(20) Gas(20)                                                    Legendary 6 Stewie + Legendary 6* Mr. Business
+Cupid Bobby                  13/63[ 6419] Hijack(11) Punch(17) Leech(17)                                                 Legendary 6* Bobby + Legendary 6* Shrimp Dress
+Wild Brian                   15/56[ 6387] Cheer(17-animal) Punch(13) Crazed(11)                                          Legendary 6 Brian + Legendary 6* Mr. Business
+Electric Love                20/62[ 6353] Cripple(22) Motivate(17-musical)                                               Legendary 6** Tina + Legendary 6** K Pop Video
+Dolphin Rider Peter          22/60[ 6310] Shield All(7-animal) Cheer All(8) Leech(17)                                    Legendary 6** Peter + Legendary 6* Iraq Lobster
+Betsy                        17/59[ 6290] Sturdy(19) Hijack(12) Boost(17)                                                Legendary 6* Dr. Amy Wong + Legendary 6* Mr. Business
+Duke                         19/48[ 6259] Jab(19) Sturdy(15) Gas(18)                                                     Legendary 6 Peggy + Legendary 6* Iraq Lobster
+Mountain Climber Peter       16/64[ 6259] Bodyguard(14) Shield(15) Sturdy(17)                                            Legendary 6** Peter + Legendary 6* Power Gym
+Christmas Punchout           20/41[ 6243] Hijack(10) Punch(15) Leech(18)                                                 Epic 5** Bob + Legendary 6** Quahog Martial Arts Academy
+Christmas Punchout           20/41[ 6243] Hijack(10) Punch(15) Leech(18)                                                 Epic 5** Bob + Legendary 6** Quahog Martial Arts Academy
+Cigarette Addicts            13/61[ 6242] Leech(18) Crazed(10) Gas(18)                                                   Legendary 6 Peggy + Legendary 6* Hypnotoad
+Noble Fighter Bobby          14/63[ 6240] Shield All(7) Bodyguard(16) Leech(19)                                          Legendary 6* Bobby + Legendary 6* Big Boy Karate
+Nasal Spray Peter            14/71[ 6221] Shield All(10-addicted) Cripple(17) Sturdy(14)                                 Legendary 6** Peter + Legendary 6* Hypnotoad
+Cigarette Addicts            12/63[ 6198] Leech(18) Crazed(10) Gas(18)                                                   Legendary 6* Bobby + Legendary 6* Hypnotoad
+Tuning Fork                  16/57[ 6181] Bodyguard(14) Jab(19) Crazed(11)                                               Legendary 6 Peggy + Legendary 6** K Pop Video
+Sculptor Peter               17/75[ 6170] Shield(20-Family Guy) Crazed(15)                                               Legendary 6** Peter + Legendary 6** Napkin Art
+$300 Knife                   17/59[ 6132] Cripple(17) Jab(17) Crazed(9)                                                  Epic 5** Bob + Legendary 6** Pantry Guns
+$300 Knife                   17/59[ 6132] Cripple(17) Jab(17) Crazed(9)                                                  Epic 5** Bob + Legendary 6** Pantry Guns
+Marmalade                    13/50[ 6102] Shield(11) Punch(15) Recover(15)                                               Legendary 6 Roger + Legendary 6* Mr. Business
+Doghouse Bobby               16/50[ 6094] Payback(13) Heal(19-animal) Gas(18)                                            Legendary 6* Bobby + Legendary 6* Mr. Business
+Private Brian                14/44[ 6047] Shield All(8-armed) Punch(14) Bomb(7)                                          Legendary 6 Brian + Legendary 6 Sacred Daggers
+Ping Pong Brian              13/56[ 6038] Jab(20) Sturdy(10) Punch(14)                                                   Legendary 6 Brian + Legendary 6* Power Gym
+Honey Mustache Stewie        12/64[ 6031] Jab(16) Crazed(11) Gas(15)                                                     Legendary 6 Stewie + Legendary 6* Shrimp Dress
+Kawaii Klaus                  8/60[ 6020] Heal All(5) Motivate(8) Bomb(11)                                               Legendary 6 Klaus Heisler + Legendary 6* Shrimp Dress
+Dummy Fight                  16/49[ 6007] Cripple(17) Heal All(8-fighter) Gas(18)                                        Legendary 6 Roger + Legendary 6** Quahog Martial Arts Academy
+Medicated Stewie             13/61[ 6003] Payback(12) Bomb(10) Gas(13)                                                   Legendary 6 Stewie + Legendary 6* Hypnotoad
+Dolphin Rider Peter          18/64[ 5982] Shield All(7-animal) Cheer All(8) Leech(16)                                    Legendary 6** Peter + Legendary 6* Mr. Business
+Chest Etching                17/72[ 5978] Cheer(19-artistic) Payback(17) Jab(22)                                         Legendary 6** Bender + Legendary 6** Napkin Art
+Teagle                       20/54[ 5904] Shield All(10-animal) Cheer(18) Hijack(14)                                     Legendary 6** Tina + Legendary 6* Iraq Lobster
+Duke                         16/52[ 5895] Jab(18) Sturdy(14) Gas(17)                                                     Legendary 6 Peggy + Legendary 6* Mr. Business
+Opera Singer Leela           25/63[ 5894] Cheer(25-Futurama) Leech(27)                                                   Mythic 8 Leela + Legendary 6** K Pop Video
+Klaus's Fish Wife            13/63[ 5874] Cheer All(8-animal) Motivate(11) Leech(15)                                     Legendary 6 Klaus Heisler + Legendary 6** Buck's Stud
+Christmas Punchout           15/50[ 5830] Hijack(10) Punch(14) Leech(17)                                                 Epic 5** Bob + Legendary 6* Big Boy Karate
+Christmas Punchout           15/50[ 5830] Hijack(10) Punch(14) Leech(17)                                                 Epic 5** Bob + Legendary 6* Big Boy Karate
+Battle Axe Peggy             16/46[ 5828] Crazed(11) Heal(15)                                                            Legendary 6 Peggy + Legendary 6 Sacred Daggers
+Sister Peter                 15/73[ 5695] Heal All(12-Family Guy) Motivate(15-disguised)                                 Legendary 6** Peter + Legendary 6* Shrimp Dress
+Pumping Iron                  9/57[ 5671] Hijack(13) Punch(13) Recover(15)                                               Legendary 6 Klaus Heisler + Legendary 6* Power Gym
+Dummy Fight                  12/58[ 5639] Cripple(16) Heal All(7-fighter) Gas(17)                                        Legendary 6 Roger + Legendary 6* Big Boy Karate
+Teagle                       17/58[ 5622] Shield All(10-animal) Cheer(17) Hijack(13)                                     Legendary 6** Tina + Legendary 6* Mr. Business
+Badminton Roger              12/57[ 5578] Sturdy(13) Hijack(9) Punch(12)                                                 Legendary 6 Roger + Legendary 6* Power Gym
+Cloud Painter                14/61[ 5567] Sturdy(14) Heal All(6-King Of The Hill) Motivate(14-King Of The Hill)          Legendary 6* Bobby + Legendary 6** Napkin Art
+Garden Shovel Bobby          15/46[ 5548] Bodyguard(11) Sturdy(6) Motivate(11)                                           Legendary 6* Bobby + Legendary 6 Sacred Daggers
+Artist Roger                 11/61[ 5455] Leech(17) Boost(11) Gas(17)                                                    Legendary 6 Roger + Legendary 6** Napkin Art
+Rodeo Bobby                  14/58[ 5448] Payback(16) Hijack(12) Sturdy(14)                                              Legendary 6* Bobby + Legendary 6* Power Gym
+Stoned Loser Roger           11/60[ 5440] Cripple(14) Bodyguard(11) Bomb(8)                                              Legendary 6 Roger + Legendary 6* Jacked on Bots
+Knife Fight Stewie           15/48[ 5418] Cripple(14) Hijack(8) Crazed(11)                                               Legendary 6 Stewie + Legendary 6 Sacred Daggers
+Legman                       14/59[ 5354] Shield(15-armed) Punch(15)                                                     Legendary 6 Roger + Legendary 6** Pantry Guns
+Art Student                  14/57[ 5324] Cheer(14-artistic) Sturdy(13) Heal(11)                                         Epic 5** Bob + Legendary 6** Napkin Art
+Art Student                  14/57[ 5324] Cheer(14-artistic) Sturdy(13) Heal(11)                                         Epic 5** Bob + Legendary 6** Napkin Art
+Dr. Bobbenstein              13/50[ 5322] Jab(18) Leech(15) Crazed(11)                                                   Epic 5** Bob + Legendary 6* Shrimp Dress
+Dr. Bobbenstein              13/50[ 5322] Jab(18) Leech(15) Crazed(11)                                                   Epic 5** Bob + Legendary 6* Shrimp Dress
+Bacon Weight                 17/39[ 5278] Hijack(11) Sturdy(12) Gas(16)                                                  Epic 5** Bob + Legendary 6 Sacred Daggers
+Bacon Weight                 17/39[ 5278] Hijack(11) Sturdy(12) Gas(16)                                                  Epic 5** Bob + Legendary 6 Sacred Daggers
+Pan Flute Brian              16/52[ 5247] Payback(13) Heal All(6-musical) Boost(14)                                      Legendary 6 Brian + Legendary 6** K Pop Video
+Swim Lesson                  14/57[ 5228] Shield All(5-athletic) Bodyguard(14) Jab(22)                                   Legendary 6 Stewie + Legendary 6* Power Gym
+Junk Food Klaus               9/63[ 5109] Gas(15) Bomb(10)                                                               Legendary 6 Klaus Heisler + Legendary 6* Jacked on Bots
+Burgerboss Bob               15/60[ 5082] Jab(18) Crazed(10)                                                             Epic 5** Bob + Legendary 6* Hypnotoad
+Burgerboss Bob               15/60[ 5082] Jab(18) Crazed(10)                                                             Epic 5** Bob + Legendary 6* Hypnotoad
+Brian in Disguise            12/56[ 5068] Cheer All(9-disguised) Boost(15) Leech(17)                                     Legendary 6 Brian + Legendary 6* Shrimp Dress
+Klaus's Fish Wife            13/48[ 5004] Cheer All(7-animal) Motivate(9) Leech(13)                                      Legendary 6 Klaus Heisler + Legendary 6* Iraq Lobster
+Cyclist Peggy                15/54[ 4974] Shield All(7-athletic) Jab(18) Cheer All(9-athletic)                           Legendary 6 Peggy + Legendary 6* Power Gym
+High Legman                  11/55[ 4800] Boost(10) Punch(12)                                                            Legendary 6 Roger + Legendary 6* Hypnotoad
+Junk Food Klaus               8/60[ 4717] Gas(14) Bomb(9)                                                                Legendary 6 Klaus Heisler + Legendary 6* Hypnotoad
+Ricky Spanish                15/39[ 4684] Payback(12) Leech(13) Gas(12)                                                  Legendary 6 Roger + Legendary 6 Sacred Daggers
+Bouldering Bob               15/46[ 4568] Cheer(14-athletic) Shield All(5-athletic) Gas(14)                              Epic 5** Bob + Legendary 6* Power Gym
+Bouldering Bob               15/46[ 4568] Cheer(14-athletic) Shield All(5-athletic) Gas(14)                              Epic 5** Bob + Legendary 6* Power Gym
+Ruby Zeldastein              11/57[ 4562] Shield All(5-disguised) Sturdy(9) Crazed(7)                                    Legendary 6 Roger + Legendary 6* Shrimp Dress
+Klaus's Fish Wife            10/52[ 4556] Cheer All(6-animal) Motivate(8) Leech(12)                                      Legendary 6 Klaus Heisler + Legendary 6* Mr. Business
+Cat Trainer Bob              16/41[ 4351] Cripple(12) Jab(15) Cheer(13-animal)                                           Epic 5** Bob + Legendary 6* Mr. Business
+Cat Trainer Bob              16/41[ 4351] Cripple(12) Jab(15) Cheer(13-animal)                                           Epic 5** Bob + Legendary 6* Mr. Business
+DJ Klaus                     11/56[ 4232] Cheer(12-American Dad) Sturdy(10) Boost(10)                                    Legendary 6 Klaus Heisler + Legendary 6** K Pop Video
+Cartel Klaus                 11/45[ 4020] Hijack(9) Leech(12) Gas(10)                                                    Legendary 6 Klaus Heisler + Legendary 6 Sacred Daggers
+
+>> Strongest combos per card:
+Legendary 6** Napkin Art:
+	   9204 with Legendary 6 Stewie                      : Pointillism                  13/65[ 9204] Punch(18) Heal(18) Bomb(14)
+	   8624 with Legendary 6 Brian                       : Pointillism                  12/61[ 8624] Punch(17) Heal(17) Bomb(13)
+	   7566 with Mythic 8 Leela                          : Leela Balloon Art            22/63[ 7566] Cripple All(10) Gas(24)
+	   6805 with Legendary 6** Tina                      : Draw Me Tina                 15/74[ 6805] Leech(23) Motivate(15-artistic) Heal(22-artistic)
+	   6469 with Legendary 6 Peggy                       : Propane Sculpture            13/68[ 6469] Jab(17) Bomb(9) Gas(19)
+	   6170 with Legendary 6** Peter                     : Sculptor Peter               17/75[ 6170] Shield(20-Family Guy) Crazed(15)
+	   5978 with Legendary 6** Bender                    : Chest Etching                17/72[ 5978] Cheer(19-artistic) Payback(17) Jab(22)
+	   5567 with Legendary 6* Bobby                      : Cloud Painter                14/61[ 5567] Sturdy(14) Heal All(6-King Of The Hill) Motivate(14-King Of The Hill)
+	   5455 with Legendary 6 Roger                       : Artist Roger                 11/61[ 5455] Leech(17) Boost(11) Gas(17)
+	   5324 with Epic 5** Bob                            : Art Student                  14/57[ 5324] Cheer(14-artistic) Sturdy(13) Heal(11)
+	   5324 with Epic 5** Bob                            : Art Student                  14/57[ 5324] Cheer(14-artistic) Sturdy(13) Heal(11)
+Legendary 6* Big Boy Karate:
+	   9774 with Legendary 6** Peter                     : Chicken Fight                17/63[ 9774] Motivate(11) Punch(20) Bomb(16)
+	   7440 with Legendary 6 Stewie                      : Karate Stewie                13/63[ 7440] Punch(16) Boost(16) Crazed(11)
+	   7036 with Legendary 6** Tina                      : Fashion Fight                17/62[ 7036] Leech(18) Crazed(14) Recover(20)
+	   6974 with Legendary 6 Peggy                       : Class Spanker                14/60[ 6974] Payback(18) Hijack(12) Punch(18)
+	   6875 with Mythic 8 Leela                          : Yeti Fighter Leela           21/65[ 6875] Jab(23) Payback(21) Cheer All(12-fighter)
+	   6747 with Legendary 6 Klaus Heisler               : Smoke Bomb                    9/63[ 6747] Cripple All(7) Gas(16) Bomb(12)
+	   6240 with Legendary 6* Bobby                      : Noble Fighter Bobby          14/63[ 6240] Shield All(7) Bodyguard(16) Leech(19)
+	   5830 with Epic 5** Bob                            : Christmas Punchout           15/50[ 5830] Hijack(10) Punch(14) Leech(17)
+	   5830 with Epic 5** Bob                            : Christmas Punchout           15/50[ 5830] Hijack(10) Punch(14) Leech(17)
+	   5639 with Legendary 6 Roger                       : Dummy Fight                  12/58[ 5639] Cripple(16) Heal All(7-fighter) Gas(17)
+Legendary 6 Klaus Heisler:
+	   7040 with Legendary 6** Quahog Martial Arts Academy: Smoke Bomb                   14/53[ 7040] Cripple All(7) Gas(17) Bomb(12)
+	   6747 with Legendary 6* Big Boy Karate             : Smoke Bomb                    9/63[ 6747] Cripple All(7) Gas(16) Bomb(12)
+	   6020 with Legendary 6* Shrimp Dress               : Kawaii Klaus                  8/60[ 6020] Heal All(5) Motivate(8) Bomb(11)
+	   5874 with Legendary 6** Buck's Stud               : Klaus's Fish Wife            13/63[ 5874] Cheer All(8-animal) Motivate(11) Leech(15)
+	   5671 with Legendary 6* Power Gym                  : Pumping Iron                  9/57[ 5671] Hijack(13) Punch(13) Recover(15)
+	   5109 with Legendary 6* Jacked on Bots             : Junk Food Klaus               9/63[ 5109] Gas(15) Bomb(10)
+	   5004 with Legendary 6* Iraq Lobster               : Klaus's Fish Wife            13/48[ 5004] Cheer All(7-animal) Motivate(9) Leech(13)
+	   4717 with Legendary 6* Hypnotoad                  : Junk Food Klaus               8/60[ 4717] Gas(14) Bomb(9)
+	   4556 with Legendary 6* Mr. Business               : Klaus's Fish Wife            10/52[ 4556] Cheer All(6-animal) Motivate(8) Leech(12)
+	   4232 with Legendary 6** K Pop Video               : DJ Klaus                     11/56[ 4232] Cheer(12-American Dad) Sturdy(10) Boost(10)
+	   4020 with Legendary 6 Sacred Daggers              : Cartel Klaus                 11/45[ 4020] Hijack(9) Leech(12) Gas(10)
+Legendary 6** Tina:
+	   8436 with Legendary 6* Jacked on Bots             : Boy Crazy                    17/67[ 8436] Shield All(10) Hijack(18) Heal(20)
+	   8156 with Legendary 6* Shrimp Dress               : Nurse Tina                   16/61[ 8156] Shield(18) Heal All(7) Punch(21)
+	   8066 with Legendary 6* Hypnotoad                  : Boy Crazy                    16/63[ 8066] Shield All(10) Hijack(17) Heal(19)
+	   8007 with Legendary 6 Sacred Daggers              : Balloon Fight                19/47[ 8007] Punch(18) Boost(16) Bomb(11)
+	   7682 with Legendary 6** Quahog Martial Arts Academy: Tina Tackle                  20/59[ 7682] Shield All(13-fighter) Bodyguard(19) Gas(22)
+	   7450 with Legendary 6* Power Gym                  : Butt Toucher Tina            18/57[ 7450] Punch(16) Leech(20) Boost(19)
+	   7036 with Legendary 6* Big Boy Karate             : Fashion Fight                17/62[ 7036] Leech(18) Crazed(14) Recover(20)
+	   6805 with Legendary 6** Napkin Art                : Draw Me Tina                 15/74[ 6805] Leech(23) Motivate(15-artistic) Heal(22-artistic)
+	   6620 with Legendary 6** Buck's Stud               : Teagle                       19/70[ 6620] Shield All(12-animal) Cheer(20) Hijack(16)
+	   6529 with Legendary 6** Pantry Guns               : Grill Cook                   19/66[ 6529] Heal(19-Bobs Burgers) Bomb(13)
+	   6353 with Legendary 6** K Pop Video               : Electric Love                20/62[ 6353] Cripple(22) Motivate(17-musical)
+	   5904 with Legendary 6* Iraq Lobster               : Teagle                       20/54[ 5904] Shield All(10-animal) Cheer(18) Hijack(14)
+	   5622 with Legendary 6* Mr. Business               : Teagle                       17/58[ 5622] Shield All(10-animal) Cheer(17) Hijack(13)
+Legendary 6* Hypnotoad:
+	   8066 with Legendary 6** Tina                      : Boy Crazy                    16/63[ 8066] Shield All(10) Hijack(17) Heal(19)
+	   7529 with Legendary 6* Dr. Amy Wong               : Wingnut Amy                  16/61[ 7529] Sturdy(14) Punch(17) Crazed(10)
+	   7044 with Legendary 6** Bender                    : Klepto Bender                17/65[ 7044] Shield All(10) Hijack(14) Sturdy(16)
+	   6978 with Mythic 8 Leela                          : Space Honey                  20/63[ 6978] Bodyguard(18) Payback(22) Hijack(15)
+	   6242 with Legendary 6 Peggy                       : Cigarette Addicts            13/61[ 6242] Leech(18) Crazed(10) Gas(18)
+	   6221 with Legendary 6** Peter                     : Nasal Spray Peter            14/71[ 6221] Shield All(10-addicted) Cripple(17) Sturdy(14)
+	   6198 with Legendary 6* Bobby                      : Cigarette Addicts            12/63[ 6198] Leech(18) Crazed(10) Gas(18)
+	   6003 with Legendary 6 Stewie                      : Medicated Stewie             13/61[ 6003] Payback(12) Bomb(10) Gas(13)
+	   5082 with Epic 5** Bob                            : Burgerboss Bob               15/60[ 5082] Jab(18) Crazed(10)
+	   5082 with Epic 5** Bob                            : Burgerboss Bob               15/60[ 5082] Jab(18) Crazed(10)
+	   4800 with Legendary 6 Roger                       : High Legman                  11/55[ 4800] Boost(10) Punch(12)
+	   4717 with Legendary 6 Klaus Heisler               : Junk Food Klaus               8/60[ 4717] Gas(14) Bomb(9)
+Legendary 6 Peggy:
+	   7455 with Legendary 6** Quahog Martial Arts Academy: Class Spanker                19/51[ 7455] Payback(19) Hijack(13) Punch(19)
+	   7414 with Legendary 6** Pantry Guns               : Paddlin' Peggy               17/68[ 7414] Punch(18) Crazed(13)
+	   7183 with Legendary 6* Shrimp Dress               : Nun Peggy                    13/60[ 7183] Leech(15) Sturdy(12) Bomb(21)
+	   6974 with Legendary 6* Big Boy Karate             : Class Spanker                14/60[ 6974] Payback(18) Hijack(12) Punch(18)
+	   6931 with Legendary 6** Buck's Stud               : Duke                         18/63[ 6931] Jab(21) Sturdy(17) Gas(20)
+	   6800 with Legendary 6* Jacked on Bots             : Cigarette Addicts            14/65[ 6800] Leech(20) Crazed(11) Gas(20)
+	   6469 with Legendary 6** Napkin Art                : Propane Sculpture            13/68[ 6469] Jab(17) Bomb(9) Gas(19)
+	   6259 with Legendary 6* Iraq Lobster               : Duke                         19/48[ 6259] Jab(19) Sturdy(15) Gas(18)
+	   6242 with Legendary 6* Hypnotoad                  : Cigarette Addicts            13/61[ 6242] Leech(18) Crazed(10) Gas(18)
+	   6181 with Legendary 6** K Pop Video               : Tuning Fork                  16/57[ 6181] Bodyguard(14) Jab(19) Crazed(11)
+	   5895 with Legendary 6* Mr. Business               : Duke                         16/52[ 5895] Jab(18) Sturdy(14) Gas(17)
+	   5828 with Legendary 6 Sacred Daggers              : Battle Axe Peggy             16/46[ 5828] Crazed(11) Heal(15)
+	   4974 with Legendary 6* Power Gym                  : Cyclist Peggy                15/54[ 4974] Shield All(7-athletic) Jab(18) Cheer All(9-athletic)
+Legendary 6 Brian:
+	   8624 with Legendary 6** Napkin Art                : Pointillism                  12/61[ 8624] Punch(17) Heal(17) Bomb(13)
+	   7648 with Legendary 6** Buck's Stud               : Wild Brian                   17/68[ 7648] Cheer(22-animal) Punch(16) Crazed(13)
+	   6694 with Legendary 6* Iraq Lobster               : Wild Brian                   18/51[ 6694] Cheer(18-animal) Punch(14) Crazed(11)
+	   6387 with Legendary 6* Mr. Business               : Wild Brian                   15/56[ 6387] Cheer(17-animal) Punch(13) Crazed(11)
+	   6047 with Legendary 6 Sacred Daggers              : Private Brian                14/44[ 6047] Shield All(8-armed) Punch(14) Bomb(7)
+	   6038 with Legendary 6* Power Gym                  : Ping Pong Brian              13/56[ 6038] Jab(20) Sturdy(10) Punch(14)
+	   5247 with Legendary 6** K Pop Video               : Pan Flute Brian              16/52[ 5247] Payback(13) Heal All(6-musical) Boost(14)
+	   5068 with Legendary 6* Shrimp Dress               : Brian in Disguise            12/56[ 5068] Cheer All(9-disguised) Boost(15) Leech(17)
+Legendary 6* Bobby:
+	   7450 with Legendary 6** Quahog Martial Arts Academy: Jealous Bobby                19/53[ 7450] Jab(19) Punch(17) Crazed(10)
+	   7256 with Legendary 6** Buck's Stud               : Doghouse Bobby               18/60[ 7256] Payback(16) Heal(23-animal) Gas(22)
+	   6966 with Legendary 6** Pantry Guns               : Sharpshooter Bobby           16/63[ 6966] Jab(13) Punch(19) Recover(12)
+	   6797 with Legendary 6** K Pop Video               : Belly Drum                   16/63[ 6797] Sturdy(16) Boost(14) Bomb(11)
+	   6643 with Legendary 6* Jacked on Bots             : Cigarette Addicts            13/67[ 6643] Leech(19) Crazed(11) Gas(19)
+	   6467 with Legendary 6* Iraq Lobster               : Doghouse Bobby               19/46[ 6467] Payback(14) Heal(20-animal) Gas(19)
+	   6419 with Legendary 6* Shrimp Dress               : Cupid Bobby                  13/63[ 6419] Hijack(11) Punch(17) Leech(17)
+	   6240 with Legendary 6* Big Boy Karate             : Noble Fighter Bobby          14/63[ 6240] Shield All(7) Bodyguard(16) Leech(19)
+	   6198 with Legendary 6* Hypnotoad                  : Cigarette Addicts            12/63[ 6198] Leech(18) Crazed(10) Gas(18)
+	   6094 with Legendary 6* Mr. Business               : Doghouse Bobby               16/50[ 6094] Payback(13) Heal(19-animal) Gas(18)
+	   5567 with Legendary 6** Napkin Art                : Cloud Painter                14/61[ 5567] Sturdy(14) Heal All(6-King Of The Hill) Motivate(14-King Of The Hill)
+	   5548 with Legendary 6 Sacred Daggers              : Garden Shovel Bobby          15/46[ 5548] Bodyguard(11) Sturdy(6) Motivate(11)
+	   5448 with Legendary 6* Power Gym                  : Rodeo Bobby                  14/58[ 5448] Payback(16) Hijack(12) Sturdy(14)
+Legendary 6* Iraq Lobster:
+	   7838 with Mythic 8 Leela                          : Katz                         26/51[ 7838] Cripple All(12) Leech(21) Hijack(15)
+	   7290 with Epic 5** Bob                            : Squirrel Death               21/36[ 7290] Jab(20) Heal(19) Bomb(10)
+	   7290 with Epic 5** Bob                            : Squirrel Death               21/36[ 7290] Jab(20) Heal(19) Bomb(10)
+	   6833 with Legendary 6 Stewie                      : Xerxes the Falcon            18/50[ 6833] Jab(21) Cripple(21) Gas(21)
+	   6694 with Legendary 6 Brian                       : Wild Brian                   18/51[ 6694] Cheer(18-animal) Punch(14) Crazed(11)
+	   6608 with Legendary 6* Dr. Amy Wong               : Betsy                        20/55[ 6608] Sturdy(20) Hijack(12) Boost(18)
+	   6532 with Legendary 6 Roger                       : Marmalade                    16/46[ 6532] Shield(12) Punch(16) Recover(16)
+	   6467 with Legendary 6* Bobby                      : Doghouse Bobby               19/46[ 6467] Payback(14) Heal(20-animal) Gas(19)
+	   6310 with Legendary 6** Peter                     : Dolphin Rider Peter          22/60[ 6310] Shield All(7-animal) Cheer All(8) Leech(17)
+	   6259 with Legendary 6 Peggy                       : Duke                         19/48[ 6259] Jab(19) Sturdy(15) Gas(18)
+	   5904 with Legendary 6** Tina                      : Teagle                       20/54[ 5904] Shield All(10-animal) Cheer(18) Hijack(14)
+	   5004 with Legendary 6 Klaus Heisler               : Klaus's Fish Wife            13/48[ 5004] Cheer All(7-animal) Motivate(9) Leech(13)
+Legendary 6* Dr. Amy Wong:
+	   8646 with Legendary 6** K Pop Video               : Line Dancer Amy              20/58[ 8646] Jab(18) Motivate(18) Bomb(12)
+	   8098 with Legendary 6* Power Gym                  : Golfer Amy                   17/56[ 8098] Bomb(14) Crazed(14) Recover(21)
+	   7986 with Legendary 6* Jacked on Bots             : Wingnut Amy                  17/65[ 7986] Sturdy(14) Punch(18) Crazed(11)
+	   7812 with Legendary 6 Sacred Daggers              : Whale Hunter Amy             20/47[ 7812] Jab(19) Punch(16) Bomb(13)
+	   7598 with Legendary 6* Shrimp Dress               : Cute Witch of the North      18/55[ 7598] Cripple(18) Leech(25) Heal(20)
+	   7529 with Legendary 6* Hypnotoad                  : Wingnut Amy                  16/61[ 7529] Sturdy(14) Punch(17) Crazed(10)
+	   7380 with Legendary 6** Buck's Stud               : Betsy                        19/71[ 7380] Sturdy(23) Hijack(14) Boost(20)
+	   6608 with Legendary 6* Iraq Lobster               : Betsy                        20/55[ 6608] Sturdy(20) Hijack(12) Boost(18)
+	   6290 with Legendary 6* Mr. Business               : Betsy                        17/59[ 6290] Sturdy(19) Hijack(12) Boost(17)
+Legendary 6** Bender:
+	   8317 with Legendary 6** Buck's Stud               : Bender's Ducklings           22/66[ 8317] Motivate(19-animal) Crazed(12) Heal(26-animal)
+	   7829 with Legendary 6* Jacked on Bots             : Nacho Addict Bender          19/63[ 7829] Bodyguard(15) Leech(22) Bomb(17)
+	   7274 with Legendary 6* Power Gym                  : Sewer Surfer Bender          20/57[ 7274] Sturdy(16) Motivate(13-athletic) Gas(23)
+	   7196 with Legendary 6 Sacred Daggers              : Assassin Bender              21/47[ 7196] Leech(18) Crazed(12) Bomb(12)
+	   7168 with Legendary 6** Quahog Martial Arts Academy: Karate Bender                21/61[ 7168] Sturdy(15) Motivate(16)
+	   7128 with Legendary 6* Mr. Business               : Bender's Ducklings           20/55[ 7128] Motivate(16-animal) Crazed(10) Heal(22-animal)
+	   7044 with Legendary 6* Hypnotoad                  : Klepto Bender                17/65[ 7044] Shield All(10) Hijack(14) Sturdy(16)
+	   6808 with Legendary 6** K Pop Video               : Red Rodriguez 2 Real         22/58[ 6808] Cheer(22-musical) Punch(20)
+	   6524 with Legendary 6* Shrimp Dress               : Disco Bender                 20/52[ 6524] Shield All(7-disguised) Sturdy(17) Bomb(10)
+	   5978 with Legendary 6** Napkin Art                : Chest Etching                17/72[ 5978] Cheer(19-artistic) Payback(17) Jab(22)
+Epic 5** Bob:
+	   8305 with Legendary 6** Buck's Stud               : Squirrel Death               20/50[ 8305] Jab(24) Heal(23) Bomb(11)
+	   7290 with Legendary 6* Iraq Lobster               : Squirrel Death               21/36[ 7290] Jab(20) Heal(19) Bomb(10)
+	   7101 with Legendary 6** K Pop Video               : Hip Hop Bob                  16/47[ 7101] Cripple All(6) Punch(15) Crazed(10)
+	   6611 with Legendary 6* Jacked on Bots             : Cranberry Bog                14/57[ 6611] Punch(15) Sturdy(12) Heal(18-addicted)
+	   6243 with Legendary 6** Quahog Martial Arts Academy: Christmas Punchout           20/41[ 6243] Hijack(10) Punch(15) Leech(18)
+	   6132 with Legendary 6** Pantry Guns               : $300 Knife                   17/59[ 6132] Cripple(17) Jab(17) Crazed(9)
+	   5830 with Legendary 6* Big Boy Karate             : Christmas Punchout           15/50[ 5830] Hijack(10) Punch(14) Leech(17)
+	   5324 with Legendary 6** Napkin Art                : Art Student                  14/57[ 5324] Cheer(14-artistic) Sturdy(13) Heal(11)
+	   5322 with Legendary 6* Shrimp Dress               : Dr. Bobbenstein              13/50[ 5322] Jab(18) Leech(15) Crazed(11)
+	   5278 with Legendary 6 Sacred Daggers              : Bacon Weight                 17/39[ 5278] Hijack(11) Sturdy(12) Gas(16)
+	   5082 with Legendary 6* Hypnotoad                  : Burgerboss Bob               15/60[ 5082] Jab(18) Crazed(10)
+	   4568 with Legendary 6* Power Gym                  : Bouldering Bob               15/46[ 4568] Cheer(14-athletic) Shield All(5-athletic) Gas(14)
+	   4351 with Legendary 6* Mr. Business               : Cat Trainer Bob              16/41[ 4351] Cripple(12) Jab(15) Cheer(13-animal)
+Mythic 8 Leela:
+	   8708 with Legendary 6** Buck's Stud               : Katz                         25/66[ 8708] Cripple All(14) Leech(23) Hijack(17)
+	   8373 with Legendary 6** Pantry Guns               : Penguin Conservator          23/66[ 8373] Jab(25) Punch(26)
+	   7838 with Legendary 6* Iraq Lobster               : Katz                         26/51[ 7838] Cripple All(12) Leech(21) Hijack(15)
+	   7566 with Legendary 6** Napkin Art                : Leela Balloon Art            22/63[ 7566] Cripple All(10) Gas(24)
+	   7536 with Legendary 6 Sacred Daggers              : Leela's Harpoon              24/48[ 7536] Jab(23) Cheer All(11-armed) Punch(17)
+	   7500 with Legendary 6* Shrimp Dress               : Male Leela                   20/62[ 7500] Sturdy(22) Boost(19) Payback(19)
+	   7427 with Legendary 6* Power Gym                  : Skiing Leela                 23/56[ 7427] Motivate(14-athletic) Sturdy(16) Bomb(11)
+	   7425 with Legendary 6* Mr. Business               : Katz                         23/55[ 7425] Cripple All(11) Leech(20) Hijack(15)
+	   7336 with Legendary 6* Jacked on Bots             : Space Honey                  21/66[ 7336] Bodyguard(19) Payback(23) Hijack(16)
+	   7196 with Legendary 6** Quahog Martial Arts Academy: Action Delivery Force Leela  26/56[ 7196] Cheer(24-Futurama) Hijack(14) Crazed(15)
+	   6978 with Legendary 6* Hypnotoad                  : Space Honey                  20/63[ 6978] Bodyguard(18) Payback(22) Hijack(15)
+	   6875 with Legendary 6* Big Boy Karate             : Yeti Fighter Leela           21/65[ 6875] Jab(23) Payback(21) Cheer All(12-fighter)
+	   5894 with Legendary 6** K Pop Video               : Opera Singer Leela           25/63[ 5894] Cheer(25-Futurama) Leech(27)
+Legendary 6 Stewie:
+	   9204 with Legendary 6** Napkin Art                : Pointillism                  13/65[ 9204] Punch(18) Heal(18) Bomb(14)
+	   7879 with Legendary 6** Quahog Martial Arts Academy: Karate Stewie                18/54[ 7879] Punch(17) Boost(17) Crazed(11)
+	   7644 with Legendary 6** Buck's Stud               : Xerxes the Falcon            17/64[ 7644] Jab(24) Cripple(24) Gas(24)
+	   7553 with Legendary 6** Pantry Guns               : Laser Gun Stewie             16/65[ 7553] Jab(21) Punch(16) Gas(18)
+	   7440 with Legendary 6* Big Boy Karate             : Karate Stewie                13/63[ 7440] Punch(16) Boost(16) Crazed(11)
+	   6976 with Legendary 6* Jacked on Bots             : Contact High Stewie          13/67[ 6976] Leech(20) Punch(18) Hijack(15)
+	   6918 with Legendary 6** K Pop Video               : Music Video Stewie           15/60[ 6918] Punch(18) Leech(18) Sturdy(12)
+	   6833 with Legendary 6* Iraq Lobster               : Xerxes the Falcon            18/50[ 6833] Jab(21) Cripple(21) Gas(21)
+	   6444 with Legendary 6* Mr. Business               : Xerxes the Falcon            15/53[ 6444] Jab(20) Cripple(20) Gas(20)
+	   6031 with Legendary 6* Shrimp Dress               : Honey Mustache Stewie        12/64[ 6031] Jab(16) Crazed(11) Gas(15)
+	   6003 with Legendary 6* Hypnotoad                  : Medicated Stewie             13/61[ 6003] Payback(12) Bomb(10) Gas(13)
+	   5418 with Legendary 6 Sacred Daggers              : Knife Fight Stewie           15/48[ 5418] Cripple(14) Hijack(8) Crazed(11)
+	   5228 with Legendary 6* Power Gym                  : Swim Lesson                  14/57[ 5228] Shield All(5-athletic) Bodyguard(14) Jab(22)
+Epic 5** Bob:
+	   8305 with Legendary 6** Buck's Stud               : Squirrel Death               20/50[ 8305] Jab(24) Heal(23) Bomb(11)
+	   7290 with Legendary 6* Iraq Lobster               : Squirrel Death               21/36[ 7290] Jab(20) Heal(19) Bomb(10)
+	   7101 with Legendary 6** K Pop Video               : Hip Hop Bob                  16/47[ 7101] Cripple All(6) Punch(15) Crazed(10)
+	   6611 with Legendary 6* Jacked on Bots             : Cranberry Bog                14/57[ 6611] Punch(15) Sturdy(12) Heal(18-addicted)
+	   6243 with Legendary 6** Quahog Martial Arts Academy: Christmas Punchout           20/41[ 6243] Hijack(10) Punch(15) Leech(18)
+	   6132 with Legendary 6** Pantry Guns               : $300 Knife                   17/59[ 6132] Cripple(17) Jab(17) Crazed(9)
+	   5830 with Legendary 6* Big Boy Karate             : Christmas Punchout           15/50[ 5830] Hijack(10) Punch(14) Leech(17)
+	   5324 with Legendary 6** Napkin Art                : Art Student                  14/57[ 5324] Cheer(14-artistic) Sturdy(13) Heal(11)
+	   5322 with Legendary 6* Shrimp Dress               : Dr. Bobbenstein              13/50[ 5322] Jab(18) Leech(15) Crazed(11)
+	   5278 with Legendary 6 Sacred Daggers              : Bacon Weight                 17/39[ 5278] Hijack(11) Sturdy(12) Gas(16)
+	   5082 with Legendary 6* Hypnotoad                  : Burgerboss Bob               15/60[ 5082] Jab(18) Crazed(10)
+	   4568 with Legendary 6* Power Gym                  : Bouldering Bob               15/46[ 4568] Cheer(14-athletic) Shield All(5-athletic) Gas(14)
+	   4351 with Legendary 6* Mr. Business               : Cat Trainer Bob              16/41[ 4351] Cripple(12) Jab(15) Cheer(13-animal)
+Legendary 6* Jacked on Bots:
+	   8436 with Legendary 6** Tina                      : Boy Crazy                    17/67[ 8436] Shield All(10) Hijack(18) Heal(20)
+	   7986 with Legendary 6* Dr. Amy Wong               : Wingnut Amy                  17/65[ 7986] Sturdy(14) Punch(18) Crazed(11)
+	   7829 with Legendary 6** Bender                    : Nacho Addict Bender          19/63[ 7829] Bodyguard(15) Leech(22) Bomb(17)
+	   7336 with Mythic 8 Leela                          : Space Honey                  21/66[ 7336] Bodyguard(19) Payback(23) Hijack(16)
+	   6976 with Legendary 6 Stewie                      : Contact High Stewie          13/67[ 6976] Leech(20) Punch(18) Hijack(15)
+	   6800 with Legendary 6 Peggy                       : Cigarette Addicts            14/65[ 6800] Leech(20) Crazed(11) Gas(20)
+	   6648 with Legendary 6** Peter                     : Nasal Spray Peter            15/75[ 6648] Shield All(11-addicted) Cripple(18) Sturdy(15)
+	   6643 with Legendary 6* Bobby                      : Cigarette Addicts            13/67[ 6643] Leech(19) Crazed(11) Gas(19)
+	   6611 with Epic 5** Bob                            : Cranberry Bog                14/57[ 6611] Punch(15) Sturdy(12) Heal(18-addicted)
+	   6611 with Epic 5** Bob                            : Cranberry Bog                14/57[ 6611] Punch(15) Sturdy(12) Heal(18-addicted)
+	   5440 with Legendary 6 Roger                       : Stoned Loser Roger           11/60[ 5440] Cripple(14) Bodyguard(11) Bomb(8)
+	   5109 with Legendary 6 Klaus Heisler               : Junk Food Klaus               9/63[ 5109] Gas(15) Bomb(10)
+Legendary 6* Shrimp Dress:
+	   8156 with Legendary 6** Tina                      : Nurse Tina                   16/61[ 8156] Shield(18) Heal All(7) Punch(21)
+	   7598 with Legendary 6* Dr. Amy Wong               : Cute Witch of the North      18/55[ 7598] Cripple(18) Leech(25) Heal(20)
+	   7500 with Mythic 8 Leela                          : Male Leela                   20/62[ 7500] Sturdy(22) Boost(19) Payback(19)
+	   7183 with Legendary 6 Peggy                       : Nun Peggy                    13/60[ 7183] Leech(15) Sturdy(12) Bomb(21)
+	   6524 with Legendary 6** Bender                    : Disco Bender                 20/52[ 6524] Shield All(7-disguised) Sturdy(17) Bomb(10)
+	   6419 with Legendary 6* Bobby                      : Cupid Bobby                  13/63[ 6419] Hijack(11) Punch(17) Leech(17)
+	   6031 with Legendary 6 Stewie                      : Honey Mustache Stewie        12/64[ 6031] Jab(16) Crazed(11) Gas(15)
+	   6020 with Legendary 6 Klaus Heisler               : Kawaii Klaus                  8/60[ 6020] Heal All(5) Motivate(8) Bomb(11)
+	   5695 with Legendary 6** Peter                     : Sister Peter                 15/73[ 5695] Heal All(12-Family Guy) Motivate(15-disguised)
+	   5322 with Epic 5** Bob                            : Dr. Bobbenstein              13/50[ 5322] Jab(18) Leech(15) Crazed(11)
+	   5322 with Epic 5** Bob                            : Dr. Bobbenstein              13/50[ 5322] Jab(18) Leech(15) Crazed(11)
+	   5068 with Legendary 6 Brian                       : Brian in Disguise            12/56[ 5068] Cheer All(9-disguised) Boost(15) Leech(17)
+	   4562 with Legendary 6 Roger                       : Ruby Zeldastein              11/57[ 4562] Shield All(5-disguised) Sturdy(9) Crazed(7)
+Legendary 6 Roger:
+	   7521 with Legendary 6** Buck's Stud               : Marmalade                    15/61[ 7521] Shield(14) Punch(19) Recover(19)
+	   7219 with Legendary 6** K Pop Video               : Roger Goes Down              14/56[ 7219] Jab(19) Heal(20) Bomb(10)
+	   6532 with Legendary 6* Iraq Lobster               : Marmalade                    16/46[ 6532] Shield(12) Punch(16) Recover(16)
+	   6102 with Legendary 6* Mr. Business               : Marmalade                    13/50[ 6102] Shield(11) Punch(15) Recover(15)
+	   6007 with Legendary 6** Quahog Martial Arts Academy: Dummy Fight                  16/49[ 6007] Cripple(17) Heal All(8-fighter) Gas(18)
+	   5639 with Legendary 6* Big Boy Karate             : Dummy Fight                  12/58[ 5639] Cripple(16) Heal All(7-fighter) Gas(17)
+	   5578 with Legendary 6* Power Gym                  : Badminton Roger              12/57[ 5578] Sturdy(13) Hijack(9) Punch(12)
+	   5455 with Legendary 6** Napkin Art                : Artist Roger                 11/61[ 5455] Leech(17) Boost(11) Gas(17)
+	   5440 with Legendary 6* Jacked on Bots             : Stoned Loser Roger           11/60[ 5440] Cripple(14) Bodyguard(11) Bomb(8)
+	   5354 with Legendary 6** Pantry Guns               : Legman                       14/59[ 5354] Shield(15-armed) Punch(15)
+	   4800 with Legendary 6* Hypnotoad                  : High Legman                  11/55[ 4800] Boost(10) Punch(12)
+	   4684 with Legendary 6 Sacred Daggers              : Ricky Spanish                15/39[ 4684] Payback(12) Leech(13) Gas(12)
+	   4562 with Legendary 6* Shrimp Dress               : Ruby Zeldastein              11/57[ 4562] Shield All(5-disguised) Sturdy(9) Crazed(7)
+Legendary 6** Peter:
+	  10147 with Legendary 6** Quahog Martial Arts Academy: Chicken Fight                22/54[10147] Motivate(11) Punch(21) Bomb(16)
+	   9774 with Legendary 6* Big Boy Karate             : Chicken Fight                17/63[ 9774] Motivate(11) Punch(20) Bomb(16)
+	   7791 with Legendary 6** K Pop Video               : K Pop Peter                  19/62[ 7791] Shield All(10-musical) Leech(22) Punch(19)
+	   7239 with Legendary 6 Sacred Daggers              : Pirate Cannon Peter          17/53[ 7239] Cheer All(7) Crazed(11) Bomb(13)
+	   7096 with Legendary 6** Buck's Stud               : Dolphin Rider Peter          22/77[ 7096] Shield All(8-animal) Cheer All(9) Leech(19)
+	   6970 with Legendary 6** Pantry Guns               : Gun Safety Peter             18/70[ 6970] Jab(15) Punch(21)
+	   6648 with Legendary 6* Jacked on Bots             : Nasal Spray Peter            15/75[ 6648] Shield All(11-addicted) Cripple(18) Sturdy(15)
+	   6310 with Legendary 6* Iraq Lobster               : Dolphin Rider Peter          22/60[ 6310] Shield All(7-animal) Cheer All(8) Leech(17)
+	   6259 with Legendary 6* Power Gym                  : Mountain Climber Peter       16/64[ 6259] Bodyguard(14) Shield(15) Sturdy(17)
+	   6221 with Legendary 6* Hypnotoad                  : Nasal Spray Peter            14/71[ 6221] Shield All(10-addicted) Cripple(17) Sturdy(14)
+	   6170 with Legendary 6** Napkin Art                : Sculptor Peter               17/75[ 6170] Shield(20-Family Guy) Crazed(15)
+	   5982 with Legendary 6* Mr. Business               : Dolphin Rider Peter          18/64[ 5982] Shield All(7-animal) Cheer All(8) Leech(16)
+	   5695 with Legendary 6* Shrimp Dress               : Sister Peter                 15/73[ 5695] Heal All(12-Family Guy) Motivate(15-disguised)
+Legendary 6** Buck's Stud:
+	   8708 with Mythic 8 Leela                          : Katz                         25/66[ 8708] Cripple All(14) Leech(23) Hijack(17)
+	   8317 with Legendary 6** Bender                    : Bender's Ducklings           22/66[ 8317] Motivate(19-animal) Crazed(12) Heal(26-animal)
+	   8305 with Epic 5** Bob                            : Squirrel Death               20/50[ 8305] Jab(24) Heal(23) Bomb(11)
+	   8305 with Epic 5** Bob                            : Squirrel Death               20/50[ 8305] Jab(24) Heal(23) Bomb(11)
+	   7648 with Legendary 6 Brian                       : Wild Brian                   17/68[ 7648] Cheer(22-animal) Punch(16) Crazed(13)
+	   7644 with Legendary 6 Stewie                      : Xerxes the Falcon            17/64[ 7644] Jab(24) Cripple(24) Gas(24)
+	   7521 with Legendary 6 Roger                       : Marmalade                    15/61[ 7521] Shield(14) Punch(19) Recover(19)
+	   7380 with Legendary 6* Dr. Amy Wong               : Betsy                        19/71[ 7380] Sturdy(23) Hijack(14) Boost(20)
+	   7256 with Legendary 6* Bobby                      : Doghouse Bobby               18/60[ 7256] Payback(16) Heal(23-animal) Gas(22)
+	   7096 with Legendary 6** Peter                     : Dolphin Rider Peter          22/77[ 7096] Shield All(8-animal) Cheer All(9) Leech(19)
+	   6931 with Legendary 6 Peggy                       : Duke                         18/63[ 6931] Jab(21) Sturdy(17) Gas(20)
+	   6620 with Legendary 6** Tina                      : Teagle                       19/70[ 6620] Shield All(12-animal) Cheer(20) Hijack(16)
+	   5874 with Legendary 6 Klaus Heisler               : Klaus's Fish Wife            13/63[ 5874] Cheer All(8-animal) Motivate(11) Leech(15)
+Legendary 6** K Pop Video:
+	   8646 with Legendary 6* Dr. Amy Wong               : Line Dancer Amy              20/58[ 8646] Jab(18) Motivate(18) Bomb(12)
+	   7791 with Legendary 6** Peter                     : K Pop Peter                  19/62[ 7791] Shield All(10-musical) Leech(22) Punch(19)
+	   7219 with Legendary 6 Roger                       : Roger Goes Down              14/56[ 7219] Jab(19) Heal(20) Bomb(10)
+	   7101 with Epic 5** Bob                            : Hip Hop Bob                  16/47[ 7101] Cripple All(6) Punch(15) Crazed(10)
+	   7101 with Epic 5** Bob                            : Hip Hop Bob                  16/47[ 7101] Cripple All(6) Punch(15) Crazed(10)
+	   6918 with Legendary 6 Stewie                      : Music Video Stewie           15/60[ 6918] Punch(18) Leech(18) Sturdy(12)
+	   6808 with Legendary 6** Bender                    : Red Rodriguez 2 Real         22/58[ 6808] Cheer(22-musical) Punch(20)
+	   6797 with Legendary 6* Bobby                      : Belly Drum                   16/63[ 6797] Sturdy(16) Boost(14) Bomb(11)
+	   6353 with Legendary 6** Tina                      : Electric Love                20/62[ 6353] Cripple(22) Motivate(17-musical)
+	   6181 with Legendary 6 Peggy                       : Tuning Fork                  16/57[ 6181] Bodyguard(14) Jab(19) Crazed(11)
+	   5894 with Mythic 8 Leela                          : Opera Singer Leela           25/63[ 5894] Cheer(25-Futurama) Leech(27)
+	   5247 with Legendary 6 Brian                       : Pan Flute Brian              16/52[ 5247] Payback(13) Heal All(6-musical) Boost(14)
+	   4232 with Legendary 6 Klaus Heisler               : DJ Klaus                     11/56[ 4232] Cheer(12-American Dad) Sturdy(10) Boost(10)
+Legendary 6* Mr. Business:
+	   7425 with Mythic 8 Leela                          : Katz                         23/55[ 7425] Cripple All(11) Leech(20) Hijack(15)
+	   7128 with Legendary 6** Bender                    : Bender's Ducklings           20/55[ 7128] Motivate(16-animal) Crazed(10) Heal(22-animal)
+	   6444 with Legendary 6 Stewie                      : Xerxes the Falcon            15/53[ 6444] Jab(20) Cripple(20) Gas(20)
+	   6387 with Legendary 6 Brian                       : Wild Brian                   15/56[ 6387] Cheer(17-animal) Punch(13) Crazed(11)
+	   6290 with Legendary 6* Dr. Amy Wong               : Betsy                        17/59[ 6290] Sturdy(19) Hijack(12) Boost(17)
+	   6102 with Legendary 6 Roger                       : Marmalade                    13/50[ 6102] Shield(11) Punch(15) Recover(15)
+	   6094 with Legendary 6* Bobby                      : Doghouse Bobby               16/50[ 6094] Payback(13) Heal(19-animal) Gas(18)
+	   5982 with Legendary 6** Peter                     : Dolphin Rider Peter          18/64[ 5982] Shield All(7-animal) Cheer All(8) Leech(16)
+	   5895 with Legendary 6 Peggy                       : Duke                         16/52[ 5895] Jab(18) Sturdy(14) Gas(17)
+	   5622 with Legendary 6** Tina                      : Teagle                       17/58[ 5622] Shield All(10-animal) Cheer(17) Hijack(13)
+	   4556 with Legendary 6 Klaus Heisler               : Klaus's Fish Wife            10/52[ 4556] Cheer All(6-animal) Motivate(8) Leech(12)
+	   4351 with Epic 5** Bob                            : Cat Trainer Bob              16/41[ 4351] Cripple(12) Jab(15) Cheer(13-animal)
+	   4351 with Epic 5** Bob                            : Cat Trainer Bob              16/41[ 4351] Cripple(12) Jab(15) Cheer(13-animal)
+Legendary 6** Pantry Guns:
+	   8373 with Mythic 8 Leela                          : Penguin Conservator          23/66[ 8373] Jab(25) Punch(26)
+	   7553 with Legendary 6 Stewie                      : Laser Gun Stewie             16/65[ 7553] Jab(21) Punch(16) Gas(18)
+	   7414 with Legendary 6 Peggy                       : Paddlin' Peggy               17/68[ 7414] Punch(18) Crazed(13)
+	   6970 with Legendary 6** Peter                     : Gun Safety Peter             18/70[ 6970] Jab(15) Punch(21)
+	   6966 with Legendary 6* Bobby                      : Sharpshooter Bobby           16/63[ 6966] Jab(13) Punch(19) Recover(12)
+	   6529 with Legendary 6** Tina                      : Grill Cook                   19/66[ 6529] Heal(19-Bobs Burgers) Bomb(13)
+	   6132 with Epic 5** Bob                            : $300 Knife                   17/59[ 6132] Cripple(17) Jab(17) Crazed(9)
+	   6132 with Epic 5** Bob                            : $300 Knife                   17/59[ 6132] Cripple(17) Jab(17) Crazed(9)
+	   5354 with Legendary 6 Roger                       : Legman                       14/59[ 5354] Shield(15-armed) Punch(15)
+Legendary 6 Sacred Daggers:
+	   8007 with Legendary 6** Tina                      : Balloon Fight                19/47[ 8007] Punch(18) Boost(16) Bomb(11)
+	   7812 with Legendary 6* Dr. Amy Wong               : Whale Hunter Amy             20/47[ 7812] Jab(19) Punch(16) Bomb(13)
+	   7536 with Mythic 8 Leela                          : Leela's Harpoon              24/48[ 7536] Jab(23) Cheer All(11-armed) Punch(17)
+	   7239 with Legendary 6** Peter                     : Pirate Cannon Peter          17/53[ 7239] Cheer All(7) Crazed(11) Bomb(13)
+	   7196 with Legendary 6** Bender                    : Assassin Bender              21/47[ 7196] Leech(18) Crazed(12) Bomb(12)
+	   6047 with Legendary 6 Brian                       : Private Brian                14/44[ 6047] Shield All(8-armed) Punch(14) Bomb(7)
+	   5828 with Legendary 6 Peggy                       : Battle Axe Peggy             16/46[ 5828] Crazed(11) Heal(15)
+	   5548 with Legendary 6* Bobby                      : Garden Shovel Bobby          15/46[ 5548] Bodyguard(11) Sturdy(6) Motivate(11)
+	   5418 with Legendary 6 Stewie                      : Knife Fight Stewie           15/48[ 5418] Cripple(14) Hijack(8) Crazed(11)
+	   5278 with Epic 5** Bob                            : Bacon Weight                 17/39[ 5278] Hijack(11) Sturdy(12) Gas(16)
+	   5278 with Epic 5** Bob                            : Bacon Weight                 17/39[ 5278] Hijack(11) Sturdy(12) Gas(16)
+	   4684 with Legendary 6 Roger                       : Ricky Spanish                15/39[ 4684] Payback(12) Leech(13) Gas(12)
+	   4020 with Legendary 6 Klaus Heisler               : Cartel Klaus                 11/45[ 4020] Hijack(9) Leech(12) Gas(10)
+Legendary 6** Quahog Martial Arts Academy:
+	  10147 with Legendary 6** Peter                     : Chicken Fight                22/54[10147] Motivate(11) Punch(21) Bomb(16)
+	   7879 with Legendary 6 Stewie                      : Karate Stewie                18/54[ 7879] Punch(17) Boost(17) Crazed(11)
+	   7682 with Legendary 6** Tina                      : Tina Tackle                  20/59[ 7682] Shield All(13-fighter) Bodyguard(19) Gas(22)
+	   7455 with Legendary 6 Peggy                       : Class Spanker                19/51[ 7455] Payback(19) Hijack(13) Punch(19)
+	   7450 with Legendary 6* Bobby                      : Jealous Bobby                19/53[ 7450] Jab(19) Punch(17) Crazed(10)
+	   7196 with Mythic 8 Leela                          : Action Delivery Force Leela  26/56[ 7196] Cheer(24-Futurama) Hijack(14) Crazed(15)
+	   7168 with Legendary 6** Bender                    : Karate Bender                21/61[ 7168] Sturdy(15) Motivate(16)
+	   7040 with Legendary 6 Klaus Heisler               : Smoke Bomb                   14/53[ 7040] Cripple All(7) Gas(17) Bomb(12)
+	   6243 with Epic 5** Bob                            : Christmas Punchout           20/41[ 6243] Hijack(10) Punch(15) Leech(18)
+	   6243 with Epic 5** Bob                            : Christmas Punchout           20/41[ 6243] Hijack(10) Punch(15) Leech(18)
+	   6007 with Legendary 6 Roger                       : Dummy Fight                  16/49[ 6007] Cripple(17) Heal All(8-fighter) Gas(18)
+Legendary 6* Power Gym:
+	   8098 with Legendary 6* Dr. Amy Wong               : Golfer Amy                   17/56[ 8098] Bomb(14) Crazed(14) Recover(21)
+	   7450 with Legendary 6** Tina                      : Butt Toucher Tina            18/57[ 7450] Punch(16) Leech(20) Boost(19)
+	   7427 with Mythic 8 Leela                          : Skiing Leela                 23/56[ 7427] Motivate(14-athletic) Sturdy(16) Bomb(11)
+	   7274 with Legendary 6** Bender                    : Sewer Surfer Bender          20/57[ 7274] Sturdy(16) Motivate(13-athletic) Gas(23)
+	   6259 with Legendary 6** Peter                     : Mountain Climber Peter       16/64[ 6259] Bodyguard(14) Shield(15) Sturdy(17)
+	   6038 with Legendary 6 Brian                       : Ping Pong Brian              13/56[ 6038] Jab(20) Sturdy(10) Punch(14)
+	   5671 with Legendary 6 Klaus Heisler               : Pumping Iron                  9/57[ 5671] Hijack(13) Punch(13) Recover(15)
+	   5578 with Legendary 6 Roger                       : Badminton Roger              12/57[ 5578] Sturdy(13) Hijack(9) Punch(12)
+	   5448 with Legendary 6* Bobby                      : Rodeo Bobby                  14/58[ 5448] Payback(16) Hijack(12) Sturdy(14)
+	   5228 with Legendary 6 Stewie                      : Swim Lesson                  14/57[ 5228] Shield All(5-athletic) Bodyguard(14) Jab(22)
+	   4974 with Legendary 6 Peggy                       : Cyclist Peggy                15/54[ 4974] Shield All(7-athletic) Jab(18) Cheer All(9-athletic)
+	   4568 with Epic 5** Bob                            : Bouldering Bob               15/46[ 4568] Cheer(14-athletic) Shield All(5-athletic) Gas(14)
+	   4568 with Epic 5** Bob                            : Bouldering Bob               15/46[ 4568] Cheer(14-athletic) Shield All(5-athletic) Gas(14)
+
+>> Strongest combos for each skill:
+	[Cripple]
+		Xerxes the Falcon            17/64[ 7644] Jab(24) Cripple(24) Gas(24)                                | Legendary 6 Stewie + Legendary 6** Buck's Stud
+		Electric Love                20/62[ 6353] Cripple(22) Motivate(17-musical)                           | Legendary 6** Tina + Legendary 6** K Pop Video
+		Xerxes the Falcon            18/50[ 6833] Jab(21) Cripple(21) Gas(21)                                | Legendary 6 Stewie + Legendary 6* Iraq Lobster
+		Xerxes the Falcon            15/53[ 6444] Jab(20) Cripple(20) Gas(20)                                | Legendary 6 Stewie + Legendary 6* Mr. Business
+		Cute Witch of the North      18/55[ 7598] Cripple(18) Leech(25) Heal(20)                             | Legendary 6* Dr. Amy Wong + Legendary 6* Shrimp Dress
+		Nasal Spray Peter            15/75[ 6648] Shield All(11-addicted) Cripple(18) Sturdy(15)             | Legendary 6** Peter + Legendary 6* Jacked on Bots
+		Nasal Spray Peter            14/71[ 6221] Shield All(10-addicted) Cripple(17) Sturdy(14)             | Legendary 6** Peter + Legendary 6* Hypnotoad
+		$300 Knife                   17/59[ 6132] Cripple(17) Jab(17) Crazed(9)                              | Epic 5** Bob + Legendary 6** Pantry Guns
+		$300 Knife                   17/59[ 6132] Cripple(17) Jab(17) Crazed(9)                              | Epic 5** Bob + Legendary 6** Pantry Guns
+		Dummy Fight                  16/49[ 6007] Cripple(17) Heal All(8-fighter) Gas(18)                    | Legendary 6 Roger + Legendary 6** Quahog Martial Arts Academy
+		Dummy Fight                  12/58[ 5639] Cripple(16) Heal All(7-fighter) Gas(17)                    | Legendary 6 Roger + Legendary 6* Big Boy Karate
+		Stoned Loser Roger           11/60[ 5440] Cripple(14) Bodyguard(11) Bomb(8)                          | Legendary 6 Roger + Legendary 6* Jacked on Bots
+		Knife Fight Stewie           15/48[ 5418] Cripple(14) Hijack(8) Crazed(11)                           | Legendary 6 Stewie + Legendary 6 Sacred Daggers
+		Cat Trainer Bob              16/41[ 4351] Cripple(12) Jab(15) Cheer(13-animal)                       | Epic 5** Bob + Legendary 6* Mr. Business
+		Cat Trainer Bob              16/41[ 4351] Cripple(12) Jab(15) Cheer(13-animal)                       | Epic 5** Bob + Legendary 6* Mr. Business
+	[Bodyguard]
+		Tina Tackle                  20/59[ 7682] Shield All(13-fighter) Bodyguard(19) Gas(22)               | Legendary 6** Tina + Legendary 6** Quahog Martial Arts Academy
+		Space Honey                  21/66[ 7336] Bodyguard(19) Payback(23) Hijack(16)                       | Mythic 8 Leela + Legendary 6* Jacked on Bots
+		Space Honey                  20/63[ 6978] Bodyguard(18) Payback(22) Hijack(15)                       | Mythic 8 Leela + Legendary 6* Hypnotoad
+		Noble Fighter Bobby          14/63[ 6240] Shield All(7) Bodyguard(16) Leech(19)                      | Legendary 6* Bobby + Legendary 6* Big Boy Karate
+		Nacho Addict Bender          19/63[ 7829] Bodyguard(15) Leech(22) Bomb(17)                           | Legendary 6** Bender + Legendary 6* Jacked on Bots
+		Mountain Climber Peter       16/64[ 6259] Bodyguard(14) Shield(15) Sturdy(17)                        | Legendary 6** Peter + Legendary 6* Power Gym
+		Tuning Fork                  16/57[ 6181] Bodyguard(14) Jab(19) Crazed(11)                           | Legendary 6 Peggy + Legendary 6** K Pop Video
+		Swim Lesson                  14/57[ 5228] Shield All(5-athletic) Bodyguard(14) Jab(22)               | Legendary 6 Stewie + Legendary 6* Power Gym
+		Garden Shovel Bobby          15/46[ 5548] Bodyguard(11) Sturdy(6) Motivate(11)                       | Legendary 6* Bobby + Legendary 6 Sacred Daggers
+		Stoned Loser Roger           11/60[ 5440] Cripple(14) Bodyguard(11) Bomb(8)                          | Legendary 6 Roger + Legendary 6* Jacked on Bots
+	[Leech]
+		Opera Singer Leela           25/63[ 5894] Cheer(25-Futurama) Leech(27)                               | Mythic 8 Leela + Legendary 6** K Pop Video
+		Cute Witch of the North      18/55[ 7598] Cripple(18) Leech(25) Heal(20)                             | Legendary 6* Dr. Amy Wong + Legendary 6* Shrimp Dress
+		Katz                         25/66[ 8708] Cripple All(14) Leech(23) Hijack(17)                       | Mythic 8 Leela + Legendary 6** Buck's Stud
+		Draw Me Tina                 15/74[ 6805] Leech(23) Motivate(15-artistic) Heal(22-artistic)          | Legendary 6** Tina + Legendary 6** Napkin Art
+		Nacho Addict Bender          19/63[ 7829] Bodyguard(15) Leech(22) Bomb(17)                           | Legendary 6** Bender + Legendary 6* Jacked on Bots
+		K Pop Peter                  19/62[ 7791] Shield All(10-musical) Leech(22) Punch(19)                 | Legendary 6** Peter + Legendary 6** K Pop Video
+		Katz                         26/51[ 7838] Cripple All(12) Leech(21) Hijack(15)                       | Mythic 8 Leela + Legendary 6* Iraq Lobster
+		Butt Toucher Tina            18/57[ 7450] Punch(16) Leech(20) Boost(19)                              | Legendary 6** Tina + Legendary 6* Power Gym
+		Katz                         23/55[ 7425] Cripple All(11) Leech(20) Hijack(15)                       | Mythic 8 Leela + Legendary 6* Mr. Business
+		Contact High Stewie          13/67[ 6976] Leech(20) Punch(18) Hijack(15)                             | Legendary 6 Stewie + Legendary 6* Jacked on Bots
+		Cigarette Addicts            14/65[ 6800] Leech(20) Crazed(11) Gas(20)                               | Legendary 6 Peggy + Legendary 6* Jacked on Bots
+		Dolphin Rider Peter          22/77[ 7096] Shield All(8-animal) Cheer All(9) Leech(19)                | Legendary 6** Peter + Legendary 6** Buck's Stud
+		Cigarette Addicts            13/67[ 6643] Leech(19) Crazed(11) Gas(19)                               | Legendary 6* Bobby + Legendary 6* Jacked on Bots
+		Noble Fighter Bobby          14/63[ 6240] Shield All(7) Bodyguard(16) Leech(19)                      | Legendary 6* Bobby + Legendary 6* Big Boy Karate
+		Assassin Bender              21/47[ 7196] Leech(18) Crazed(12) Bomb(12)                              | Legendary 6** Bender + Legendary 6 Sacred Daggers
+		Fashion Fight                17/62[ 7036] Leech(18) Crazed(14) Recover(20)                           | Legendary 6** Tina + Legendary 6* Big Boy Karate
+		Music Video Stewie           15/60[ 6918] Punch(18) Leech(18) Sturdy(12)                             | Legendary 6 Stewie + Legendary 6** K Pop Video
+		Christmas Punchout           20/41[ 6243] Hijack(10) Punch(15) Leech(18)                             | Epic 5** Bob + Legendary 6** Quahog Martial Arts Academy
+		Christmas Punchout           20/41[ 6243] Hijack(10) Punch(15) Leech(18)                             | Epic 5** Bob + Legendary 6** Quahog Martial Arts Academy
+		Cigarette Addicts            13/61[ 6242] Leech(18) Crazed(10) Gas(18)                               | Legendary 6 Peggy + Legendary 6* Hypnotoad
+		Cigarette Addicts            12/63[ 6198] Leech(18) Crazed(10) Gas(18)                               | Legendary 6* Bobby + Legendary 6* Hypnotoad
+		Cupid Bobby                  13/63[ 6419] Hijack(11) Punch(17) Leech(17)                             | Legendary 6* Bobby + Legendary 6* Shrimp Dress
+		Dolphin Rider Peter          22/60[ 6310] Shield All(7-animal) Cheer All(8) Leech(17)                | Legendary 6** Peter + Legendary 6* Iraq Lobster
+		Christmas Punchout           15/50[ 5830] Hijack(10) Punch(14) Leech(17)                             | Epic 5** Bob + Legendary 6* Big Boy Karate
+		Christmas Punchout           15/50[ 5830] Hijack(10) Punch(14) Leech(17)                             | Epic 5** Bob + Legendary 6* Big Boy Karate
+		Artist Roger                 11/61[ 5455] Leech(17) Boost(11) Gas(17)                                | Legendary 6 Roger + Legendary 6** Napkin Art
+		Brian in Disguise            12/56[ 5068] Cheer All(9-disguised) Boost(15) Leech(17)                 | Legendary 6 Brian + Legendary 6* Shrimp Dress
+		Dolphin Rider Peter          18/64[ 5982] Shield All(7-animal) Cheer All(8) Leech(16)                | Legendary 6** Peter + Legendary 6* Mr. Business
+		Nun Peggy                    13/60[ 7183] Leech(15) Sturdy(12) Bomb(21)                              | Legendary 6 Peggy + Legendary 6* Shrimp Dress
+		Klaus's Fish Wife            13/63[ 5874] Cheer All(8-animal) Motivate(11) Leech(15)                 | Legendary 6 Klaus Heisler + Legendary 6** Buck's Stud
+		Dr. Bobbenstein              13/50[ 5322] Jab(18) Leech(15) Crazed(11)                               | Epic 5** Bob + Legendary 6* Shrimp Dress
+		Dr. Bobbenstein              13/50[ 5322] Jab(18) Leech(15) Crazed(11)                               | Epic 5** Bob + Legendary 6* Shrimp Dress
+		Klaus's Fish Wife            13/48[ 5004] Cheer All(7-animal) Motivate(9) Leech(13)                  | Legendary 6 Klaus Heisler + Legendary 6* Iraq Lobster
+		Ricky Spanish                15/39[ 4684] Payback(12) Leech(13) Gas(12)                              | Legendary 6 Roger + Legendary 6 Sacred Daggers
+		Klaus's Fish Wife            10/52[ 4556] Cheer All(6-animal) Motivate(8) Leech(12)                  | Legendary 6 Klaus Heisler + Legendary 6* Mr. Business
+		Cartel Klaus                 11/45[ 4020] Hijack(9) Leech(12) Gas(10)                                | Legendary 6 Klaus Heisler + Legendary 6 Sacred Daggers
+	[Bomb]
+		Nun Peggy                    13/60[ 7183] Leech(15) Sturdy(12) Bomb(21)                              | Legendary 6 Peggy + Legendary 6* Shrimp Dress
+		Nacho Addict Bender          19/63[ 7829] Bodyguard(15) Leech(22) Bomb(17)                           | Legendary 6** Bender + Legendary 6* Jacked on Bots
+		Chicken Fight                22/54[10147] Motivate(11) Punch(21) Bomb(16)                            | Legendary 6** Peter + Legendary 6** Quahog Martial Arts Academy
+		Chicken Fight                17/63[ 9774] Motivate(11) Punch(20) Bomb(16)                            | Legendary 6** Peter + Legendary 6* Big Boy Karate
+		Pointillism                  13/65[ 9204] Punch(18) Heal(18) Bomb(14)                                | Legendary 6 Stewie + Legendary 6** Napkin Art
+		Golfer Amy                   17/56[ 8098] Bomb(14) Crazed(14) Recover(21)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Power Gym
+		Pointillism                  12/61[ 8624] Punch(17) Heal(17) Bomb(13)                                | Legendary 6 Brian + Legendary 6** Napkin Art
+		Whale Hunter Amy             20/47[ 7812] Jab(19) Punch(16) Bomb(13)                                 | Legendary 6* Dr. Amy Wong + Legendary 6 Sacred Daggers
+		Pirate Cannon Peter          17/53[ 7239] Cheer All(7) Crazed(11) Bomb(13)                           | Legendary 6** Peter + Legendary 6 Sacred Daggers
+		Grill Cook                   19/66[ 6529] Heal(19-Bobs Burgers) Bomb(13)                             | Legendary 6** Tina + Legendary 6** Pantry Guns
+		Line Dancer Amy              20/58[ 8646] Jab(18) Motivate(18) Bomb(12)                              | Legendary 6* Dr. Amy Wong + Legendary 6** K Pop Video
+		Assassin Bender              21/47[ 7196] Leech(18) Crazed(12) Bomb(12)                              | Legendary 6** Bender + Legendary 6 Sacred Daggers
+		Smoke Bomb                   14/53[ 7040] Cripple All(7) Gas(17) Bomb(12)                            | Legendary 6 Klaus Heisler + Legendary 6** Quahog Martial Arts Academy
+		Smoke Bomb                    9/63[ 6747] Cripple All(7) Gas(16) Bomb(12)                            | Legendary 6 Klaus Heisler + Legendary 6* Big Boy Karate
+		Squirrel Death               20/50[ 8305] Jab(24) Heal(23) Bomb(11)                                  | Epic 5** Bob + Legendary 6** Buck's Stud
+		Squirrel Death               20/50[ 8305] Jab(24) Heal(23) Bomb(11)                                  | Epic 5** Bob + Legendary 6** Buck's Stud
+		Balloon Fight                19/47[ 8007] Punch(18) Boost(16) Bomb(11)                               | Legendary 6** Tina + Legendary 6 Sacred Daggers
+		Skiing Leela                 23/56[ 7427] Motivate(14-athletic) Sturdy(16) Bomb(11)                  | Mythic 8 Leela + Legendary 6* Power Gym
+		Belly Drum                   16/63[ 6797] Sturdy(16) Boost(14) Bomb(11)                              | Legendary 6* Bobby + Legendary 6** K Pop Video
+		Kawaii Klaus                  8/60[ 6020] Heal All(5) Motivate(8) Bomb(11)                           | Legendary 6 Klaus Heisler + Legendary 6* Shrimp Dress
+		Squirrel Death               21/36[ 7290] Jab(20) Heal(19) Bomb(10)                                  | Epic 5** Bob + Legendary 6* Iraq Lobster
+		Squirrel Death               21/36[ 7290] Jab(20) Heal(19) Bomb(10)                                  | Epic 5** Bob + Legendary 6* Iraq Lobster
+		Roger Goes Down              14/56[ 7219] Jab(19) Heal(20) Bomb(10)                                  | Legendary 6 Roger + Legendary 6** K Pop Video
+		Disco Bender                 20/52[ 6524] Shield All(7-disguised) Sturdy(17) Bomb(10)                | Legendary 6** Bender + Legendary 6* Shrimp Dress
+		Medicated Stewie             13/61[ 6003] Payback(12) Bomb(10) Gas(13)                               | Legendary 6 Stewie + Legendary 6* Hypnotoad
+		Junk Food Klaus               9/63[ 5109] Gas(15) Bomb(10)                                           | Legendary 6 Klaus Heisler + Legendary 6* Jacked on Bots
+		Propane Sculpture            13/68[ 6469] Jab(17) Bomb(9) Gas(19)                                    | Legendary 6 Peggy + Legendary 6** Napkin Art
+		Junk Food Klaus               8/60[ 4717] Gas(14) Bomb(9)                                            | Legendary 6 Klaus Heisler + Legendary 6* Hypnotoad
+		Stoned Loser Roger           11/60[ 5440] Cripple(14) Bodyguard(11) Bomb(8)                          | Legendary 6 Roger + Legendary 6* Jacked on Bots
+		Private Brian                14/44[ 6047] Shield All(8-armed) Punch(14) Bomb(7)                      | Legendary 6 Brian + Legendary 6 Sacred Daggers
+	[Shield]
+		Sculptor Peter               17/75[ 6170] Shield(20-Family Guy) Crazed(15)                           | Legendary 6** Peter + Legendary 6** Napkin Art
+		Nurse Tina                   16/61[ 8156] Shield(18) Heal All(7) Punch(21)                           | Legendary 6** Tina + Legendary 6* Shrimp Dress
+		Mountain Climber Peter       16/64[ 6259] Bodyguard(14) Shield(15) Sturdy(17)                        | Legendary 6** Peter + Legendary 6* Power Gym
+		Legman                       14/59[ 5354] Shield(15-armed) Punch(15)                                 | Legendary 6 Roger + Legendary 6** Pantry Guns
+		Marmalade                    15/61[ 7521] Shield(14) Punch(19) Recover(19)                           | Legendary 6 Roger + Legendary 6** Buck's Stud
+		Marmalade                    16/46[ 6532] Shield(12) Punch(16) Recover(16)                           | Legendary 6 Roger + Legendary 6* Iraq Lobster
+		Marmalade                    13/50[ 6102] Shield(11) Punch(15) Recover(15)                           | Legendary 6 Roger + Legendary 6* Mr. Business
+	[Punch]
+		Penguin Conservator          23/66[ 8373] Jab(25) Punch(26)                                          | Mythic 8 Leela + Legendary 6** Pantry Guns
+		Chicken Fight                22/54[10147] Motivate(11) Punch(21) Bomb(16)                            | Legendary 6** Peter + Legendary 6** Quahog Martial Arts Academy
+		Nurse Tina                   16/61[ 8156] Shield(18) Heal All(7) Punch(21)                           | Legendary 6** Tina + Legendary 6* Shrimp Dress
+		Gun Safety Peter             18/70[ 6970] Jab(15) Punch(21)                                          | Legendary 6** Peter + Legendary 6** Pantry Guns
+		Chicken Fight                17/63[ 9774] Motivate(11) Punch(20) Bomb(16)                            | Legendary 6** Peter + Legendary 6* Big Boy Karate
+		Red Rodriguez 2 Real         22/58[ 6808] Cheer(22-musical) Punch(20)                                | Legendary 6** Bender + Legendary 6** K Pop Video
+		K Pop Peter                  19/62[ 7791] Shield All(10-musical) Leech(22) Punch(19)                 | Legendary 6** Peter + Legendary 6** K Pop Video
+		Marmalade                    15/61[ 7521] Shield(14) Punch(19) Recover(19)                           | Legendary 6 Roger + Legendary 6** Buck's Stud
+		Class Spanker                19/51[ 7455] Payback(19) Hijack(13) Punch(19)                           | Legendary 6 Peggy + Legendary 6** Quahog Martial Arts Academy
+		Sharpshooter Bobby           16/63[ 6966] Jab(13) Punch(19) Recover(12)                              | Legendary 6* Bobby + Legendary 6** Pantry Guns
+		Pointillism                  13/65[ 9204] Punch(18) Heal(18) Bomb(14)                                | Legendary 6 Stewie + Legendary 6** Napkin Art
+		Balloon Fight                19/47[ 8007] Punch(18) Boost(16) Bomb(11)                               | Legendary 6** Tina + Legendary 6 Sacred Daggers
+		Wingnut Amy                  17/65[ 7986] Sturdy(14) Punch(18) Crazed(11)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Jacked on Bots
+		Paddlin' Peggy               17/68[ 7414] Punch(18) Crazed(13)                                       | Legendary 6 Peggy + Legendary 6** Pantry Guns
+		Contact High Stewie          13/67[ 6976] Leech(20) Punch(18) Hijack(15)                             | Legendary 6 Stewie + Legendary 6* Jacked on Bots
+		Class Spanker                14/60[ 6974] Payback(18) Hijack(12) Punch(18)                           | Legendary 6 Peggy + Legendary 6* Big Boy Karate
+		Music Video Stewie           15/60[ 6918] Punch(18) Leech(18) Sturdy(12)                             | Legendary 6 Stewie + Legendary 6** K Pop Video
+		Pointillism                  12/61[ 8624] Punch(17) Heal(17) Bomb(13)                                | Legendary 6 Brian + Legendary 6** Napkin Art
+		Karate Stewie                18/54[ 7879] Punch(17) Boost(17) Crazed(11)                             | Legendary 6 Stewie + Legendary 6** Quahog Martial Arts Academy
+		Leela's Harpoon              24/48[ 7536] Jab(23) Cheer All(11-armed) Punch(17)                      | Mythic 8 Leela + Legendary 6 Sacred Daggers
+		Wingnut Amy                  16/61[ 7529] Sturdy(14) Punch(17) Crazed(10)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Hypnotoad
+		Jealous Bobby                19/53[ 7450] Jab(19) Punch(17) Crazed(10)                               | Legendary 6* Bobby + Legendary 6** Quahog Martial Arts Academy
+		Cupid Bobby                  13/63[ 6419] Hijack(11) Punch(17) Leech(17)                             | Legendary 6* Bobby + Legendary 6* Shrimp Dress
+		Whale Hunter Amy             20/47[ 7812] Jab(19) Punch(16) Bomb(13)                                 | Legendary 6* Dr. Amy Wong + Legendary 6 Sacred Daggers
+		Wild Brian                   17/68[ 7648] Cheer(22-animal) Punch(16) Crazed(13)                      | Legendary 6 Brian + Legendary 6** Buck's Stud
+		Laser Gun Stewie             16/65[ 7553] Jab(21) Punch(16) Gas(18)                                  | Legendary 6 Stewie + Legendary 6** Pantry Guns
+		Butt Toucher Tina            18/57[ 7450] Punch(16) Leech(20) Boost(19)                              | Legendary 6** Tina + Legendary 6* Power Gym
+		Karate Stewie                13/63[ 7440] Punch(16) Boost(16) Crazed(11)                             | Legendary 6 Stewie + Legendary 6* Big Boy Karate
+		Marmalade                    16/46[ 6532] Shield(12) Punch(16) Recover(16)                           | Legendary 6 Roger + Legendary 6* Iraq Lobster
+		Hip Hop Bob                  16/47[ 7101] Cripple All(6) Punch(15) Crazed(10)                        | Epic 5** Bob + Legendary 6** K Pop Video
+		Hip Hop Bob                  16/47[ 7101] Cripple All(6) Punch(15) Crazed(10)                        | Epic 5** Bob + Legendary 6** K Pop Video
+		Cranberry Bog                14/57[ 6611] Punch(15) Sturdy(12) Heal(18-addicted)                     | Epic 5** Bob + Legendary 6* Jacked on Bots
+		Cranberry Bog                14/57[ 6611] Punch(15) Sturdy(12) Heal(18-addicted)                     | Epic 5** Bob + Legendary 6* Jacked on Bots
+		Christmas Punchout           20/41[ 6243] Hijack(10) Punch(15) Leech(18)                             | Epic 5** Bob + Legendary 6** Quahog Martial Arts Academy
+		Christmas Punchout           20/41[ 6243] Hijack(10) Punch(15) Leech(18)                             | Epic 5** Bob + Legendary 6** Quahog Martial Arts Academy
+		Marmalade                    13/50[ 6102] Shield(11) Punch(15) Recover(15)                           | Legendary 6 Roger + Legendary 6* Mr. Business
+		Legman                       14/59[ 5354] Shield(15-armed) Punch(15)                                 | Legendary 6 Roger + Legendary 6** Pantry Guns
+		Wild Brian                   18/51[ 6694] Cheer(18-animal) Punch(14) Crazed(11)                      | Legendary 6 Brian + Legendary 6* Iraq Lobster
+		Private Brian                14/44[ 6047] Shield All(8-armed) Punch(14) Bomb(7)                      | Legendary 6 Brian + Legendary 6 Sacred Daggers
+		Ping Pong Brian              13/56[ 6038] Jab(20) Sturdy(10) Punch(14)                               | Legendary 6 Brian + Legendary 6* Power Gym
+		Christmas Punchout           15/50[ 5830] Hijack(10) Punch(14) Leech(17)                             | Epic 5** Bob + Legendary 6* Big Boy Karate
+		Christmas Punchout           15/50[ 5830] Hijack(10) Punch(14) Leech(17)                             | Epic 5** Bob + Legendary 6* Big Boy Karate
+		Wild Brian                   15/56[ 6387] Cheer(17-animal) Punch(13) Crazed(11)                      | Legendary 6 Brian + Legendary 6* Mr. Business
+		Pumping Iron                  9/57[ 5671] Hijack(13) Punch(13) Recover(15)                           | Legendary 6 Klaus Heisler + Legendary 6* Power Gym
+		Badminton Roger              12/57[ 5578] Sturdy(13) Hijack(9) Punch(12)                             | Legendary 6 Roger + Legendary 6* Power Gym
+		High Legman                  11/55[ 4800] Boost(10) Punch(12)                                        | Legendary 6 Roger + Legendary 6* Hypnotoad
+	[Heal All]
+		Sister Peter                 15/73[ 5695] Heal All(12-Family Guy) Motivate(15-disguised)             | Legendary 6** Peter + Legendary 6* Shrimp Dress
+		Dummy Fight                  16/49[ 6007] Cripple(17) Heal All(8-fighter) Gas(18)                    | Legendary 6 Roger + Legendary 6** Quahog Martial Arts Academy
+		Nurse Tina                   16/61[ 8156] Shield(18) Heal All(7) Punch(21)                           | Legendary 6** Tina + Legendary 6* Shrimp Dress
+		Dummy Fight                  12/58[ 5639] Cripple(16) Heal All(7-fighter) Gas(17)                    | Legendary 6 Roger + Legendary 6* Big Boy Karate
+		Cloud Painter                14/61[ 5567] Sturdy(14) Heal All(6-King Of The Hill) Motivate(14-King Of The Hill) | Legendary 6* Bobby + Legendary 6** Napkin Art
+		Pan Flute Brian              16/52[ 5247] Payback(13) Heal All(6-musical) Boost(14)                  | Legendary 6 Brian + Legendary 6** K Pop Video
+		Kawaii Klaus                  8/60[ 6020] Heal All(5) Motivate(8) Bomb(11)                           | Legendary 6 Klaus Heisler + Legendary 6* Shrimp Dress
+	[Motivate]
+		Bender's Ducklings           22/66[ 8317] Motivate(19-animal) Crazed(12) Heal(26-animal)             | Legendary 6** Bender + Legendary 6** Buck's Stud
+		Line Dancer Amy              20/58[ 8646] Jab(18) Motivate(18) Bomb(12)                              | Legendary 6* Dr. Amy Wong + Legendary 6** K Pop Video
+		Electric Love                20/62[ 6353] Cripple(22) Motivate(17-musical)                           | Legendary 6** Tina + Legendary 6** K Pop Video
+		Karate Bender                21/61[ 7168] Sturdy(15) Motivate(16)                                    | Legendary 6** Bender + Legendary 6** Quahog Martial Arts Academy
+		Bender's Ducklings           20/55[ 7128] Motivate(16-animal) Crazed(10) Heal(22-animal)             | Legendary 6** Bender + Legendary 6* Mr. Business
+		Draw Me Tina                 15/74[ 6805] Leech(23) Motivate(15-artistic) Heal(22-artistic)          | Legendary 6** Tina + Legendary 6** Napkin Art
+		Sister Peter                 15/73[ 5695] Heal All(12-Family Guy) Motivate(15-disguised)             | Legendary 6** Peter + Legendary 6* Shrimp Dress
+		Skiing Leela                 23/56[ 7427] Motivate(14-athletic) Sturdy(16) Bomb(11)                  | Mythic 8 Leela + Legendary 6* Power Gym
+		Cloud Painter                14/61[ 5567] Sturdy(14) Heal All(6-King Of The Hill) Motivate(14-King Of The Hill) | Legendary 6* Bobby + Legendary 6** Napkin Art
+		Sewer Surfer Bender          20/57[ 7274] Sturdy(16) Motivate(13-athletic) Gas(23)                   | Legendary 6** Bender + Legendary 6* Power Gym
+		Chicken Fight                22/54[10147] Motivate(11) Punch(21) Bomb(16)                            | Legendary 6** Peter + Legendary 6** Quahog Martial Arts Academy
+		Chicken Fight                17/63[ 9774] Motivate(11) Punch(20) Bomb(16)                            | Legendary 6** Peter + Legendary 6* Big Boy Karate
+		Klaus's Fish Wife            13/63[ 5874] Cheer All(8-animal) Motivate(11) Leech(15)                 | Legendary 6 Klaus Heisler + Legendary 6** Buck's Stud
+		Garden Shovel Bobby          15/46[ 5548] Bodyguard(11) Sturdy(6) Motivate(11)                       | Legendary 6* Bobby + Legendary 6 Sacred Daggers
+		Klaus's Fish Wife            13/48[ 5004] Cheer All(7-animal) Motivate(9) Leech(13)                  | Legendary 6 Klaus Heisler + Legendary 6* Iraq Lobster
+		Kawaii Klaus                  8/60[ 6020] Heal All(5) Motivate(8) Bomb(11)                           | Legendary 6 Klaus Heisler + Legendary 6* Shrimp Dress
+		Klaus's Fish Wife            10/52[ 4556] Cheer All(6-animal) Motivate(8) Leech(12)                  | Legendary 6 Klaus Heisler + Legendary 6* Mr. Business
+	[Recover]
+		Golfer Amy                   17/56[ 8098] Bomb(14) Crazed(14) Recover(21)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Power Gym
+		Fashion Fight                17/62[ 7036] Leech(18) Crazed(14) Recover(20)                           | Legendary 6** Tina + Legendary 6* Big Boy Karate
+		Marmalade                    15/61[ 7521] Shield(14) Punch(19) Recover(19)                           | Legendary 6 Roger + Legendary 6** Buck's Stud
+		Marmalade                    16/46[ 6532] Shield(12) Punch(16) Recover(16)                           | Legendary 6 Roger + Legendary 6* Iraq Lobster
+		Marmalade                    13/50[ 6102] Shield(11) Punch(15) Recover(15)                           | Legendary 6 Roger + Legendary 6* Mr. Business
+		Pumping Iron                  9/57[ 5671] Hijack(13) Punch(13) Recover(15)                           | Legendary 6 Klaus Heisler + Legendary 6* Power Gym
+		Sharpshooter Bobby           16/63[ 6966] Jab(13) Punch(19) Recover(12)                              | Legendary 6* Bobby + Legendary 6** Pantry Guns
+	[Heal]
+		Bender's Ducklings           22/66[ 8317] Motivate(19-animal) Crazed(12) Heal(26-animal)             | Legendary 6** Bender + Legendary 6** Buck's Stud
+		Squirrel Death               20/50[ 8305] Jab(24) Heal(23) Bomb(11)                                  | Epic 5** Bob + Legendary 6** Buck's Stud
+		Squirrel Death               20/50[ 8305] Jab(24) Heal(23) Bomb(11)                                  | Epic 5** Bob + Legendary 6** Buck's Stud
+		Doghouse Bobby               18/60[ 7256] Payback(16) Heal(23-animal) Gas(22)                        | Legendary 6* Bobby + Legendary 6** Buck's Stud
+		Bender's Ducklings           20/55[ 7128] Motivate(16-animal) Crazed(10) Heal(22-animal)             | Legendary 6** Bender + Legendary 6* Mr. Business
+		Draw Me Tina                 15/74[ 6805] Leech(23) Motivate(15-artistic) Heal(22-artistic)          | Legendary 6** Tina + Legendary 6** Napkin Art
+		Boy Crazy                    17/67[ 8436] Shield All(10) Hijack(18) Heal(20)                         | Legendary 6** Tina + Legendary 6* Jacked on Bots
+		Cute Witch of the North      18/55[ 7598] Cripple(18) Leech(25) Heal(20)                             | Legendary 6* Dr. Amy Wong + Legendary 6* Shrimp Dress
+		Roger Goes Down              14/56[ 7219] Jab(19) Heal(20) Bomb(10)                                  | Legendary 6 Roger + Legendary 6** K Pop Video
+		Doghouse Bobby               19/46[ 6467] Payback(14) Heal(20-animal) Gas(19)                        | Legendary 6* Bobby + Legendary 6* Iraq Lobster
+		Boy Crazy                    16/63[ 8066] Shield All(10) Hijack(17) Heal(19)                         | Legendary 6** Tina + Legendary 6* Hypnotoad
+		Squirrel Death               21/36[ 7290] Jab(20) Heal(19) Bomb(10)                                  | Epic 5** Bob + Legendary 6* Iraq Lobster
+		Squirrel Death               21/36[ 7290] Jab(20) Heal(19) Bomb(10)                                  | Epic 5** Bob + Legendary 6* Iraq Lobster
+		Grill Cook                   19/66[ 6529] Heal(19-Bobs Burgers) Bomb(13)                             | Legendary 6** Tina + Legendary 6** Pantry Guns
+		Doghouse Bobby               16/50[ 6094] Payback(13) Heal(19-animal) Gas(18)                        | Legendary 6* Bobby + Legendary 6* Mr. Business
+		Pointillism                  13/65[ 9204] Punch(18) Heal(18) Bomb(14)                                | Legendary 6 Stewie + Legendary 6** Napkin Art
+		Cranberry Bog                14/57[ 6611] Punch(15) Sturdy(12) Heal(18-addicted)                     | Epic 5** Bob + Legendary 6* Jacked on Bots
+		Cranberry Bog                14/57[ 6611] Punch(15) Sturdy(12) Heal(18-addicted)                     | Epic 5** Bob + Legendary 6* Jacked on Bots
+		Pointillism                  12/61[ 8624] Punch(17) Heal(17) Bomb(13)                                | Legendary 6 Brian + Legendary 6** Napkin Art
+		Battle Axe Peggy             16/46[ 5828] Crazed(11) Heal(15)                                        | Legendary 6 Peggy + Legendary 6 Sacred Daggers
+		Art Student                  14/57[ 5324] Cheer(14-artistic) Sturdy(13) Heal(11)                     | Epic 5** Bob + Legendary 6** Napkin Art
+		Art Student                  14/57[ 5324] Cheer(14-artistic) Sturdy(13) Heal(11)                     | Epic 5** Bob + Legendary 6** Napkin Art
+	[Gas]
+		Xerxes the Falcon            17/64[ 7644] Jab(24) Cripple(24) Gas(24)                                | Legendary 6 Stewie + Legendary 6** Buck's Stud
+		Leela Balloon Art            22/63[ 7566] Cripple All(10) Gas(24)                                    | Mythic 8 Leela + Legendary 6** Napkin Art
+		Sewer Surfer Bender          20/57[ 7274] Sturdy(16) Motivate(13-athletic) Gas(23)                   | Legendary 6** Bender + Legendary 6* Power Gym
+		Tina Tackle                  20/59[ 7682] Shield All(13-fighter) Bodyguard(19) Gas(22)               | Legendary 6** Tina + Legendary 6** Quahog Martial Arts Academy
+		Doghouse Bobby               18/60[ 7256] Payback(16) Heal(23-animal) Gas(22)                        | Legendary 6* Bobby + Legendary 6** Buck's Stud
+		Xerxes the Falcon            18/50[ 6833] Jab(21) Cripple(21) Gas(21)                                | Legendary 6 Stewie + Legendary 6* Iraq Lobster
+		Duke                         18/63[ 6931] Jab(21) Sturdy(17) Gas(20)                                 | Legendary 6 Peggy + Legendary 6** Buck's Stud
+		Cigarette Addicts            14/65[ 6800] Leech(20) Crazed(11) Gas(20)                               | Legendary 6 Peggy + Legendary 6* Jacked on Bots
+		Xerxes the Falcon            15/53[ 6444] Jab(20) Cripple(20) Gas(20)                                | Legendary 6 Stewie + Legendary 6* Mr. Business
+		Cigarette Addicts            13/67[ 6643] Leech(19) Crazed(11) Gas(19)                               | Legendary 6* Bobby + Legendary 6* Jacked on Bots
+		Propane Sculpture            13/68[ 6469] Jab(17) Bomb(9) Gas(19)                                    | Legendary 6 Peggy + Legendary 6** Napkin Art
+		Doghouse Bobby               19/46[ 6467] Payback(14) Heal(20-animal) Gas(19)                        | Legendary 6* Bobby + Legendary 6* Iraq Lobster
+		Laser Gun Stewie             16/65[ 7553] Jab(21) Punch(16) Gas(18)                                  | Legendary 6 Stewie + Legendary 6** Pantry Guns
+		Duke                         19/48[ 6259] Jab(19) Sturdy(15) Gas(18)                                 | Legendary 6 Peggy + Legendary 6* Iraq Lobster
+		Cigarette Addicts            13/61[ 6242] Leech(18) Crazed(10) Gas(18)                               | Legendary 6 Peggy + Legendary 6* Hypnotoad
+		Cigarette Addicts            12/63[ 6198] Leech(18) Crazed(10) Gas(18)                               | Legendary 6* Bobby + Legendary 6* Hypnotoad
+		Doghouse Bobby               16/50[ 6094] Payback(13) Heal(19-animal) Gas(18)                        | Legendary 6* Bobby + Legendary 6* Mr. Business
+		Dummy Fight                  16/49[ 6007] Cripple(17) Heal All(8-fighter) Gas(18)                    | Legendary 6 Roger + Legendary 6** Quahog Martial Arts Academy
+		Smoke Bomb                   14/53[ 7040] Cripple All(7) Gas(17) Bomb(12)                            | Legendary 6 Klaus Heisler + Legendary 6** Quahog Martial Arts Academy
+		Duke                         16/52[ 5895] Jab(18) Sturdy(14) Gas(17)                                 | Legendary 6 Peggy + Legendary 6* Mr. Business
+		Dummy Fight                  12/58[ 5639] Cripple(16) Heal All(7-fighter) Gas(17)                    | Legendary 6 Roger + Legendary 6* Big Boy Karate
+		Artist Roger                 11/61[ 5455] Leech(17) Boost(11) Gas(17)                                | Legendary 6 Roger + Legendary 6** Napkin Art
+		Smoke Bomb                    9/63[ 6747] Cripple All(7) Gas(16) Bomb(12)                            | Legendary 6 Klaus Heisler + Legendary 6* Big Boy Karate
+		Bacon Weight                 17/39[ 5278] Hijack(11) Sturdy(12) Gas(16)                              | Epic 5** Bob + Legendary 6 Sacred Daggers
+		Bacon Weight                 17/39[ 5278] Hijack(11) Sturdy(12) Gas(16)                              | Epic 5** Bob + Legendary 6 Sacred Daggers
+		Honey Mustache Stewie        12/64[ 6031] Jab(16) Crazed(11) Gas(15)                                 | Legendary 6 Stewie + Legendary 6* Shrimp Dress
+		Junk Food Klaus               9/63[ 5109] Gas(15) Bomb(10)                                           | Legendary 6 Klaus Heisler + Legendary 6* Jacked on Bots
+		Junk Food Klaus               8/60[ 4717] Gas(14) Bomb(9)                                            | Legendary 6 Klaus Heisler + Legendary 6* Hypnotoad
+		Bouldering Bob               15/46[ 4568] Cheer(14-athletic) Shield All(5-athletic) Gas(14)          | Epic 5** Bob + Legendary 6* Power Gym
+		Bouldering Bob               15/46[ 4568] Cheer(14-athletic) Shield All(5-athletic) Gas(14)          | Epic 5** Bob + Legendary 6* Power Gym
+		Medicated Stewie             13/61[ 6003] Payback(12) Bomb(10) Gas(13)                               | Legendary 6 Stewie + Legendary 6* Hypnotoad
+		Ricky Spanish                15/39[ 4684] Payback(12) Leech(13) Gas(12)                              | Legendary 6 Roger + Legendary 6 Sacred Daggers
+		Cartel Klaus                 11/45[ 4020] Hijack(9) Leech(12) Gas(10)                                | Legendary 6 Klaus Heisler + Legendary 6 Sacred Daggers
+	[Jab]
+		Penguin Conservator          23/66[ 8373] Jab(25) Punch(26)                                          | Mythic 8 Leela + Legendary 6** Pantry Guns
+		Squirrel Death               20/50[ 8305] Jab(24) Heal(23) Bomb(11)                                  | Epic 5** Bob + Legendary 6** Buck's Stud
+		Squirrel Death               20/50[ 8305] Jab(24) Heal(23) Bomb(11)                                  | Epic 5** Bob + Legendary 6** Buck's Stud
+		Xerxes the Falcon            17/64[ 7644] Jab(24) Cripple(24) Gas(24)                                | Legendary 6 Stewie + Legendary 6** Buck's Stud
+		Leela's Harpoon              24/48[ 7536] Jab(23) Cheer All(11-armed) Punch(17)                      | Mythic 8 Leela + Legendary 6 Sacred Daggers
+		Yeti Fighter Leela           21/65[ 6875] Jab(23) Payback(21) Cheer All(12-fighter)                  | Mythic 8 Leela + Legendary 6* Big Boy Karate
+		Chest Etching                17/72[ 5978] Cheer(19-artistic) Payback(17) Jab(22)                     | Legendary 6** Bender + Legendary 6** Napkin Art
+		Swim Lesson                  14/57[ 5228] Shield All(5-athletic) Bodyguard(14) Jab(22)               | Legendary 6 Stewie + Legendary 6* Power Gym
+		Laser Gun Stewie             16/65[ 7553] Jab(21) Punch(16) Gas(18)                                  | Legendary 6 Stewie + Legendary 6** Pantry Guns
+		Duke                         18/63[ 6931] Jab(21) Sturdy(17) Gas(20)                                 | Legendary 6 Peggy + Legendary 6** Buck's Stud
+		Xerxes the Falcon            18/50[ 6833] Jab(21) Cripple(21) Gas(21)                                | Legendary 6 Stewie + Legendary 6* Iraq Lobster
+		Squirrel Death               21/36[ 7290] Jab(20) Heal(19) Bomb(10)                                  | Epic 5** Bob + Legendary 6* Iraq Lobster
+		Squirrel Death               21/36[ 7290] Jab(20) Heal(19) Bomb(10)                                  | Epic 5** Bob + Legendary 6* Iraq Lobster
+		Xerxes the Falcon            15/53[ 6444] Jab(20) Cripple(20) Gas(20)                                | Legendary 6 Stewie + Legendary 6* Mr. Business
+		Ping Pong Brian              13/56[ 6038] Jab(20) Sturdy(10) Punch(14)                               | Legendary 6 Brian + Legendary 6* Power Gym
+		Whale Hunter Amy             20/47[ 7812] Jab(19) Punch(16) Bomb(13)                                 | Legendary 6* Dr. Amy Wong + Legendary 6 Sacred Daggers
+		Jealous Bobby                19/53[ 7450] Jab(19) Punch(17) Crazed(10)                               | Legendary 6* Bobby + Legendary 6** Quahog Martial Arts Academy
+		Roger Goes Down              14/56[ 7219] Jab(19) Heal(20) Bomb(10)                                  | Legendary 6 Roger + Legendary 6** K Pop Video
+		Duke                         19/48[ 6259] Jab(19) Sturdy(15) Gas(18)                                 | Legendary 6 Peggy + Legendary 6* Iraq Lobster
+		Tuning Fork                  16/57[ 6181] Bodyguard(14) Jab(19) Crazed(11)                           | Legendary 6 Peggy + Legendary 6** K Pop Video
+		Line Dancer Amy              20/58[ 8646] Jab(18) Motivate(18) Bomb(12)                              | Legendary 6* Dr. Amy Wong + Legendary 6** K Pop Video
+		Duke                         16/52[ 5895] Jab(18) Sturdy(14) Gas(17)                                 | Legendary 6 Peggy + Legendary 6* Mr. Business
+		Dr. Bobbenstein              13/50[ 5322] Jab(18) Leech(15) Crazed(11)                               | Epic 5** Bob + Legendary 6* Shrimp Dress
+		Dr. Bobbenstein              13/50[ 5322] Jab(18) Leech(15) Crazed(11)                               | Epic 5** Bob + Legendary 6* Shrimp Dress
+		Burgerboss Bob               15/60[ 5082] Jab(18) Crazed(10)                                         | Epic 5** Bob + Legendary 6* Hypnotoad
+		Burgerboss Bob               15/60[ 5082] Jab(18) Crazed(10)                                         | Epic 5** Bob + Legendary 6* Hypnotoad
+		Cyclist Peggy                15/54[ 4974] Shield All(7-athletic) Jab(18) Cheer All(9-athletic)       | Legendary 6 Peggy + Legendary 6* Power Gym
+		Propane Sculpture            13/68[ 6469] Jab(17) Bomb(9) Gas(19)                                    | Legendary 6 Peggy + Legendary 6** Napkin Art
+		$300 Knife                   17/59[ 6132] Cripple(17) Jab(17) Crazed(9)                              | Epic 5** Bob + Legendary 6** Pantry Guns
+		$300 Knife                   17/59[ 6132] Cripple(17) Jab(17) Crazed(9)                              | Epic 5** Bob + Legendary 6** Pantry Guns
+		Honey Mustache Stewie        12/64[ 6031] Jab(16) Crazed(11) Gas(15)                                 | Legendary 6 Stewie + Legendary 6* Shrimp Dress
+		Gun Safety Peter             18/70[ 6970] Jab(15) Punch(21)                                          | Legendary 6** Peter + Legendary 6** Pantry Guns
+		Cat Trainer Bob              16/41[ 4351] Cripple(12) Jab(15) Cheer(13-animal)                       | Epic 5** Bob + Legendary 6* Mr. Business
+		Cat Trainer Bob              16/41[ 4351] Cripple(12) Jab(15) Cheer(13-animal)                       | Epic 5** Bob + Legendary 6* Mr. Business
+		Sharpshooter Bobby           16/63[ 6966] Jab(13) Punch(19) Recover(12)                              | Legendary 6* Bobby + Legendary 6** Pantry Guns
+	[Cheer]
+		Opera Singer Leela           25/63[ 5894] Cheer(25-Futurama) Leech(27)                               | Mythic 8 Leela + Legendary 6** K Pop Video
+		Action Delivery Force Leela  26/56[ 7196] Cheer(24-Futurama) Hijack(14) Crazed(15)                   | Mythic 8 Leela + Legendary 6** Quahog Martial Arts Academy
+		Wild Brian                   17/68[ 7648] Cheer(22-animal) Punch(16) Crazed(13)                      | Legendary 6 Brian + Legendary 6** Buck's Stud
+		Red Rodriguez 2 Real         22/58[ 6808] Cheer(22-musical) Punch(20)                                | Legendary 6** Bender + Legendary 6** K Pop Video
+		Teagle                       19/70[ 6620] Shield All(12-animal) Cheer(20) Hijack(16)                 | Legendary 6** Tina + Legendary 6** Buck's Stud
+		Chest Etching                17/72[ 5978] Cheer(19-artistic) Payback(17) Jab(22)                     | Legendary 6** Bender + Legendary 6** Napkin Art
+		Wild Brian                   18/51[ 6694] Cheer(18-animal) Punch(14) Crazed(11)                      | Legendary 6 Brian + Legendary 6* Iraq Lobster
+		Teagle                       20/54[ 5904] Shield All(10-animal) Cheer(18) Hijack(14)                 | Legendary 6** Tina + Legendary 6* Iraq Lobster
+		Wild Brian                   15/56[ 6387] Cheer(17-animal) Punch(13) Crazed(11)                      | Legendary 6 Brian + Legendary 6* Mr. Business
+		Teagle                       17/58[ 5622] Shield All(10-animal) Cheer(17) Hijack(13)                 | Legendary 6** Tina + Legendary 6* Mr. Business
+		Art Student                  14/57[ 5324] Cheer(14-artistic) Sturdy(13) Heal(11)                     | Epic 5** Bob + Legendary 6** Napkin Art
+		Art Student                  14/57[ 5324] Cheer(14-artistic) Sturdy(13) Heal(11)                     | Epic 5** Bob + Legendary 6** Napkin Art
+		Bouldering Bob               15/46[ 4568] Cheer(14-athletic) Shield All(5-athletic) Gas(14)          | Epic 5** Bob + Legendary 6* Power Gym
+		Bouldering Bob               15/46[ 4568] Cheer(14-athletic) Shield All(5-athletic) Gas(14)          | Epic 5** Bob + Legendary 6* Power Gym
+		Cat Trainer Bob              16/41[ 4351] Cripple(12) Jab(15) Cheer(13-animal)                       | Epic 5** Bob + Legendary 6* Mr. Business
+		Cat Trainer Bob              16/41[ 4351] Cripple(12) Jab(15) Cheer(13-animal)                       | Epic 5** Bob + Legendary 6* Mr. Business
+		DJ Klaus                     11/56[ 4232] Cheer(12-American Dad) Sturdy(10) Boost(10)                | Legendary 6 Klaus Heisler + Legendary 6** K Pop Video
+	[Cheer All]
+		Yeti Fighter Leela           21/65[ 6875] Jab(23) Payback(21) Cheer All(12-fighter)                  | Mythic 8 Leela + Legendary 6* Big Boy Karate
+		Leela's Harpoon              24/48[ 7536] Jab(23) Cheer All(11-armed) Punch(17)                      | Mythic 8 Leela + Legendary 6 Sacred Daggers
+		Dolphin Rider Peter          22/77[ 7096] Shield All(8-animal) Cheer All(9) Leech(19)                | Legendary 6** Peter + Legendary 6** Buck's Stud
+		Brian in Disguise            12/56[ 5068] Cheer All(9-disguised) Boost(15) Leech(17)                 | Legendary 6 Brian + Legendary 6* Shrimp Dress
+		Cyclist Peggy                15/54[ 4974] Shield All(7-athletic) Jab(18) Cheer All(9-athletic)       | Legendary 6 Peggy + Legendary 6* Power Gym
+		Dolphin Rider Peter          22/60[ 6310] Shield All(7-animal) Cheer All(8) Leech(17)                | Legendary 6** Peter + Legendary 6* Iraq Lobster
+		Dolphin Rider Peter          18/64[ 5982] Shield All(7-animal) Cheer All(8) Leech(16)                | Legendary 6** Peter + Legendary 6* Mr. Business
+		Klaus's Fish Wife            13/63[ 5874] Cheer All(8-animal) Motivate(11) Leech(15)                 | Legendary 6 Klaus Heisler + Legendary 6** Buck's Stud
+		Pirate Cannon Peter          17/53[ 7239] Cheer All(7) Crazed(11) Bomb(13)                           | Legendary 6** Peter + Legendary 6 Sacred Daggers
+		Klaus's Fish Wife            13/48[ 5004] Cheer All(7-animal) Motivate(9) Leech(13)                  | Legendary 6 Klaus Heisler + Legendary 6* Iraq Lobster
+		Klaus's Fish Wife            10/52[ 4556] Cheer All(6-animal) Motivate(8) Leech(12)                  | Legendary 6 Klaus Heisler + Legendary 6* Mr. Business
+	[Boost]
+		Betsy                        19/71[ 7380] Sturdy(23) Hijack(14) Boost(20)                            | Legendary 6* Dr. Amy Wong + Legendary 6** Buck's Stud
+		Male Leela                   20/62[ 7500] Sturdy(22) Boost(19) Payback(19)                           | Mythic 8 Leela + Legendary 6* Shrimp Dress
+		Butt Toucher Tina            18/57[ 7450] Punch(16) Leech(20) Boost(19)                              | Legendary 6** Tina + Legendary 6* Power Gym
+		Betsy                        20/55[ 6608] Sturdy(20) Hijack(12) Boost(18)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Iraq Lobster
+		Karate Stewie                18/54[ 7879] Punch(17) Boost(17) Crazed(11)                             | Legendary 6 Stewie + Legendary 6** Quahog Martial Arts Academy
+		Betsy                        17/59[ 6290] Sturdy(19) Hijack(12) Boost(17)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Mr. Business
+		Balloon Fight                19/47[ 8007] Punch(18) Boost(16) Bomb(11)                               | Legendary 6** Tina + Legendary 6 Sacred Daggers
+		Karate Stewie                13/63[ 7440] Punch(16) Boost(16) Crazed(11)                             | Legendary 6 Stewie + Legendary 6* Big Boy Karate
+		Brian in Disguise            12/56[ 5068] Cheer All(9-disguised) Boost(15) Leech(17)                 | Legendary 6 Brian + Legendary 6* Shrimp Dress
+		Belly Drum                   16/63[ 6797] Sturdy(16) Boost(14) Bomb(11)                              | Legendary 6* Bobby + Legendary 6** K Pop Video
+		Pan Flute Brian              16/52[ 5247] Payback(13) Heal All(6-musical) Boost(14)                  | Legendary 6 Brian + Legendary 6** K Pop Video
+		Artist Roger                 11/61[ 5455] Leech(17) Boost(11) Gas(17)                                | Legendary 6 Roger + Legendary 6** Napkin Art
+		High Legman                  11/55[ 4800] Boost(10) Punch(12)                                        | Legendary 6 Roger + Legendary 6* Hypnotoad
+		DJ Klaus                     11/56[ 4232] Cheer(12-American Dad) Sturdy(10) Boost(10)                | Legendary 6 Klaus Heisler + Legendary 6** K Pop Video
+	[Crazed]
+		Action Delivery Force Leela  26/56[ 7196] Cheer(24-Futurama) Hijack(14) Crazed(15)                   | Mythic 8 Leela + Legendary 6** Quahog Martial Arts Academy
+		Sculptor Peter               17/75[ 6170] Shield(20-Family Guy) Crazed(15)                           | Legendary 6** Peter + Legendary 6** Napkin Art
+		Golfer Amy                   17/56[ 8098] Bomb(14) Crazed(14) Recover(21)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Power Gym
+		Fashion Fight                17/62[ 7036] Leech(18) Crazed(14) Recover(20)                           | Legendary 6** Tina + Legendary 6* Big Boy Karate
+		Wild Brian                   17/68[ 7648] Cheer(22-animal) Punch(16) Crazed(13)                      | Legendary 6 Brian + Legendary 6** Buck's Stud
+		Paddlin' Peggy               17/68[ 7414] Punch(18) Crazed(13)                                       | Legendary 6 Peggy + Legendary 6** Pantry Guns
+		Bender's Ducklings           22/66[ 8317] Motivate(19-animal) Crazed(12) Heal(26-animal)             | Legendary 6** Bender + Legendary 6** Buck's Stud
+		Assassin Bender              21/47[ 7196] Leech(18) Crazed(12) Bomb(12)                              | Legendary 6** Bender + Legendary 6 Sacred Daggers
+		Wingnut Amy                  17/65[ 7986] Sturdy(14) Punch(18) Crazed(11)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Jacked on Bots
+		Karate Stewie                18/54[ 7879] Punch(17) Boost(17) Crazed(11)                             | Legendary 6 Stewie + Legendary 6** Quahog Martial Arts Academy
+		Karate Stewie                13/63[ 7440] Punch(16) Boost(16) Crazed(11)                             | Legendary 6 Stewie + Legendary 6* Big Boy Karate
+		Pirate Cannon Peter          17/53[ 7239] Cheer All(7) Crazed(11) Bomb(13)                           | Legendary 6** Peter + Legendary 6 Sacred Daggers
+		Cigarette Addicts            14/65[ 6800] Leech(20) Crazed(11) Gas(20)                               | Legendary 6 Peggy + Legendary 6* Jacked on Bots
+		Wild Brian                   18/51[ 6694] Cheer(18-animal) Punch(14) Crazed(11)                      | Legendary 6 Brian + Legendary 6* Iraq Lobster
+		Cigarette Addicts            13/67[ 6643] Leech(19) Crazed(11) Gas(19)                               | Legendary 6* Bobby + Legendary 6* Jacked on Bots
+		Wild Brian                   15/56[ 6387] Cheer(17-animal) Punch(13) Crazed(11)                      | Legendary 6 Brian + Legendary 6* Mr. Business
+		Tuning Fork                  16/57[ 6181] Bodyguard(14) Jab(19) Crazed(11)                           | Legendary 6 Peggy + Legendary 6** K Pop Video
+		Honey Mustache Stewie        12/64[ 6031] Jab(16) Crazed(11) Gas(15)                                 | Legendary 6 Stewie + Legendary 6* Shrimp Dress
+		Battle Axe Peggy             16/46[ 5828] Crazed(11) Heal(15)                                        | Legendary 6 Peggy + Legendary 6 Sacred Daggers
+		Knife Fight Stewie           15/48[ 5418] Cripple(14) Hijack(8) Crazed(11)                           | Legendary 6 Stewie + Legendary 6 Sacred Daggers
+		Dr. Bobbenstein              13/50[ 5322] Jab(18) Leech(15) Crazed(11)                               | Epic 5** Bob + Legendary 6* Shrimp Dress
+		Dr. Bobbenstein              13/50[ 5322] Jab(18) Leech(15) Crazed(11)                               | Epic 5** Bob + Legendary 6* Shrimp Dress
+		Wingnut Amy                  16/61[ 7529] Sturdy(14) Punch(17) Crazed(10)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Hypnotoad
+		Jealous Bobby                19/53[ 7450] Jab(19) Punch(17) Crazed(10)                               | Legendary 6* Bobby + Legendary 6** Quahog Martial Arts Academy
+		Bender's Ducklings           20/55[ 7128] Motivate(16-animal) Crazed(10) Heal(22-animal)             | Legendary 6** Bender + Legendary 6* Mr. Business
+		Hip Hop Bob                  16/47[ 7101] Cripple All(6) Punch(15) Crazed(10)                        | Epic 5** Bob + Legendary 6** K Pop Video
+		Hip Hop Bob                  16/47[ 7101] Cripple All(6) Punch(15) Crazed(10)                        | Epic 5** Bob + Legendary 6** K Pop Video
+		Cigarette Addicts            13/61[ 6242] Leech(18) Crazed(10) Gas(18)                               | Legendary 6 Peggy + Legendary 6* Hypnotoad
+		Cigarette Addicts            12/63[ 6198] Leech(18) Crazed(10) Gas(18)                               | Legendary 6* Bobby + Legendary 6* Hypnotoad
+		Burgerboss Bob               15/60[ 5082] Jab(18) Crazed(10)                                         | Epic 5** Bob + Legendary 6* Hypnotoad
+		Burgerboss Bob               15/60[ 5082] Jab(18) Crazed(10)                                         | Epic 5** Bob + Legendary 6* Hypnotoad
+		$300 Knife                   17/59[ 6132] Cripple(17) Jab(17) Crazed(9)                              | Epic 5** Bob + Legendary 6** Pantry Guns
+		$300 Knife                   17/59[ 6132] Cripple(17) Jab(17) Crazed(9)                              | Epic 5** Bob + Legendary 6** Pantry Guns
+		Ruby Zeldastein              11/57[ 4562] Shield All(5-disguised) Sturdy(9) Crazed(7)                | Legendary 6 Roger + Legendary 6* Shrimp Dress
+	[Payback]
+		Space Honey                  21/66[ 7336] Bodyguard(19) Payback(23) Hijack(16)                       | Mythic 8 Leela + Legendary 6* Jacked on Bots
+		Space Honey                  20/63[ 6978] Bodyguard(18) Payback(22) Hijack(15)                       | Mythic 8 Leela + Legendary 6* Hypnotoad
+		Yeti Fighter Leela           21/65[ 6875] Jab(23) Payback(21) Cheer All(12-fighter)                  | Mythic 8 Leela + Legendary 6* Big Boy Karate
+		Male Leela                   20/62[ 7500] Sturdy(22) Boost(19) Payback(19)                           | Mythic 8 Leela + Legendary 6* Shrimp Dress
+		Class Spanker                19/51[ 7455] Payback(19) Hijack(13) Punch(19)                           | Legendary 6 Peggy + Legendary 6** Quahog Martial Arts Academy
+		Class Spanker                14/60[ 6974] Payback(18) Hijack(12) Punch(18)                           | Legendary 6 Peggy + Legendary 6* Big Boy Karate
+		Chest Etching                17/72[ 5978] Cheer(19-artistic) Payback(17) Jab(22)                     | Legendary 6** Bender + Legendary 6** Napkin Art
+		Doghouse Bobby               18/60[ 7256] Payback(16) Heal(23-animal) Gas(22)                        | Legendary 6* Bobby + Legendary 6** Buck's Stud
+		Rodeo Bobby                  14/58[ 5448] Payback(16) Hijack(12) Sturdy(14)                          | Legendary 6* Bobby + Legendary 6* Power Gym
+		Doghouse Bobby               19/46[ 6467] Payback(14) Heal(20-animal) Gas(19)                        | Legendary 6* Bobby + Legendary 6* Iraq Lobster
+		Doghouse Bobby               16/50[ 6094] Payback(13) Heal(19-animal) Gas(18)                        | Legendary 6* Bobby + Legendary 6* Mr. Business
+		Pan Flute Brian              16/52[ 5247] Payback(13) Heal All(6-musical) Boost(14)                  | Legendary 6 Brian + Legendary 6** K Pop Video
+		Medicated Stewie             13/61[ 6003] Payback(12) Bomb(10) Gas(13)                               | Legendary 6 Stewie + Legendary 6* Hypnotoad
+		Ricky Spanish                15/39[ 4684] Payback(12) Leech(13) Gas(12)                              | Legendary 6 Roger + Legendary 6 Sacred Daggers
+	[Shield All]
+		Tina Tackle                  20/59[ 7682] Shield All(13-fighter) Bodyguard(19) Gas(22)               | Legendary 6** Tina + Legendary 6** Quahog Martial Arts Academy
+		Teagle                       19/70[ 6620] Shield All(12-animal) Cheer(20) Hijack(16)                 | Legendary 6** Tina + Legendary 6** Buck's Stud
+		Nasal Spray Peter            15/75[ 6648] Shield All(11-addicted) Cripple(18) Sturdy(15)             | Legendary 6** Peter + Legendary 6* Jacked on Bots
+		Boy Crazy                    17/67[ 8436] Shield All(10) Hijack(18) Heal(20)                         | Legendary 6** Tina + Legendary 6* Jacked on Bots
+		Boy Crazy                    16/63[ 8066] Shield All(10) Hijack(17) Heal(19)                         | Legendary 6** Tina + Legendary 6* Hypnotoad
+		K Pop Peter                  19/62[ 7791] Shield All(10-musical) Leech(22) Punch(19)                 | Legendary 6** Peter + Legendary 6** K Pop Video
+		Klepto Bender                17/65[ 7044] Shield All(10) Hijack(14) Sturdy(16)                       | Legendary 6** Bender + Legendary 6* Hypnotoad
+		Nasal Spray Peter            14/71[ 6221] Shield All(10-addicted) Cripple(17) Sturdy(14)             | Legendary 6** Peter + Legendary 6* Hypnotoad
+		Teagle                       20/54[ 5904] Shield All(10-animal) Cheer(18) Hijack(14)                 | Legendary 6** Tina + Legendary 6* Iraq Lobster
+		Teagle                       17/58[ 5622] Shield All(10-animal) Cheer(17) Hijack(13)                 | Legendary 6** Tina + Legendary 6* Mr. Business
+		Dolphin Rider Peter          22/77[ 7096] Shield All(8-animal) Cheer All(9) Leech(19)                | Legendary 6** Peter + Legendary 6** Buck's Stud
+		Private Brian                14/44[ 6047] Shield All(8-armed) Punch(14) Bomb(7)                      | Legendary 6 Brian + Legendary 6 Sacred Daggers
+		Disco Bender                 20/52[ 6524] Shield All(7-disguised) Sturdy(17) Bomb(10)                | Legendary 6** Bender + Legendary 6* Shrimp Dress
+		Dolphin Rider Peter          22/60[ 6310] Shield All(7-animal) Cheer All(8) Leech(17)                | Legendary 6** Peter + Legendary 6* Iraq Lobster
+		Noble Fighter Bobby          14/63[ 6240] Shield All(7) Bodyguard(16) Leech(19)                      | Legendary 6* Bobby + Legendary 6* Big Boy Karate
+		Dolphin Rider Peter          18/64[ 5982] Shield All(7-animal) Cheer All(8) Leech(16)                | Legendary 6** Peter + Legendary 6* Mr. Business
+		Cyclist Peggy                15/54[ 4974] Shield All(7-athletic) Jab(18) Cheer All(9-athletic)       | Legendary 6 Peggy + Legendary 6* Power Gym
+		Swim Lesson                  14/57[ 5228] Shield All(5-athletic) Bodyguard(14) Jab(22)               | Legendary 6 Stewie + Legendary 6* Power Gym
+		Bouldering Bob               15/46[ 4568] Cheer(14-athletic) Shield All(5-athletic) Gas(14)          | Epic 5** Bob + Legendary 6* Power Gym
+		Bouldering Bob               15/46[ 4568] Cheer(14-athletic) Shield All(5-athletic) Gas(14)          | Epic 5** Bob + Legendary 6* Power Gym
+		Ruby Zeldastein              11/57[ 4562] Shield All(5-disguised) Sturdy(9) Crazed(7)                | Legendary 6 Roger + Legendary 6* Shrimp Dress
+	[Cripple All]
+		Katz                         25/66[ 8708] Cripple All(14) Leech(23) Hijack(17)                       | Mythic 8 Leela + Legendary 6** Buck's Stud
+		Katz                         26/51[ 7838] Cripple All(12) Leech(21) Hijack(15)                       | Mythic 8 Leela + Legendary 6* Iraq Lobster
+		Katz                         23/55[ 7425] Cripple All(11) Leech(20) Hijack(15)                       | Mythic 8 Leela + Legendary 6* Mr. Business
+		Leela Balloon Art            22/63[ 7566] Cripple All(10) Gas(24)                                    | Mythic 8 Leela + Legendary 6** Napkin Art
+		Smoke Bomb                   14/53[ 7040] Cripple All(7) Gas(17) Bomb(12)                            | Legendary 6 Klaus Heisler + Legendary 6** Quahog Martial Arts Academy
+		Smoke Bomb                    9/63[ 6747] Cripple All(7) Gas(16) Bomb(12)                            | Legendary 6 Klaus Heisler + Legendary 6* Big Boy Karate
+		Hip Hop Bob                  16/47[ 7101] Cripple All(6) Punch(15) Crazed(10)                        | Epic 5** Bob + Legendary 6** K Pop Video
+		Hip Hop Bob                  16/47[ 7101] Cripple All(6) Punch(15) Crazed(10)                        | Epic 5** Bob + Legendary 6** K Pop Video
+	[Hijack]
+		Boy Crazy                    17/67[ 8436] Shield All(10) Hijack(18) Heal(20)                         | Legendary 6** Tina + Legendary 6* Jacked on Bots
+		Katz                         25/66[ 8708] Cripple All(14) Leech(23) Hijack(17)                       | Mythic 8 Leela + Legendary 6** Buck's Stud
+		Boy Crazy                    16/63[ 8066] Shield All(10) Hijack(17) Heal(19)                         | Legendary 6** Tina + Legendary 6* Hypnotoad
+		Space Honey                  21/66[ 7336] Bodyguard(19) Payback(23) Hijack(16)                       | Mythic 8 Leela + Legendary 6* Jacked on Bots
+		Teagle                       19/70[ 6620] Shield All(12-animal) Cheer(20) Hijack(16)                 | Legendary 6** Tina + Legendary 6** Buck's Stud
+		Katz                         26/51[ 7838] Cripple All(12) Leech(21) Hijack(15)                       | Mythic 8 Leela + Legendary 6* Iraq Lobster
+		Katz                         23/55[ 7425] Cripple All(11) Leech(20) Hijack(15)                       | Mythic 8 Leela + Legendary 6* Mr. Business
+		Space Honey                  20/63[ 6978] Bodyguard(18) Payback(22) Hijack(15)                       | Mythic 8 Leela + Legendary 6* Hypnotoad
+		Contact High Stewie          13/67[ 6976] Leech(20) Punch(18) Hijack(15)                             | Legendary 6 Stewie + Legendary 6* Jacked on Bots
+		Betsy                        19/71[ 7380] Sturdy(23) Hijack(14) Boost(20)                            | Legendary 6* Dr. Amy Wong + Legendary 6** Buck's Stud
+		Action Delivery Force Leela  26/56[ 7196] Cheer(24-Futurama) Hijack(14) Crazed(15)                   | Mythic 8 Leela + Legendary 6** Quahog Martial Arts Academy
+		Klepto Bender                17/65[ 7044] Shield All(10) Hijack(14) Sturdy(16)                       | Legendary 6** Bender + Legendary 6* Hypnotoad
+		Teagle                       20/54[ 5904] Shield All(10-animal) Cheer(18) Hijack(14)                 | Legendary 6** Tina + Legendary 6* Iraq Lobster
+		Class Spanker                19/51[ 7455] Payback(19) Hijack(13) Punch(19)                           | Legendary 6 Peggy + Legendary 6** Quahog Martial Arts Academy
+		Pumping Iron                  9/57[ 5671] Hijack(13) Punch(13) Recover(15)                           | Legendary 6 Klaus Heisler + Legendary 6* Power Gym
+		Teagle                       17/58[ 5622] Shield All(10-animal) Cheer(17) Hijack(13)                 | Legendary 6** Tina + Legendary 6* Mr. Business
+		Class Spanker                14/60[ 6974] Payback(18) Hijack(12) Punch(18)                           | Legendary 6 Peggy + Legendary 6* Big Boy Karate
+		Betsy                        20/55[ 6608] Sturdy(20) Hijack(12) Boost(18)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Iraq Lobster
+		Betsy                        17/59[ 6290] Sturdy(19) Hijack(12) Boost(17)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Mr. Business
+		Rodeo Bobby                  14/58[ 5448] Payback(16) Hijack(12) Sturdy(14)                          | Legendary 6* Bobby + Legendary 6* Power Gym
+		Cupid Bobby                  13/63[ 6419] Hijack(11) Punch(17) Leech(17)                             | Legendary 6* Bobby + Legendary 6* Shrimp Dress
+		Bacon Weight                 17/39[ 5278] Hijack(11) Sturdy(12) Gas(16)                              | Epic 5** Bob + Legendary 6 Sacred Daggers
+		Bacon Weight                 17/39[ 5278] Hijack(11) Sturdy(12) Gas(16)                              | Epic 5** Bob + Legendary 6 Sacred Daggers
+		Christmas Punchout           20/41[ 6243] Hijack(10) Punch(15) Leech(18)                             | Epic 5** Bob + Legendary 6** Quahog Martial Arts Academy
+		Christmas Punchout           20/41[ 6243] Hijack(10) Punch(15) Leech(18)                             | Epic 5** Bob + Legendary 6** Quahog Martial Arts Academy
+		Christmas Punchout           15/50[ 5830] Hijack(10) Punch(14) Leech(17)                             | Epic 5** Bob + Legendary 6* Big Boy Karate
+		Christmas Punchout           15/50[ 5830] Hijack(10) Punch(14) Leech(17)                             | Epic 5** Bob + Legendary 6* Big Boy Karate
+		Badminton Roger              12/57[ 5578] Sturdy(13) Hijack(9) Punch(12)                             | Legendary 6 Roger + Legendary 6* Power Gym
+		Cartel Klaus                 11/45[ 4020] Hijack(9) Leech(12) Gas(10)                                | Legendary 6 Klaus Heisler + Legendary 6 Sacred Daggers
+		Knife Fight Stewie           15/48[ 5418] Cripple(14) Hijack(8) Crazed(11)                           | Legendary 6 Stewie + Legendary 6 Sacred Daggers
+	[Sturdy]
+		Betsy                        19/71[ 7380] Sturdy(23) Hijack(14) Boost(20)                            | Legendary 6* Dr. Amy Wong + Legendary 6** Buck's Stud
+		Male Leela                   20/62[ 7500] Sturdy(22) Boost(19) Payback(19)                           | Mythic 8 Leela + Legendary 6* Shrimp Dress
+		Betsy                        20/55[ 6608] Sturdy(20) Hijack(12) Boost(18)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Iraq Lobster
+		Betsy                        17/59[ 6290] Sturdy(19) Hijack(12) Boost(17)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Mr. Business
+		Duke                         18/63[ 6931] Jab(21) Sturdy(17) Gas(20)                                 | Legendary 6 Peggy + Legendary 6** Buck's Stud
+		Disco Bender                 20/52[ 6524] Shield All(7-disguised) Sturdy(17) Bomb(10)                | Legendary 6** Bender + Legendary 6* Shrimp Dress
+		Mountain Climber Peter       16/64[ 6259] Bodyguard(14) Shield(15) Sturdy(17)                        | Legendary 6** Peter + Legendary 6* Power Gym
+		Skiing Leela                 23/56[ 7427] Motivate(14-athletic) Sturdy(16) Bomb(11)                  | Mythic 8 Leela + Legendary 6* Power Gym
+		Sewer Surfer Bender          20/57[ 7274] Sturdy(16) Motivate(13-athletic) Gas(23)                   | Legendary 6** Bender + Legendary 6* Power Gym
+		Klepto Bender                17/65[ 7044] Shield All(10) Hijack(14) Sturdy(16)                       | Legendary 6** Bender + Legendary 6* Hypnotoad
+		Belly Drum                   16/63[ 6797] Sturdy(16) Boost(14) Bomb(11)                              | Legendary 6* Bobby + Legendary 6** K Pop Video
+		Karate Bender                21/61[ 7168] Sturdy(15) Motivate(16)                                    | Legendary 6** Bender + Legendary 6** Quahog Martial Arts Academy
+		Nasal Spray Peter            15/75[ 6648] Shield All(11-addicted) Cripple(18) Sturdy(15)             | Legendary 6** Peter + Legendary 6* Jacked on Bots
+		Duke                         19/48[ 6259] Jab(19) Sturdy(15) Gas(18)                                 | Legendary 6 Peggy + Legendary 6* Iraq Lobster
+		Wingnut Amy                  17/65[ 7986] Sturdy(14) Punch(18) Crazed(11)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Jacked on Bots
+		Wingnut Amy                  16/61[ 7529] Sturdy(14) Punch(17) Crazed(10)                            | Legendary 6* Dr. Amy Wong + Legendary 6* Hypnotoad
+		Nasal Spray Peter            14/71[ 6221] Shield All(10-addicted) Cripple(17) Sturdy(14)             | Legendary 6** Peter + Legendary 6* Hypnotoad
+		Duke                         16/52[ 5895] Jab(18) Sturdy(14) Gas(17)                                 | Legendary 6 Peggy + Legendary 6* Mr. Business
+		Cloud Painter                14/61[ 5567] Sturdy(14) Heal All(6-King Of The Hill) Motivate(14-King Of The Hill) | Legendary 6* Bobby + Legendary 6** Napkin Art
+		Rodeo Bobby                  14/58[ 5448] Payback(16) Hijack(12) Sturdy(14)                          | Legendary 6* Bobby + Legendary 6* Power Gym
+		Badminton Roger              12/57[ 5578] Sturdy(13) Hijack(9) Punch(12)                             | Legendary 6 Roger + Legendary 6* Power Gym
+		Art Student                  14/57[ 5324] Cheer(14-artistic) Sturdy(13) Heal(11)                     | Epic 5** Bob + Legendary 6** Napkin Art
+		Art Student                  14/57[ 5324] Cheer(14-artistic) Sturdy(13) Heal(11)                     | Epic 5** Bob + Legendary 6** Napkin Art
+		Nun Peggy                    13/60[ 7183] Leech(15) Sturdy(12) Bomb(21)                              | Legendary 6 Peggy + Legendary 6* Shrimp Dress
+		Music Video Stewie           15/60[ 6918] Punch(18) Leech(18) Sturdy(12)                             | Legendary 6 Stewie + Legendary 6** K Pop Video
+		Cranberry Bog                14/57[ 6611] Punch(15) Sturdy(12) Heal(18-addicted)                     | Epic 5** Bob + Legendary 6* Jacked on Bots
+		Cranberry Bog                14/57[ 6611] Punch(15) Sturdy(12) Heal(18-addicted)                     | Epic 5** Bob + Legendary 6* Jacked on Bots
+		Bacon Weight                 17/39[ 5278] Hijack(11) Sturdy(12) Gas(16)                              | Epic 5** Bob + Legendary 6 Sacred Daggers
+		Bacon Weight                 17/39[ 5278] Hijack(11) Sturdy(12) Gas(16)                              | Epic 5** Bob + Legendary 6 Sacred Daggers
+		Ping Pong Brian              13/56[ 6038] Jab(20) Sturdy(10) Punch(14)                               | Legendary 6 Brian + Legendary 6* Power Gym
+		DJ Klaus                     11/56[ 4232] Cheer(12-American Dad) Sturdy(10) Boost(10)                | Legendary 6 Klaus Heisler + Legendary 6** K Pop Video
+		Ruby Zeldastein              11/57[ 4562] Shield All(5-disguised) Sturdy(9) Crazed(7)                | Legendary 6 Roger + Legendary 6* Shrimp Dress
+		Garden Shovel Bobby          15/46[ 5548] Bodyguard(11) Sturdy(6) Motivate(11)                       | Legendary 6* Bobby + Legendary 6 Sacred Daggers
+Report generated on 2019-10-11 09:34:32

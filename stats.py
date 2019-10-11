@@ -17,7 +17,7 @@ def stat_count_by_series(owned_instances):
 				cards_by_series[inst.series].append(inst)
 	count_by_series = sorted(count_by_series.items(), key=lambda t: t[1], reverse=True)
 	for series, count in count_by_series:
-		print(" {:16}: {}".format(series, count))
+		print(" {:16}: {}".format(str(series), count))
 	print("Detailed:")
 	for series, cards in cards_by_series.items():
 		print("	{}".format(series))

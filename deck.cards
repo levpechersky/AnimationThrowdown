@@ -24,8 +24,7 @@ L 6 Peggy
 L 6** Peter
 L 6 Roger
 L 6 Stewie
-L 6 Tina
-L 6* Tina
+L 6** Tina
 
 # Legendary objects
 L 6* Big Boy Karate
@@ -38,9 +37,13 @@ L 6* Mr. Business
 L 6** Napkin Art
 L 6** Pantry Guns
 L 6* Power Gym
-L 6* Quahog Martial Arts Academy
+L 6** Quahog Martial Arts Academy
 L 6 Sacred Daggers
 L 6* Shrimp Dress
 
 
 # Legendary Power
+
+
+# Mythic
+M 1 Leela
