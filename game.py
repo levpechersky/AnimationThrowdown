@@ -183,19 +183,24 @@ class CardBase:
 		if id == 0:
 			raise Exception("Card id unknown")
 
-		if 10001 <= id <= 14000 or 15001 <= id <= 20000 or 110001 <= id <= 120000:
+		if 10001 <= id <= 14000 or 15001 <= id <= 20000 \
+				or 110001 <= id <= 120000 or 1100001 <= id <= 1200000:
 			return Series.FAMILY_GUY
 
-		if 20001 <= id <= 24000 or 25001 <= id <= 30000 or 120001 <= id <= 130000:
+		if 20001 <= id <= 24000 or 25001 <= id <= 30000 \
+				or 120001 <= id <= 130000 or 1200001 <= id <= 1300000:
 			return Series.AMERICAN_DAD
 
-		if 30001 <= id <= 34000 or 35001 <= id <= 40000 or 130001 <= id <= 140000:
+		if 30001 <= id <= 34000 or 35001 <= id <= 40000 \
+				or 130001 <= id <= 140000 or 1300001 <= id <= 1400000:
 			return Series.BOBS_BURGERS
 
-		if 40001 <= id <= 44000 or 45001 <= id <= 50000 or 140001 <= id <= 150000:
+		if 40001 <= id <= 44000 or 45001 <= id <= 50000\
+				or 140001 <= id <= 150000 or 1400001 <= id <= 1500000:
 			return Series.KING_OF_THE_HILL
 
-		if 50001 <= id <= 54000 or 55001 <= id <= 60000 or 150001 <= id <= 160000:
+		if 50001 <= id <= 54000 or 55001 <= id <= 60000\
+				or 150001 <= id <= 160000 or 1500001 <= id <= 1600000:
 			return Series.FUTURAMA
 
 
